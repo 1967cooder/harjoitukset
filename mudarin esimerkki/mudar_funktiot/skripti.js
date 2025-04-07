@@ -62,6 +62,7 @@ console.log
 }
 const multiply = (a,b) =>
     fetch(.catch());
+
     return a * b// ei toimi
 console.log(multiply(5,7));
 
