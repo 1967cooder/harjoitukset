@@ -1,0 +1,59 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*Lisää aina css alkuun*/
+
+body {
+    background-color:rgb(238, 177, 198)
+}
+
+header {
+
+    background: #ec39bc;
+    padding: 25px;
+    color: white;
+
+}
+/*Backgraund määrittelee tausta ominaisuuksia.
+Backgraund color määrittelee vain taustavärin.
+Color määrittelee tekstin väriä.*/
+main {
+/*Main kontroloi tässä tilanteessa divien asemointia sivulla. Padding siirtää divit 10px 
+alas ja oikealle.*/
+    padding: 10px;
+}
+
+div{
+
+    background: hwb(274 60% 14%);
+    height: 200px;
+    width: 200px;
+    margin:  0 10px 0 0;
+    display: inline-block;
+
+}
+/*Diveissä on marginia 10px oikealla ja alla, 
+jotta marginin määrä ei tuplaannu.*/
+
+/*Luokka, eli class, valitaan css:ssä pisteellä nimen edessä: .nimi*/
+
+.box1{
+    border: 5px dotted white;
+
+}
+
+.box2{
+    border: 7px double seagreen;
+    background-color: cornflowerblue;
+}
+
+.box3{
+    border-style: groove;
+    border-width: 10px;
+    border-color: white blue red yellow;
+   
+
+}

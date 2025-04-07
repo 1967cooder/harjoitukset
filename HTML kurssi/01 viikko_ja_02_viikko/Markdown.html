@@ -1,0 +1,1041 @@
+
+
+
+<!DOCTYPE html>
+<html xml:lang="fi-FI" lang="fi-FI">
+<head>
+            <link rel="preload" href="https://cdn.itslearning.com/v2025.3.3.13981/Skins/itsl.css" as="style" />
+        
+
+        <link rel="preload" href="https://cdn.itslearning.com/v2025.3.3.13981/Skins/JQuery/theme/jquery-ui-1.11.4.custom.css" as="style" />
+
+        
+        <link rel="stylesheet" href="https://cdn.itslearning.com/v2025.3.3.13981/Skins/itsl.css" />
+        
+
+        <link rel="stylesheet" href="https://cdn.itslearning.com/v2025.3.3.13981/skins/lato.css">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        
+        <meta name="referrer" content="origin-when-cross-origin" />
+        <meta name="format-detection" content="telephone=no" />
+        <script src="https://cdn.itslearning.com/v2025.3.3.13981/javascript/jQuery/jquery-1.7.1/jquery-1.7.1.min.js"></script>
+        <script src="https://cdn.itslearning.com/v2025.3.3.13981/javascript/jQuery/jquery-1.7.1/jquery-ui-1.11.4.custom.min.js"></script>
+        <script src="https://cdn.itslearning.com/v2025.3.3.13981/javascript/commonControlLibrary.min.js"></script>
+        <link rel="icon" type="image/vnd.microsoft.icon" href="https://cdn.itslearning.com/v2025.3.3.13981/favicon.ico" />
+        <link rel="apple-touch-icon" href='https://cdn.itslearning.com/v2025.3.3.13981/touch-icon-iphone.png' />
+        <link rel="apple-touch-icon" sizes="76x76" href='https://cdn.itslearning.com/v2025.3.3.13981/touch-icon-ipad.png' />
+        <link rel="apple-touch-icon" sizes="120x120" href='https://cdn.itslearning.com/v2025.3.3.13981/touch-icon-iphone-retina.png' />
+        <link rel="apple-touch-icon" sizes="152x152" href='https://cdn.itslearning.com/v2025.3.3.13981/touch-icon-ipad-retina.png' />
+
+        
+            <script src="https://cdn.itslearning.com/v2025.3.3.13981/javascript/Knockout/knockout-3.5.0.js"></script>
+            <script src="https://cdn.itslearning.com/v2025.3.3.13981/javascript/Knockout/knockout.bindings.child.js"></script>
+        
+
+    <script src="https://cdn.itslearning.com/v2025.3.3.13981/javascript/Common.js"></script>
+    <script src="https://cdn.itslearning.com/v2025.3.3.13981/javascript/xmlhttp.js"></script>
+    <script src="https://cdn.itslearning.com/v2025.3.3.13981/javascript/NetworkLatencyMonitor.js"></script>
+    <script src="https://cdn.itslearning.com/v2025.3.3.13981/javascript/onboarding/onboarding.min.js"></script>
+<title>
+	itslearning
+</title></head>
+ <body class='l-topmenu'>
+    <form method="post" action="./ContentArea.aspx?LocationID=10098&amp;LocationType=1" id="aspnetForm">
+<div>
+<input type="hidden" name="__ITSL_CSRF_TOKEN__" id="__ITSL_CSRF_TOKEN__" value="pl8Oqmqd2wEDoggAAMZWBgBscHI0c3VpeG40enJieWsxMmJpdXN0bG5co4ffeW1NPxpDsybx1Vnun8INIY5DFlql3eZs3rld6KGtUtY1knRUBFIfiBtkJpZLIfGvrweMm4iq8jILAt+T" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTE1MjM4NzQ0NjYPFgIeE1ZhbGlkYXRlUmVxdWVzdE1vZGUCARYCZg9kFgRmD2QWAmYPZBYIZg8VATpodHRwczovL2Nkbi5pdHNsZWFybmluZy5jb20vdjIwMjUuMy4zLjEzOTgxL1NraW5zL2l0c2wuY3NzZAIBDxUBOmh0dHBzOi8vY2RuLml0c2xlYXJuaW5nLmNvbS92MjAyNS4zLjMuMTM5ODEvU2tpbnMvaXRzbC5jc3NkAgIPFQEFdXRmLThkAgMPFQRBaHR0cHM6Ly9jZG4uaXRzbGVhcm5pbmcuY29tL3YyMDI1LjMuMy4xMzk4MS90b3VjaC1pY29uLWlwaG9uZS5wbmc/aHR0cHM6Ly9jZG4uaXRzbGVhcm5pbmcuY29tL3YyMDI1LjMuMy4xMzk4MS90b3VjaC1pY29uLWlwYWQucG5nSGh0dHBzOi8vY2RuLml0c2xlYXJuaW5nLmNvbS92MjAyNS4zLjMuMTM5ODEvdG91Y2gtaWNvbi1pcGhvbmUtcmV0aW5hLnBuZ0ZodHRwczovL2Nkbi5pdHNsZWFybmluZy5jb20vdjIwMjUuMy4zLjEzOTgxL3RvdWNoLWljb24taXBhZC1yZXRpbmEucG5nZAIBD2QWCmYPZBYCZg8PFgQeCENzc0NsYXNzBRFsLWNvbW1vbi1tZW51LXJvdx4EXyFTQgICZBYGAgEPZBYCZg8WAh4HVmlzaWJsZWhkAgMPZBYCZg9kFgJmDxYEHgVjbGFzcwUSbC1tb2JpbGUtbWVudS1pY29uHwNoZAIFD2QWAmYPFgQfBAUWbC1wZXJzb25hbC1tZW51IGgtZmwtch4KYXJpYS1sYWJlbAUZSGVua2lsw7Zrb2h0YWluZW4gdmFsaWtrbxY6Zg8VAQBkAgEPFQQ5Y3RsMDBfUGVyc29uYWxSZXNwb25zaXZlTWVudV9PZmZpY2UzNjVDbG91ZEVtYWlsQ29udGFpbmVyPC9DbG91ZEVtYWlsL0xvZ2luLmFzcHg/Q2xvdWRFbWFpbEFjY291bnRJZD0wJk1lc3NhZ2VPcmlnaW49MgZfYmxhbmsFMTAwMDBkAgIPFgIfBAUnbC1wZXJzb25hbC1iYWRnZS1tZW51LWl0ZW0gaC1wb3NpdGlvbi1yFghmDxUCDE5vdGlmaWNhdGlvbjVoLXBvc2l0aW9uLXIgaC1wZGw1IGgtcGRyNSBsLXBlcnNvbmFsLW1lbnUtaXRlbXMtbGlua2QCAQ8VAhNub3RpZmljYXRpb25zLWJhZGdlDGwtbWFpbC1iYWRnZWQCAg8PFgoeBkhlaWdodBsAAAAAAAA4QAEAAAAeBVdpZHRoGwAAAAAAADhAAQAAAB4ISW1hZ2VVcmwFlgFkYXRhOmltYWdlL3BuZztiYXNlNjQsaVZCT1J3MEtHZ29BQUFBTlNVaEVVZ0FBQUFFQUFBQUJBUU1BQUFBbDIxYktBQUFBQTFCTVZFVUFBQUNuZWozYUFBQUFBWFJTVGxNQVFPYllaZ0FBQUFwSlJFRlVDQjFqWUFBQUFBSUFBYy9JTmVVQUFBQUFTVVZPUks1Q1lJST0fAQU7aC12YS1taWRkbGUgbC1wZXJzb25hbC1tZW51LWljb24tbm90aWZpY2F0aW9ucyBsLW1lbnUtaWNvbnMfAgKCA2RkAgMPFQIlc2NyZWVuLXJlYWRlciBzY3JlZW4tcmVhZGVyLWZvY3VzYWJsZQtJbG1vaXR1a3NpYWQCAw8WBB8EBSdsLXBlcnNvbmFsLWJhZGdlLW1lbnUtaXRlbSBoLXBvc2l0aW9uLXIfA2hkAgQPFgQfBAUnbC1wZXJzb25hbC1iYWRnZS1tZW51LWl0ZW0gaC1wb3NpdGlvbi1yHwNoZAIFDxYEHwQFJ2wtcGVyc29uYWwtYmFkZ2UtbWVudS1pdGVtIGgtcG9zaXRpb24tch8DaGQCBg8VBC5sLXBlcnNvbmFsLWJhZGdlLW1lbnUtaXRlbSBoLXBvc2l0aW9uLXIgaC1wZGwwD2ltMi1vcGVuLWJ1dHRvbjVoLXBvc2l0aW9uLXIgaC1wZGw1IGgtcGRyNSBsLXBlcnNvbmFsLW1lbnUtaXRlbXMtbGluawlpbTItYmFkZ2VkAgcPFQIlc2NyZWVuLXJlYWRlciBzY3JlZW4tcmVhZGVyLWZvY3VzYWJsZQdWaWVzdGl0ZAIIDxYEHwQFJ2wtcGVyc29uYWwtYmFkZ2UtbWVudS1pdGVtIGgtcG9zaXRpb24tch8DaBYCAgMPDxYEHwEFHWl0c2wtbWVzc2FnZXMtcG9wdXAtY29udGFpbmVyHwICAmRkAgkPFQEUbC1wZXJzb25hbC1tZW51LW5hbWVkAgoPFgIfBAUubC1kcm9wZG93bi1tZW51LWl0ZW0gbC1wZXJzb25hbC1tZW51LWRkLWhlYWRlchYKZg8VASBsLXBlcnNvbmFsLW1lbnUtZGQtaGVhZGVyLS1jbG9zZWQCAQ8PFgQfCAVraHR0cHM6Ly9jZG4uaXRzbGVhcm5pbmcuY29tL3YyMDI1LjMuMy4xMzk4MS9Db21tb24vc2VtaW90aWMvaWNvbnMvbXVsdGljb2xvdXIvdXNlci1hbHRlcm5hdGl2ZS5mMjEzYzdjYy5zdmceDUFsdGVybmF0ZVRleHQFYE9sZXR1c3Byb2ZpaWxpa3V2YS4gVm9pdCBrb3J2YXRhIG9sZXR1c3Byb2ZpaWxpa3V2YW4gb21hbGxhIGt1dmFsbGFzaSBrb2hkYXNzYSBNdW9ra2FhIHByb2ZpaWxpYWRkAgIPFQIfbC1wZXJzb25hbC1tZW51LWRkLWhlYWRlci0tdGV4dB9sLXBlcnNvbmFsLW1lbnUtZGQtaGVhZGVyLS1uYW1lZAIDDxUBImwtcGVyc29uYWwtbWVudS1kZC1oZWFkZXItLWRldGFpbHNkAgQPZBYCZg8VAiEvbWFpbi5hc3B4P1RleHRVUkw9JTJmRWRpdFByb2ZpbGUhbC1wZXJzb25hbC1tZW51LWRkLWhlYWRlci0tYnV0dG9uZAILDxUBFGwtcGVyc29uYWwtbWVudS1uYW1lZAIMDxUBFWwtcG0tY2hpbGRyZW4tLWhlYWRlcmQCDQ8VASJsLWRyb3Bkb3duLW1lbnUtaXRlbSBsLXBtLWNoaWxkcmVuZAIODxYCHwQFIWwtZHJvcGRvd24tbWVudS1pdGVtIGwtcG0tcHJvZmlsZWQCDw8WAh8EBR9sLWRyb3Bkb3duLW1lbnUtaXRlbSBsLXBtLWZpbGVzZAIQDxYCHwQFImwtZHJvcGRvd24tbWVudS1pdGVtIGwtcG0tc2V0dGluZ3NkAhEPFgQfBAUlbC1kcm9wZG93bi1tZW51LWl0ZW0gbC1wbS1zdHVkZW50cGxhbh8DaGQCEg8WAh8EBSRsLWRyb3Bkb3duLW1lbnUtaXRlbSBsLXBtLWFzc2Vzc21lbnRkAhMPFgQfBAUkbC1kcm9wZG93bi1tZW51LWl0ZW0gbC1wbS1hdHRlbmRhbmNlHwNoZAIUDxYEHwQFJGwtZHJvcGRvd24tbWVudS1pdGVtIGwtcG0tYXR0ZW5kYW5jZR8DaGQCFQ8WBB8EBSNsLWRyb3Bkb3duLW1lbnUtaXRlbSBsLXBtLWJlaGF2aW91ch8DaGQCFg8WBB8EBSxsLWRyb3Bkb3duLW1lbnUtaXRlbSBsLXBtLWxlYXJuaW5nb2JqZWN0aXZlcx8DaGQCFw8WBB8EBR1sLWRyb3Bkb3duLW1lbnUtaXRlbSBsLXBtLWlscB8DaGQCGA8WBB8EBR1sLWRyb3Bkb3duLW1lbnUtaXRlbSBsLXBtLWlscB8DaGQCGQ8WAh8EBSRsLWRyb3Bkb3duLW1lbnUtaXRlbSBsLXBtLWVwb3J0Zm9saW9kAhoPFgQfBAUpbC1kcm9wZG93bi1tZW51LWl0ZW0gbC1wbS1zdHVkZW50d29ya2xvYWQfA2hkAhsPFgIfBAUebC1kcm9wZG93bi1tZW51LWl0ZW0gbC1wbS1oZWxwZAIcDxUBIGwtZHJvcGRvd24tbWVudS1pdGVtIGwtcG0tbG9nb3V0ZAIDD2QWAgIBD2QWBAICDxYCHgtfIUl0ZW1Db3VudAIGFgxmD2QWAmYPFCsCB2QFWiBDb21tb25GdW5jdGlvbnMubWVhc3VyZUtwaSgnL1Jlc3RBcGkvY29tbW9uL2twaS92MScsIA0KICAgICAgICAgICAgICAgICAgICAxMTgsIDEyODQsIDEpOwUiL0NvdXJzZS9jb3Vyc2UuYXNweD9Db3Vyc2VJZD0xMDA5OAUJZGFzaGJvYXJkZQUIbWFpbm1lbnUFDFlsZWlza2F0c2F1c2QCAQ9kFgJmDxQrAgdkBVogQ29tbW9uRnVuY3Rpb25zLm1lYXN1cmVLcGkoJy9SZXN0QXBpL2NvbW1vbi9rcGkvdjEnLCANCiAgICAgICAgICAgICAgICAgICAgMTE4LCAxMjg1LCAxKTsFJC9QbGFubmVyL1BsYW5uZXIuYXNweD9Db3Vyc2VJRD0xMDA5OAUHcGxhbm5lcmUFCG1haW5tZW51BQxTdXVubml0ZWxtYXRkAgIPZBYCZg8UKwIHZAVaIENvbW1vbkZ1bmN0aW9ucy5tZWFzdXJlS3BpKCcvUmVzdEFwaS9jb21tb24va3BpL3YxJywgDQogICAgICAgICAgICAgICAgICAgIDExOCwgMTI4NiwgMSk7BUdodHRwczovL3NwYWNlLml0c2xlYXJuaW5nLmNvbS9Gb2xkZXIvcHJvY2Vzc2ZvbGRlci5hc3B4P0ZvbGRlcklEPTc1NzQzNAUJcmVzb3VyY2VzZQUIbWFpbm1lbnUFCVJlc3Vyc3NpdGQCAw9kFgJmDxQrAgdkBVogQ29tbW9uRnVuY3Rpb25zLm1lYXN1cmVLcGkoJy9SZXN0QXBpL2NvbW1vbi9rcGkvdjEnLCANCiAgICAgICAgICAgICAgICAgICAgMTE4LCAxMjg3LCAxKTsFJS9TdGF0dXNBbmRGb2xsb3dVcE1lbnU/Q291cnNlSWQ9MTAwOTgFBnN0YXR1c2UFCG1haW5tZW51BQhSYXBvcnRpdGQCBA9kFgJmDxUHAFogQ29tbW9uRnVuY3Rpb25zLm1lYXN1cmVLcGkoJy9SZXN0QXBpL2NvbW1vbi9rcGkvdjEnLCANCiAgICAgICAgICAgICAgICAgICAgMTE4LCAxMjg5LCAxKTskL0NvdXJzZVBhcnRpY2lwYW50c1YyP0NvdXJzZUlEPTEwMDk4DHBhcnRpY2lwYW50cwAIbWFpbm1lbnUMT3NhbGxpc3R1amF0ZAIFD2QWAmYPFCsCB2QFWSBDb21tb25GdW5jdGlvbnMubWVhc3VyZUtwaSgnL1Jlc3RBcGkvY29tbW9uL2twaS92MScsIA0KICAgICAgICAgICAgICAgICAgICAyMCwgMTI5OSwgMSk7BSEvQ291cnNlL0Fib3V0LmFzcHg/Q291cnNlSUQ9MTAwOTgFCHNldHRpbmdzZQUIbWFpbm1lbnUFDE9taW5haXN1dWRldGQCAw8WAh8KAgYWDGYPZBYEZg8UKwIDZAUiL0NvdXJzZS9jb3Vyc2UuYXNweD9Db3Vyc2VJZD0xMDA5OAUIbWFpbm1lbnVkAgEPFQEMWWxlaXNrYXRzYXVzZAIBD2QWBGYPFCsCA2QFJC9QbGFubmVyL1BsYW5uZXIuYXNweD9Db3Vyc2VJRD0xMDA5OAUIbWFpbm1lbnVkAgEPFQEMU3V1bm5pdGVsbWF0ZAICD2QWBGYPFCsCA2QFR2h0dHBzOi8vc3BhY2UuaXRzbGVhcm5pbmcuY29tL0ZvbGRlci9wcm9jZXNzZm9sZGVyLmFzcHg/Rm9sZGVySUQ9NzU3NDM0BQhtYWlubWVudWQCAQ8VAQlSZXN1cnNzaXRkAgMPZBYEZg8UKwIDZAUlL1N0YXR1c0FuZEZvbGxvd1VwTWVudT9Db3Vyc2VJZD0xMDA5OAUIbWFpbm1lbnVkAgEPFQEIUmFwb3J0aXRkAgQPZBYEZg8VAwAkL0NvdXJzZVBhcnRpY2lwYW50c1YyP0NvdXJzZUlEPTEwMDk4CG1haW5tZW51ZAIBDxUBDE9zYWxsaXN0dWphdGQCBQ9kFgRmDxQrAgNkBSEvQ291cnNlL0Fib3V0LmFzcHg/Q291cnNlSUQ9MTAwOTgFCG1haW5tZW51ZAIBDxUBDE9taW5haXN1dWRldGQCBg8WAh8DaGQCBw8WAh4Fc3R5bGUFDWRpc3BsYXk6bm9uZTsWBAIBD2QWAmYPZBYCAgEPZBYCZg8WAh8EBSNjY2wtdHJlZW1lbnUgY2NsLXRyZWVtZW51IGwtbW9kZXJuIGQCAw9kFgICAQ9kFgJmDxYCHgV0aXRsZQUPUGlpbG90YSB2YWxpa2tvZAIID2QWAmYPFhAeBmhlaWdodAUDODAwHwsFGndpZHRoOiAxMDAlOyBib3JkZXI6IG5vbmU7HgRuYW1lBQhtYWlubWVudR4Vd2Via2l0QWxsb3dGdWxsU2NyZWVuBQR0cnVlHhJtb3phbGxvd2Z1bGxzY3JlZW4FBHRydWUeD2FsbG93RnVsbFNjcmVlbgUEdHJ1ZR4FYWxsb3cFFmNhbWVyYSAqOyBtaWNyb3Bob25lICoeA3NyYwUiL0NvdXJzZS9jb3Vyc2UuYXNweD9Db3Vyc2VJZD0xMDA5OGRkIkjO9SWQa+Kq4BMWDItpXlFAxLE=" />
+</div>
+
+
+<script src="https://cdn.itslearning.com/v2025.3.3.13981/javascript/controls/PersonalMessagesManager.js" type="text/javascript"></script>
+<script src="https://cdn.itslearning.com/v2025.3.3.13981/javascript/controls/PersonalMessagesComposer.js" type="text/javascript"></script>
+<script src="https://cdn.itslearning.com/v2025.3.3.13981/javascript/Generated/itslearningweb.generated.js" type="text/javascript"></script>
+<script src="https://cdn.itslearning.com/v2025.3.3.13981/javascript/itslTop.js" type="text/javascript"></script>
+<script src="https://cdn.itslearning.com/v2025.3.3.13981/javascript/embedLoader.js?omit_script=true&amp;lazy=1&amp;iframe=1&amp;cdn=https%3a%2f%2foembeditslearning.com&amp;isIframelyEnabled=true" type="text/javascript"></script>
+<script src="https://cdn.itslearning.com/v2025.3.3.13981/javascript/commonControlLibrary.min.js" type="text/javascript"></script>
+<script src="https://cdn.itslearning.com/v2025.3.3.13981/javascript/Controls/LeftMenu.js" type="text/javascript"></script>
+<script src="https://cdn.itslearning.com/v2025.3.3.13981/javascript/jquery.hotkeys/jquery.hotkeys.js" type="text/javascript"></script>
+<script src="https://cdn.itslearning.com/v2025.3.3.13981/javascript/jsTree_pre1.0_stable/jquery.jstree.js" type="text/javascript"></script>
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="324A2813" />
+</div>
+        
+
+<div id="l-header">
+    <div id="MainMenu" class=""></div>
+    <div id="OldMessages" class="h-position-r">
+        <div id="ctl00_PersonalResponsiveMenu_MessagesPopup" class="itsl-messages-popup-container ccl-context-dialog-content" style=""></div>
+    </div>
+</div>
+
+<script>
+    window.MainMenu = {"antiForgeryHeaderName":"__ITSL_ANTIFORGERY_TOKEN__","antiForgeryHeaderValue":"yqYaqmqd2wEDoggAAMZWBgBscHI0c3VpeG40enJieWsxMmJpdXN0bG7XujxZaI40o+GXbUAZVyT5yoFKDHZRwnJL6dqwf0aIiVK+EeRxcsIvsshNDZhF3k7D3aD4Vwt4PAVkkok3jILc","menuItems":[{"id":"l-menu-course","target":null,"cssClass":null,"label":"Kurssit","labelVisible":true,"menu":false,"selected":false,"url":"/CourseCards","ping":"/RestApi/common/kpi/v1?MeasureSection=77\u0026Measurement=1678\u0026MeasureContext=1"},{"id":"l-menu-updates","target":null,"cssClass":null,"label":"Päivitykset","labelVisible":true,"menu":false,"selected":false,"url":"/main.aspx?TextURL=Dashboard%2fDashboard.aspx%3fLocationType%3dPersonal%26DashboardType%3dMyPage","ping":"/RestApi/common/kpi/v1?MeasureSection=77\u0026Measurement=1679\u0026MeasureContext=1"},{"id":"l-menu-calendar","target":null,"cssClass":null,"label":"Kalenteri","labelVisible":true,"menu":false,"selected":false,"url":"/main.aspx?TextURL=Calendar%2fSchedule.aspx\u0026Item=l-menu-calendar","ping":"/RestApi/common/kpi/v1?MeasureSection=77\u0026Measurement=1681\u0026MeasureContext=1"},{"id":"l-menu-customlinks","target":null,"cssClass":null,"label":"Linkit","labelVisible":true,"menu":true,"selected":false,"url":"#main","ping":"/RestApi/common/kpi/v1?MeasureSection=77\u0026Measurement=1683\u0026MeasureContext=1","menuItems":[{"id":null,"target":"_blank","cssClass":"l-tab-menu-text l-menu-customlinks_0","label":"Intra","labelVisible":true,"menu":false,"selected":false,"url":"https://opiskelija.bc.fi","ping":"/RestApi/common/kpi/v1?MeasureSection=77\u0026Measurement=1685\u0026MeasureContext=1"},{"id":null,"target":"_blank","cssClass":"l-tab-menu-text l-menu-customlinks_1","label":"Wilma","labelVisible":true,"menu":false,"selected":false,"url":"http://bc.inschool.fi","ping":"/RestApi/common/kpi/v1?MeasureSection=77\u0026Measurement=1685\u0026MeasureContext=1"},{"id":null,"target":"_blank","cssClass":"l-tab-menu-text l-menu-customlinks_2","label":"Eduhouse","labelVisible":true,"menu":false,"selected":false,"url":"https://app.eduhouse.fi/","ping":"/RestApi/common/kpi/v1?MeasureSection=77\u0026Measurement=1685\u0026MeasureContext=1"}]}],"secondaryMenu":{"title":"Koodaajakoulutus WP25K Wordpress \u0026 React 🎀","type":"course","colour":"clay--100","showSecondaryMenu":true,"menuItems":[{"id":"dashboard","target":"mainmenu","cssClass":null,"label":"Yleiskatsaus","labelVisible":true,"menu":false,"selected":false,"url":"/Course/course.aspx?CourseId=10098","ping":"https://space.itslearning.com/RestApi/common/kpi/v1?MeasureSection=118\u0026Measurement=1284\u0026MeasureContext=1"},{"id":"planner","target":"mainmenu","cssClass":null,"label":"Suunnitelmat","labelVisible":true,"menu":false,"selected":false,"url":"/Planner/Planner.aspx?CourseID=10098","ping":"https://space.itslearning.com/RestApi/common/kpi/v1?MeasureSection=118\u0026Measurement=1285\u0026MeasureContext=1"},{"id":"resources","target":"mainmenu","cssClass":null,"label":"Resurssit","labelVisible":true,"menu":false,"selected":false,"url":"https://space.itslearning.com/Folder/processfolder.aspx?FolderID=757434","ping":"https://space.itslearning.com/RestApi/common/kpi/v1?MeasureSection=118\u0026Measurement=1286\u0026MeasureContext=1"},{"id":"status","target":"mainmenu","cssClass":null,"label":"Raportit","labelVisible":true,"menu":false,"selected":false,"url":"/StatusAndFollowUpMenu?CourseId=10098","ping":"https://space.itslearning.com/RestApi/common/kpi/v1?MeasureSection=118\u0026Measurement=1287\u0026MeasureContext=1"},{"id":"participants","target":"mainmenu","cssClass":null,"label":"Osallistujat","labelVisible":true,"menu":false,"selected":false,"url":"/CourseParticipantsV2?CourseID=10098","ping":"https://space.itslearning.com/RestApi/common/kpi/v1?MeasureSection=118\u0026Measurement=1289\u0026MeasureContext=1"}],"settingItems":{"options":[{"id":"settings","target":"mainmenu","label":"Ominaisuudet","labelVisible":true,"url":"/Course/About.aspx?CourseID=10098","link":true,"icon":"https://cdn.itslearning.com/v2025.3.3.13981//Common/semiotic/icons/fa6/gear--gray--700.c0fd9785.svg","iconsize":24,"ping":"https://space.itslearning.com/RestApi/common/kpi/v1?MeasureSection=20\u0026Measurement=1299\u0026MeasureContext=1"}],"exitStudentViewUrl":null,"isStudentViewEnabled":false}},"selectSubMenuItemMessageName":"setSelectedSecondaryMenuItemMessage","assets":{"logo":"https://cdn.itslearning.com/v2025.3.3.13981/images/logo-badge.svg","avatarSrc":"https://cdn.itslearning.com/v2025.3.3.13981/Common/semiotic/icons/multicolour/user-alternative.f213c7cc.svg","bars":"https://cdn.itslearning.com/v2025.3.3.13981//Common/semiotic/icons/bars-square--gray--700.89aa75e9.svg","caretUp":"https://cdn.itslearning.com/v2025.3.3.13981//Common/semiotic/icons/caret-up-square--gray--700.1be395ed.svg","caretDown":"https://cdn.itslearning.com/v2025.3.3.13981//Common/semiotic/icons/caret-down-square--gray--700.87c4b2c2.svg"},"personalMessagingItems":[{"id":"Notification","src":"https://cdn.itslearning.com/v2025.3.3.13981//Common/semiotic/icons/bell--gray--700.b139817a.svg","label":"Ilmoituksia","url":null,"target":null,"badgeId":null,"badge":0},{"id":"im2-open-button","src":"https://cdn.itslearning.com/v2025.3.3.13981//Common/semiotic/icons/comment-bubble--gray--700.91106e1b.svg","label":"Pikaviestit","url":null,"target":null,"badgeId":"im2-badge","badge":0}],"personalMenu":{"profileName":"Lindholm, Silvana","profileRole":"Opiskelija","profilePictureDescription":"","personalMenuItems":[{"label":"Omat asetukset","labelVisible":true,"url":"/YourSettings/Index","target":"_parent","divider":false},{"label":"Omat tiedostot","labelVisible":true,"url":"/main.aspx?TextURL=FileExplorer%2fBrowseFiles.aspx","target":"_parent","divider":false},{"label":null,"labelVisible":false,"url":null,"target":null,"divider":true},{"label":"Arviointikirja","labelVisible":true,"url":"/main.aspx?TextURL=Person%2fPersonAssessment.aspx","target":"_parent","divider":false},{"label":"e-portfolio","labelVisible":true,"url":"/main.aspx?TextURL=eportfolio%2fprivate%2fv1%2fmain","target":"_parent","divider":false},{"label":null,"labelVisible":false,"url":null,"target":null,"divider":true},{"label":"Kirjaudu ulos","labelVisible":true,"url":"/TopMenu/TopMenu/Logout","target":"_parent","divider":false}],"mainUrl":"/main.aspx?TextURL=","searchUrl":"/Search/index?Search=True\u0026Text=","showSearch":false},"menuItemTypes":{"instantMessage":"im2-open-button","messages":"Messages","notification":"Notification","office":"Office","gmail":"Gmail"},"isInstantMessageEnabled":true,"isModernInstantMessagesEnabled":true,"showSearchTop":true,"showSearchPersonal":false,"userSearchUrl":"","contentSearchUrl":"/main.aspx?TextURL=Search%2findex","updateStatusEnabled":true,"runKeepAliveRequestTimeoutMilliseconds":3000,"runKeepAliveRequestIntervalMilliseconds":600000,"logoutScript":{"functionName":"autologout","function":"function () { LogOut(); }"},"menuTerms":{"new":"{0} uusi","searchLabel":"Haku","searchPlaceholder":"Haku","skipLink":"Siirry sisältöön","userMenu":"Henkilökohtainen valikko","hamburgerLabel":"Päävalikko","studentView":"Oppija-näkymä","settings":"Asetukset","secondaryNavLabel":"Kurssi","menuLabel":"Valikko","viewingAsStudent":"Tarkastele oppijana","exitStudentView":"Poistu oppijan näkymästä","settingsMenu":"Lisää","searchContent":"Etsi sisältöä","searchDescription":"Etsi kursseja, projekteja, suunnitelmia, resursseja ja aktiviteetteja.","searchErrorMessage":"Jokin meni pieleen. Mahdollisia syitä voivat olla ongelmat palvelussamme tai että verkkosi on epävakaa. Jos yhteytesi on kunnossa ja näet tämän viestin toistuvasti, ota yhteyttä järjestelmänvalvojaan.","noResults":"Ei tuloksia","noResultsDescription":"Vinkki: Tarkista oikeinkirjoitus tai kokeile uudelleen toisella hakusanalla.","clearSearch":"Tyhjennä haku","course":"Kurssi","project":"Projekti","archived":"Arkistoitu","loading":"Ladataan...","advancedSearch":"Tarkennettu haku","resultsLinkSingular":"Kaikki tulokset (1)","resultsLinkPlural":"Kaikki tulokset ({0})","userSearch":"Käyttäjähaku"},"isEmbedded":false};
+</script>
+<script type="module" src="https://cdn.itslearning.com/v2025.3.3.13981/application/menu/mainmenu.bundle.js"></script>
+<link rel="stylesheet" href="https://cdn.itslearning.com/v2025.3.3.13981/application/menu/mainmenu.modern.bundle.css">
+
+
+
+<script src="https://cdn.itslearning.com/v2025.3.3.13981/javascript/commonControlLibrary.min.js"></script>
+<script type="text/javascript" src="https://cdn.itslearning.com/v2025.3.3.13981/javascript/controls/PersonalResponsiveMenu.js"></script>
+
+<div class="c-messages c-messages-popup c-secondary-nav c-secondary-nav--right" aria-label="submenu" aria-hidden="true" aria-haspopup="true">
+    <!-- Insert html for popup/flyout-menu here -->
+</div>
+<div id="im2-overlay-wrapper" style="display: none;" ></div>
+
+        <script type="text/javascript" src="https://cdn.itslearning.com/v2025.3.3.13981/javascript/SignalRCoreScripts/signalr.min.js"></script>
+        <script type="text/javascript" src="https://cdn.itslearning.com/v2025.3.3.13981/javascript/Crypto/aes.js"></script>
+<link rel="stylesheet" href="https://cdn.itslearning.com/v2025.3.3.13981/apps/instant-message/index.min.css" /><script type="module" src="https://cdn.itslearning.com/v2025.3.3.13981/apps/instant-message/index.min.js"></script>            <script>
+                window.IM2Config = {"instantMessageOverlayWrapperId":"im2-overlay-wrapper","contentAreaIframeClientId":"ctl00_ContentAreaIframe","instantMessageButtonId":"im2-open-button","instantMessageBadgeId":"im2-badge","antiForgeryHeaderSettings":{"headerName":"__ITSL_ANTIFORGERY_TOKEN__","headerValue":"86Ufqmqd2wEDoggAAMZWBgBscHI0c3VpeG40enJieWsxMmJpdXN0bG6L/iTqiANSO1FdHAHoo0Qqe45L9gXTw9txz0WCyBVWRbwOHj8WRxkVTYall/93pdJmo6y12jL/7Bc9Zq1EYjpk"},"i18n":{"cancel":"Peruuta","close":"Sulje","send":"Lähetä","buttonCaptionNew":"Uusi viesti","messagesHeader":"Viestit","threadNoOther":"{0} ja {1}","xColonY":"{0}: {1}","youAsSender":"Sinä: {0}","errorMessage":"Jotain meni pieleen. Yritä uudelleen.","loading":"Ladataan...","emptyMessageTitle":"Ei viestejä","oneParticipant":"1 osallistuja","xParticipants":"{0} osallistujaa","overlayEmptyStateDescription":"Lähetetyt ja vastaanotetut viestisi ovat aina saatavilla täällä.","noMessagesYet":"Ei vielä viestejä","writeNewMessageTo":"Kirjoita uusi viesti henkilölle {0}","backTooltip":"Takaisin omiin keskusteluihin","backToConversationX":"Takaisin keskusteluun \u0027{0}\u0027","optionsTooltip":"Keskusteluvaihtoehdot","messageTextAreaLabel":"Viesti","writeNewMessageToXAndY":"Kirjoita uusi viesti vastaanottajille {0} ja {1}","writeNewMessageToXYAndZ":"Kirjoita uusi viesti vastaanottajille {0}, {1} ja {2}","writeNewMessageToXYZAndWMore":"Kirjoita uusi viesti vastaanottajille {0}, {1}, {2} ja {3}muulle","writeNewMessageToXAsWellAsY":"Kirjoita uusi viesti kurssille {0} ja henkilölle {1}","writeNewMessageToXAsWellAsYAndZ":"Kirjoita uusi viesti kurssille {0} ja henkilöille {1} ja {2}","writeNewMessageToXAsWellAsYZAndWMore":"Kirjoita uusi viesti kurssille {0}, henkilöille {1} ja {2} sekä {3} muulle","writeNewMessageToXAndYAsWellAsZ":"Kirjoita uusi viesti kurssille {0} ja {1} sekä henkilölle {2}","writeNewMessageToXAndYAsWellAsZAndWMore":"Kirjoita uusi viesti vastaanottajille {0}, {1} ja {2} sekä {3} muulle","conversationTheParticipantsInX":"Tämä on keskustelun aloitus kurssin {0} osallistujien kanssa","conversationTheParticipantsInXAndY":"Tämä on keskustelun aloitus kurssien {0} ja {1} osallistujien kanssa","conversationTheParticipantsInXYAndZ":"Tämä on keskustelun aloitus kurssien {0}, {1} ja {2} osallistujien kanssa","conversationTheParticipantsInXYZAndWMore":"Tämä on keskustelun aloitus kurssien {0}, {1}, {2} osallistujien ja {3} muun kanssa","conversationTheParticipantsInXAsWellAsYAndZ":"Tämä on keskustelun aloitus kurssin {0} osallistujien sekä henkilöiden {1} ja {2} kanssa","conversationTheParticipantsInXAsWellAsYZAndWMore":"Tämä on keskustelun aloitus kurssin {0} osallistujien, henkilöiden {1} ja {2} sekä {3} muun kanssa","conversationTheParticipantsInXAndYAsWellAsZ":"Tämä on keskustelun aloitus kurssien {0} ja {1} osallistujien sekä henkilön {2} kanssa","conversationTheParticipantsInXAndYAsWellAsZAndW":"Tämä on keskustelun aloitus kurssien {0} ja {1} osallistujien, henkilön {2} sekä {3} muun kanssa","conversationWithXAndYOtherParticipants":"Keskustelu {0} ja {1} muun osallistujan kanssa","conversationWithX":"Tämä on keskustelun aloitus henkilön {0} kanssa","conversationWithXAndY":"Tämä on keskustelun aloitus henkilöiden {0} ja {1} kanssa","conversationWithXYAndZ":"Tämä on keskustelun aloitus henkilöiden {0}, {1} ja {2} kanssa","conversationWithXYZAndWMore":"Tämä on keskustelun aloitus henkilöiden {0}, {1} ja {2} sekä {3} muun kanssa","courseConversationX":"Kurssin keskustelu, {0}","courseConversationBetweenYouAndX":"Keskustelu sinun ja käyttäjän {0} välillä.","groupConversation":"Ryhmäkeskustelu, {0}.","groupConversationBetweenYouAndX":"Ryhmäkeskustelu sinun ja käyttäjien {0} välillä.","noUnreadMessages":"Lukemattomia viestejä ei ole.","youHaveUnreadMessages":"Sinulla on lukemattomia viestejä.","lastMessageFromYouX":"Viimeisin viesti sinulta. {0}","lastMessageFromXY":"Viimeisin viesti käyttäjältä {0}. {1}","youWrote":"Kirjoitit","xWrote":"{0} kirjoitti","youSharedAnAttachment":"Jaoit liitteen","xSharedAnAttachment":"{0} jakoi liitteen","automaticallyLoadMessages":"Lataa viestit automaattisesti","automaticallyLoadConversations":"Lataa keskustelut automaattisesti","showMoreConversations":"Näytä lisää keskusteluja","showMoreMessages":"Näytä lisää viestejä","goToLastMessage":"Siirry viimeiseen viestiin","goToXNewMessages":"Siirry {0} uuteen viestiin","goTo1NewMessage":"Siirry 1 uuteen viestiin","xNewMessages":"{0} uutta viestiä","oneNewMessage":"1 uusi viesti","attachFilesToMessage":"Liitä tiedostoja viestiin","writeMessageToX":"Kirjoita viesti vastaanottajalle {0}","writeMessageToAll":"Kirjoita viesti kaikille","loggedOutError":"Olet kirjautunut ulos. Päivitä sivu, jotta voit kirjautua uudelleen sisään.","offlineError":"Näyttää siltä, että et ole yhteydessä verkkoon. Yritä uudelleen myöhemmin.","xNotAvailableError":"{0} ei ole saatavilla","youCannotSendMessagesToMoreThanXRecipients":"Voit lähettää viestin enintään {0} vastaanottajalle.","errorFileSizeIsTooBig":"Tiedosto on liian suuri","errorAttachmentsExceedCombinedMaximumAllowedFileSize":"Liitteiden yhteenlaskettu koko ylittää suurimman sallitun tiedostokoon ({0} Mt).","errorAttachmentFailedToUpload":"Virhe tiedoston latauksessa","errorAttachmentInvalidFileType":"Valitettavasti et voi lähettää {0}-tiedostoja","errorAttachmentHasErrors":"Viestiä ei ole lähetetty. Liitteessä on virheitä.","errorAttachmentsHaveErrors":"Viestiä ei ole lähetetty. {0} liitteessä on virheitä.","deleteConfirm":"Poista viesti","deleteCancel":"Peruuta","optionsForMessageFromYou":"Viestiasetukset sinulta.","optionsForMessageFromX":"Viestiasetukset henkilöltä {0}.","sentAtX":"Lähetetty kello {0}.","deleteMessage":"Poista viesti","deleteMessageQuestion":"Poistetaanko viesti?","yourMessageWillBeDeletedForEveryoneInThisChat":"Viestisi poistetaan kaikilta tähän keskusteluun osallistuvilta.","thisMessageWillBeDeletedForEveryoneInThisChat":"Tämä viesti poistetaan kaikilta tähän keskusteluun osallistuvilta.","permanentDeletionModalDescription":"Haluatko poistaa tämän viestin pysyvästi?","edit":"Muokkaa","messageEdited":"Muokattu","editErrorMessage":"Emme pystyneet muokkaamaan viestiä. Yritä myöhemmin uudelleen.","messageEditedSuccessfully":"Viestiä on muokattu","editAcceptButtonText":"Hyväksy viestin muutokset","editCancelButtonText":"Hylkää viestin muutokset","forwarded":"Välitetty","xForwardedY":"{0} välitti {1}","optionsForMessageForwardedFromYou":"Viestiasetukset viestille, jonka sinä välitit","optionsForMessageForwardedFromX":"Viestiasetukset viestille, jonka välitti {0}.","youForwardedX":"Sinä välitit käyttäjälle {0}","deleteErrorMessage":"Emme pystyneet poistamaan viestiä. Yritä myöhemmin uudelleen.","newMessage":"Uusi viesti","newMessageSendIndividualMessageToEachRecipient":"Lähetä yksittäinen viesti kullekin vastaanottajalle","newMessageSendIndividualMessageToEachCourseParticipant":"Lähetä yksittäinen viesti kullekin kurssin osallistujalle","newMessageStartGroupConversation":"Aloita ryhmäkeskustelu","searchForPeopleCoursesOrProjects":"Etsi käyttäjiä, kursseja tai projekteja","searchForPeopleOrProjects":"Etsi ihmisiä tai projekteja","newMessageWriteAMessage":"Kirjoita viesti","recipientNoMatchesFound":"Tuloksia ei löytynyt","searchNoResultsFound":"Hakusanalla ei löytynyt tuloksia","renameConversation":"Nimeä keskustelu uudelleen","leaveConversation":"Poistu keskustelusta","closeConversation":"Sulje keskustelu","participantsX":"Osallistujat ({0})","youRepliedX":"Sinä vastasit {0}","xRepliedY":"{0} vastasi {1}","conversationSettings":"Keskusteluasetukset","messagesDisabled":"Viestit ovat pois käytöstä","conversationSettingsParticipantOptions":"Osallistujan {0} asetukset","reportAbuse":"Ilmoita väärinkäytöksestä","delete360ReportThread":"Poista kaikki viikoittaiset päivitykset","delete360ReportThreadQuestion":"Haluatko varmasti poistaa kaikki viikoittaiset päivitykset tästä kurssista?","deleteConversation":"Poista keskustelu","deleteConversationQuestionMark":"Poistetaanko keskustelu?","deleteConversationExplanationText":"Keskustelua ei voi palauttaa, ja historia poistetaan.","theConversationHasBeenDeleted":"Kysymys on poistettu.","conversationXHasBeenDeleted":"Kysymys “{0}” on poistettu.","blockMessages":"Estä viestit","addRecipients":"Lisää vastaanottajia","messagesIndividualMessageOptions":"Viestin asetukset","messagesEmptyMessageError":"Kirjoita viesti ennen lähettämistä.","messagesEmptyRecipientsError":"Valitse vastaanottajat ennen lähettämistä.","messagesNoOptionsSelectedError":"Valitse, millaisen viestin haluat lähettää","messagesSelectedItemX":"Valinta: {0}","messagesOneMatchFound":"Löytyi yksi tulos","messagesXMatchesFound":"Löytyi {0} tulosta","reopenConversation":"Avaa keskustelu uudelleen","unblock":"Poista esto","unblockConversation":"Poista viestien esto","messagesBlockedFromX":"Lähettäjän {0} viestit on estetty","messagesXCanSendYouAgain":"{0} voi lähettää sinulle viestejä uudelleen","messagesXIsNotAvailable":"{0} ei ole saatavilla","conversationIsNotAvailableAnymore":"Keskustelu ei ole enää saatavilla","conversationXIsNotAvailableAnymore":"{0} ei ole enää saatavilla","requiredField":"Pakollinen kenttä","searchInConversation":"Hae keskustelusta","searchCurrentConversation":"Hae keskustelusta","searchForMessages":"Hae viestejä","exitSearch":"Poistu hausta","loadingSearchResults":"Ladataan hakutuloksia","noResultsFoundForX":"Hakuehdolla {0} ei löytynyt tuloksia","resultsForX":"Tulokset haulle {0}","oneResult":"1 tulos","searchXOfY":"{0} / {1}","searchXOfYResults":"Tulos {0}/{1}","previousResult":"Edellinen tulos","nextResult":"Seuraava tulos","backToConversationOptions":"Takaisin keskusteluasetuksiin","xResults":"{0} tulosta","xResult":"{0} tulos","search":"Hae","searchConversations":"Hae keskustelusta","unread":"Lukemattomat","sentByMe":"Minun lähettämäni","attachment":"Liite","resultsForXStringYCount":"Tulokset haulle {0}: {1}","resultsForXStringInYFiltersZCount":"Tulokset haulle{0} kohteessa{1}: {2}","resultsForXStringWithAttachmentYCount":"Tulokset haulle {0}, jotka sisältävät liitteen: {1}","resultsForXStringInYFiltersWithAttachmentZCount":"Tulokset haulle {0} kohteessa {1}, jotka sisältävät liitteen: {2}","resultsInXFiltersYCount":"Tulokset kohteessa {0}: {1}","resultsWithAttachmentXCount":"Tulokset, jotka sisältävät liitteen: {0}","resultsInXFiltersWithAttachmentYCount":"Tulokset kohteessa {0}, jotka sisältävät liitteen: {1}","noResultsFoundForXStringInYFilters":"Hakuehdolla {0} kohteessa {1} ei löytynyt tuloksia","noResultsFoundForXStringWithAttachment":"Hakuehdolle {0} ei löytynyt tuloksia, jotka sisältävät liitteen","noResultsFoundForXStringInYFiltersWithAttachment":"Hakuehdolle {0} kohteessa {1} ei löytynyt tuloksia, jotka sisältävät liitteen","noResultsFoundInXFilters":"Hakuehdolla kohteessa {0} ei löytynyt tuloksia","noResultsFoundWithAttachment":"Hakuehdolle ei löytynyt tuloksia, jotka sisältävät liitteen","noResultsFoundInXFiltersWithAttachment":"Hakuehdolle kohteessa {0} ei löytynyt tuloksia, jotka sisältävät liitteen","resultsForXStringInYFilters":"Tulokset haulle{0} kohteessa {1}","resultsForXStringWithAttachment":"Tulokset haulle {0} jotka sisältävät liitteen:","resultsForXStringInYFiltersWithAttachment":"Tulokset haulle {0} kohteessa {1}, jotka sisältävät liitteen:","resultsInXFilters":"Tulokset kohteessa {0}","resultsWithAttachment":"Tulokset, jotka sisältävät liitteen:","resultsInXFiltersWithAttachment":"Tulokset kohteessa{0}, jotka sisältävät liitteen:","backToSearch":"Takaisin hakuun","oneConversationMatchingX":"1 keskustelu, joka vastaa {0}","xConversationsMatchingY":"{0} keskustelua, jotka vastaa {1}","allConversationResults":"Kaikki keskustelun tulokset","reply":"Vastaa","save":"Tallenna","view360Reports":"Näytä 360°-raportit","markAsUnread":"Merkitse lukemattomaksi","newMessages":"Uudet viestit","remove":"Poista","removeX":"Poista {0}","removeXQuestion":"Poista {0}?","removeParticipantExplanation":"Poistetut osallistujat eivät enää näe keskusteluhistoriaa. Voit lisätä ne takaisin milloin tahansa.","removeUserError":"{0} ei voitu poistaa keskustelusta.","forward":"Välitä","messageForwarded":"Välitetty viesti","xSharedAttachmentInY":"{0} jakoi liitteen keskustelussa {1}","xWroteInConversation":"{0} kirjoitti ryhmäkeskusteluun","xSharedAttachmentInConversation":"{0} jakoi liitteen ryhmäkeskustelussa","xWroteInY":"{0} kirjoitti ryhmäkeskusteluun {1}","xSharedAttachmentInConversationWithY":"{0} jakoi liitteen ryhmäkeskustelussa käyttäjän {1} kanssa","xWroteInConversationWithY":"{0} kirjoitti keskusteluun käyttäjän {1} kanssa","forwardMessageHeader":"Välitä viesti","leave":"Poistu","leaveConversationX":"Poistu {0}?","leaveConversationExplanation":"Et enää näe keskusteluhistoriaa.","closeConversationQuestion":"Sulje keskustelu?","closeConversationExplanation":"Keskusteluhistoria on edelleen käytettävissä. Voit avata keskustelun myöhemmin uudelleen.","conversationClosed":"Suljettu keskustelu","messagesAreDisabledForX":"{0} ei voi nähdä viestejä.","messagesAreDisabledForAllRecipients":"Kaikki vastaanottajat eivät näe viestejä.","messagesAreDisabledForXOneRecipientWillReceiveMessage":"{0} ei voi nähdä viestejä. 1 vastaanottaja saa viestin.","messagesAreDisabledForXOthersWillReceiveMessage":"{0} ei voi nähdä viestejä. Muut vastaanottajat saavat viestin.","messagesAreDisabledForXOneRecipientWillBeAdded":"{0} ei voi nähdä viestejä. 1 vastaanottaja lisätään.","messagesAreDisabledForXOtherRecipientsWillBeAdded":"{0} ei voi nähdä viestejä. Muut vastaanottajat lisätään.","allCurrentXParticipantsOfYZArePartOfThisConversation":"Kaikki {1}{2}-ohjelman nykyiset {0}osallistujat ovat osa tätä keskustelua.","addParticipants":"Lisää osallistujia","addParticipantsMessage":"Osallistujia lisätty","addParticipantMessage":"Osallistuja lisätty","reachedLimitWithXInGroupConversation":"Olet saavuttanut rajan {0} ryhmäkeskustelun osallistujaa.","addParticipantReachedLimitWithXInGroupConversation":"Osallistuja lisätty. Olet nyt saavuttanut rajan {0} ryhmäkeskustelun osallistujaa.","addParticipantsReachedLimitWithXInGroupConversation":"Osallistuja lisätty. Olet nyt saavuttanut rajan {0} ryhmäkeskustelun osallistujaa.","addParticipantsSelectAtLeastOneUser":"Valitse vähintään 1 käyttäjä","addParticipantsYouCanAddXMoreParticipantsLimitIsY":"Voit lisätä vain {0} osallistujaa. Raja on {1} osallistujaa.","addParticipantsYouCanAddOneMoreParticipantsLimitIsY":"Voit lisätä vain 1 osallistujan. Raja on {0} osallistujaa.","yourRelationships":"Omat suhteesi","youHaveNoRelationships":"Sinulla ei ole suhteita.","andXMore":"... ja {0} lisää.","removeMessage":"Poista viesti","thisMessageWasRemoved":"Tämä viesti poistettiin. Osallistujat eivät enää näe sitä.","removeMessageQuestion":"Poistetaanko viesti?","participantsWillNoLongerSee":"Osallistujat eivät enää näe viestiä.","youReportedX":"Ilmoitit: {0}","xReportedY":"{0} ilmoitti: {1}","lastMessageReportByYouX":"Viimeinen viesti on sinun raporttisi: {0}","lastMessageReportByXY":"Viimeinen viesti on raportti, jonka teki {0}: {1}","messageWasRemoved":"Tämä viesti poistettiin","reported":"Ilmoitettu","youReportedXDescription":"Sinä ilmoitit {0}","xReportedYDescription":"{0} ilmoitti {1}","viewConversation":"Näytä keskustelu","conversationRemovedParticipantsCanNoLongerAccessIt":"Keskustelu poistettiin. Osallistujat eivät voi enää käyttää sitä.","youReportedAConversation":"Ilmoitit keskustelun","youReportedXName":"Sinä ilmoitit {0}","xReportedYName":"{0} ilmoitti {1}","xReportedAConversation":"{0} ilmoitti keskustelun","xReportedYZ":"{0} ilmoitti {1}: {2}","xReportedAConversationY":"{0} ilmoitti keskustelun: {1}","youReportedXY":"Sinä ilmoitit {0}: {1}","youReportedAConversationX":"Ilmoitit keskustelun: {0}","lastMessageForwardedByYouX":"Viimeisimmän viestin välitit sinä. {0}","lastMessageForwardedByXY":"Viimeisimmän viestin välitti {0}. {1}","reportAbuseTeacherWhoWillReviewYourReport":"Opettaja / kouluttaja, joka tarkistaa raporttisi","reportAbuseHasBeenSent":"Raportti on lähetetty.","reportAbuseExplainWhyItIsAbuse":"Selitä, miksi se on väärinkäyttöä","reportAbuseForConversation":"Ilmoita väärinkäytöstä keskustelua varten","reportAbuseForConversationX":"Ilmoita väärinkäytöstä keskustelua varten: {0}","nameOfUserWithUserNameInParentheses":"{0} ({1})","openProfileCard":"Avaa profiili: {0}","useMassMessagingToMessageMultipleUsers":"Käytä {0}massaviestintää {1} lähettääksesi viestin useille käyttäjille organisaation puolesta","xParticipantsCannotSeeMessagesColon":"{0} osallistujaa ei voi nähdä viestejä:","oneParticipantCannotSeeMessagesColon":"1 osallistuja ei voi nähdä viestejä.","xParticipantsCannotSeeMessages":"{0} osallistujaa ei voi nähdä viestejä."},"customerSettings":{"oneWayMassMessagesEnabled":false,"reportAbuseEnabled":true,"userBlockingEnabled":true},"constants":{"errorResponseMessages":{"fileIsTooLarge":"File is too large","tooManyRecipientsInThread":"Too many recipients in thread."},"maxPersonsPerThread":300,"instantMessageMaxAttachmentFileSize":20971520,"genericPersonImageUrl":"https://cdn.itslearning.com/v2025.3.3.13981/Common/semiotic/icons/multicolour/user-alternative.f213c7cc.svg","commaSeparator":", ","cultureSpecificPeriodSeparator":". ","personNameSeparator":"; ","illegalFileNameCharacters":["\"","<",">","|","\u0000","\u0001","\u0002","\u0003","\u0004","\u0005","\u0006","\u0007","\b","\t","\n","\u000b","\f","\r","\u000e","\u000f","\u0010","\u0011","\u0012","\u0013","\u0014","\u0015","\u0016","\u0017","\u0018","\u0019","\u001a","\u001b","\u001c","\u001d","\u001e","\u001f",":","*","?","\\","/"],"illegalFileExtensions":["js","exe","com","ps1","bat","cmd","vbs","msi","msp","dll","ocx"]},"urls":{"courseParticipants":"/ContentArea/ContentArea.aspx?LocationType=1\u0026LocationID=%7b0%7d\u0026TextURL=%2fCourseParticipantsV2%3fCourseID%3d%257b0%257d","projectParticipants":"/ContentArea/ContentArea.aspx?LocationType=2\u0026LocationID=%7b0%7d\u0026TextURL=%2fProject%2fParticipants%3fprojectId%3d%257b0%257d","massMessages":"/Broadcasting/Broadcasting/Overview?hideBackLink=False"},"internalUserIds":{"system":400000},"personId":415430,"customerId":2210,"canSendBroadcastMassMessage":false,"isStaff":false,"isStudent":true,"openInstantMessagesKpiSettings":{"measureSection":28,"measurement":1687,"measureContext":1},"measureKpiUrl":"/RestApi/common/kpi/v1"};
+            </script>
+    <script>
+    const instantMessageSettings = {"app":{"antiForgeryHeaderName":"__ITSL_ANTIFORGERY_TOKEN__","antiForgeryHeaderValue":"86Ufqmqd2wEDoggAAMZWBgBscHI0c3VpeG40enJieWsxMmJpdXN0bG5bY2wjQ8i+WEBWieCDNAdUzUquCQKivxmlx3S997svTu57P2N+gByp0qbANgkivOTKUGRpkSmgFgcnimY2Cg5f","is_instant_message_system_enabled":true,"enableModernInstantMessages":true,"signal_r_endpoint":"dummy value","signalRUrl":"https://signalr.itslearning.com/InstantMessageHub"}};
+
+    if (typeof(window.itslearning) != 'object'){
+        window.itslearning = {};
+    }
+
+    if (typeof(window.itslearning.instantmessaging) != 'object') {
+        window.itslearning.instantmessaging = {};
+    }
+
+    if (typeof(window.itslearning.settings) != 'object') {
+        window.itslearning.settings = {};
+    }
+
+    for (var property in instantMessageSettings) {
+        window.itslearning.settings[property] = instantMessageSettings[property];
+    }
+    </script>
+
+
+
+<div id="notifications-overlay-wrapper" style="display: none;" ></div>
+
+<script>
+    window.personalNotificationsConfig =  {"antiForgeryHeaderSettings":{"headerName":"__ITSL_ANTIFORGERY_TOKEN__","headerValue":"aAUiqmqd2wEDoggAAMZWBgBscHI0c3VpeG40enJieWsxMmJpdXN0bG54/x1gCg1DkNaiw7MfTHNPMRkxAzww12uNKRpsEecTdbDR348A4qQH8Rdznujh5zk1b0zMR7Clnc2rHQmP3Jk9"},"i18n":{"notifications":"Ilmoituksia","showAll":"Näytä kaikki","emptyMessageTitle":"Ilmoituksia ei ole","emptyMessageDescription":"Jatka eteenpäin. Tämä näyttö on tyhjä. Ilmoitamme, jos jotakin merkittävää tapahtuu.","close":"Sulje","errorMessage":"Jotain meni pieleen. Yritä uudelleen.","loading":"Ladataan...","help":"Ohje","unread":"Ei luettu"},"helpLinkKpiSettings":{"measureSection":98,"measurement":719,"measureContext":1},"overlayOpenButtonId":"Notification","overlayWrapperId":"notifications-overlay-wrapper","showAllLink":"/main.aspx?StartUrl=%2fnotification%2fNotifications.aspx","showHelp":true,"helpTopicUrl":"https://space.itslearning.com/help.aspx?CID=2210\u0026LID=17\u0026DefLanguage=17\u0026URL=ApplicationHelp_CSH.htm!2023","measureKpiUrl":"/RestApi/common/kpi/v1"};
+</script>
+
+<script type="module" src="https://cdn.itslearning.com/v2025.3.3.13981/apps/topmenu/index.min.js"></script>
+<link rel="stylesheet" href="https://cdn.itslearning.com/v2025.3.3.13981/apps/topmenu/index.min.css" />
+
+
+        <div id="ctl00_TopNavigationContainer" class="l-main-content-header clearfix">
+            
+    <link rel="stylesheet" href="https://cdn.itslearning.com/v2025.3.3.13981/apps/contentarea-main/index.min.css" />
+        <script type="module" src="https://cdn.itslearning.com/v2025.3.3.13981/apps/contentarea-main/index.min.js"></script>
+        <script type="text/javascript">
+            window.copyCourseConfig = {"courseId":10098,"locationType":1,"userId":415430,"isCourseInCopyState":false,"shouldTriggerAutomaticCopyCourse":false,"isTeacherInCourse":false,"checkIfCopyingCourseIsInProgressInMs":60000,"getCourseCopyStatusEndpoint":"~/RestApi/courses/{courseId}/copy/status/v1","showContentAreaSimpleFeedbackPostMessage":"showContentAreaSimpleFeedback","courseCopyStatusNotInProgress":"NotInProgress","courseCopyStatusInProgress":"InProgress","courseCopyStatusLearningToolElementsInProgress":"LearningToolElementsCopyInProgress","courseCopyStatusPlannerFailed":"PlannerFailed","courseCopyStatusPartlyFailed":"PartlyFailed","courseCopyStatusFailed":"Failed","contentAreaIframeClientId":"ctl00_ContentAreaIframe","isCourseInProgressOrFailed":false};
+        </script>
+        
+            <div class="l-header-mask"></div>
+        </div>
+        <div style="position: relative; display: none;">
+            
+            <div class="l-header-mask"></div>
+        </div>
+        
+        <main>
+            <section class="l-main">
+                <aside id="ctl00_Sidebar" class="l-main-sidebar js-sidebar" style="display:none;">
+                    <div class="l-sidebar-mask"></div>
+                    
+    <a href="#ctl00_TreeMenuTogglerPlaceHolder_TreeToggler" class="treemenu__skiplink">
+        Ohita puuvalikko
+    </a>
+    <div id="ctl00_TreeMenu_ViewPort" class="treemenu-viewport" style="display: none;">
+        <nav id="ctl00_TreeMenu_TreeMenu_C" role="navigation" class="ccl-treemenu ccl-treemenu l-modern "></nav>
+    </div>
+    <script type="text/javascript">
+        //<![CDATA[
+        var treeMenu = $('#ctl00_TreeMenu_TreeMenu_C');
+        var selectedElementId = "0";
+        var usesSimpleMenu = "False";
+        var errorStateDescriptions = {};
+
+        var notFocusingOnElement = false;
+
+        var isRefreshing = false; // Set to true when treemenu is busy
+        var wasFocusedFirstTime = false;
+
+        function getUrlParameterByName(name) {
+            var match = RegExp('[?&]' + name + '=([^&]*)')
+                .exec(window.location.search);
+
+            return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+        }
+
+        $(function setupTreeMenu() {
+            restoreContentAreaTreeMenu('Course', 10098);
+
+            isRefreshing = true;
+            // Hide the treemenu until it's completely loaded
+            treeMenu.on("loaded.jstree", function () {
+                $(".treemenu-viewport").show();
+            });
+
+            // When selecting has been triggered on any link
+            treeMenu.on("trigger_selected", "a", function () {
+                var element = $(this);
+                treeMenu.jstree('open_node', element);
+                if (!notFocusingOnElement) {
+                    element.focus();
+                }
+            });
+
+            var currentNavigationItem = getUrlParameterByName('ElementID');
+            if (!currentNavigationItem) {
+                // If not specified, set to dashboard node
+                currentNavigationItem = $('#dashboard');
+            }
+            var lastSelected = $(".jstree-clicked");
+            // Bind selecting to after jstree has finished loading. This selects current item
+            // when querystring contains the elementid, e.g. after a session expired and you go to previously visited element's page
+            treeMenu.on("reselect.jstree", function (event, data) {
+
+                // ON SELECT
+                treeMenu.on("select_node.jstree", function (e, d) {
+                    var currentNode = $(d.rslt.obj);
+                    if (currentNode.hasClass('jstree-togglable')) {
+                        return false;
+                    }
+                    // Store selected
+                    lastSelected = currentNode.children("a:first");
+                    return true;
+                });
+
+                // ON OPEN
+                treeMenu.on("open_node.jstree", function (e, d) {
+                    var currentNode = $(d.rslt.obj);
+                    if (currentNode.hasClass('jstree-togglable')) {
+                        // Don't select the togglables
+                        treeMenu.jstree('deselect_node', currentNode);
+                        treeMenu.jstree('open_node', currentNode);
+                        if (lastSelected) {
+                            // If something was previously selected, select it again
+                            lastSelected.addClass('jstree-clicked');
+                        }
+                    } else {
+                        return true;
+                    }
+                });
+
+                // ON CLOSE
+                treeMenu.on("close_node.jstree", function (e, d) {
+                    var currentNode = $(d.rslt.obj);
+                    if (currentNode.hasClass('jstree-togglable') || currentNode.hasClass('folder')) {
+                        // Don't select the togglables
+                        treeMenu.jstree('deselect_node', currentNode);
+                        treeMenu.jstree('close_node', currentNode);
+                        if (lastSelected) {
+                            // If something was previously selected, select it again
+                            lastSelected.addClass('jstree-clicked');
+                        }
+                    } else {
+                        return true;
+                    }
+                });
+
+                // Try to select the item on client load
+                if (currentNavigationItem == 'planner') {
+                    selectedId = $('#planner');
+                } else if (currentNavigationItem == 'settings') {
+                    selectedId = $('#settings');
+                } else if (currentNavigationItem == 'status') {
+                    selectedId = $('#status');
+                } else if (currentNavigationItem == 'dashboard') {
+                    selectedId = $('#dashboard');
+                } else if (currentNavigationItem == 'participants') {
+                    selectedId = $('#participants');
+                } else if (currentNavigationItem == 'links') {
+                    selectedId = $('#links');
+                } else if (currentNavigationItem == 'student360reports') {
+                    selectedId = $('#360reports');
+                } else {
+                    var selectedId = $('#item' + currentNavigationItem);
+                }
+                if (selectedId.length) {
+                    treeMenu.jstree('deselect_all');
+                    treeMenu.jstree('select_node', selectedId);
+                    selectedId = selectedId.find("a").first();
+                    selectedId.trigger('trigger_selected');
+                }
+                isRefreshing = false;
+            });
+        });
+
+        /**
+        * Reloads a folder with and selects a node after refresh is done
+        */
+        function reloadFolder(folderNodeId, nodeId, doNotSelectElementOnAdd, doNotFocusElementOnAdd) {
+            if (nodeId && nodeId.length > 0) {
+                selectedElementId = nodeId.split('item')[1];
+            }
+            isRefreshing = true;
+            // Callback after refresh - will select the node
+            var selectItemCallback = function () {
+
+                if (nodeId && nodeId.length > 0) {
+                    var cachedValue = notFocusingOnElement;
+                    if (doNotFocusElementOnAdd != null) {
+                        notFocusingOnElement = doNotFocusElementOnAdd;
+                    }
+                    SelectCurrentNavigationItem(nodeId, true, doNotSelectElementOnAdd);
+                    notFocusingOnElement = cachedValue;
+                } else {
+                    // If nodeId is not set, deselect all
+                    treeMenu.jstree('deselect_all');
+                }
+                isRefreshing = false;
+            };
+
+            var callbackFunction = function () {
+                treeMenu.jstree("refresh", '#' + folderNodeId, selectItemCallback);
+            };
+            // Open node to make sure that refresh works. If it's closed, refresh wont trigger an ajax call
+            if ($("#" + folderNodeId).hasClass('jstree-closed')) {
+                treeMenu.jstree("open_node", "#" + folderNodeId, callbackFunction, false);
+            } else {
+                // do the callback function if the node was open
+                callbackFunction();
+            }
+        }
+
+        function showContentAreaTreeMenu() {
+            $('#ctl00_Sidebar').removeClass('l-desktop-leftmenu-hidden').addClass('l-desktop-leftmenu-visible').css('display', '');
+            treeMenu.resize();
+
+            updateContentAreaTreeMenuState(true, 'Course', 10098);
+
+            
+            if (!wasFocusedFirstTime) {
+                wasFocusedFirstTime = true;
+                treeMenu.jstree("set_focus");
+            }
+            
+        }
+
+        function hideContentAreaTreeMenu() {
+            $('#ctl00_Sidebar').removeClass('l-desktop-leftmenu-visible').addClass('l-desktop-leftmenu-hidden').hide();
+
+            updateContentAreaTreeMenuState(false, 'Course', 10098);
+        }
+
+        function restoreContentAreaTreeMenu(locationType, locationId) {
+            var state = loadContentAreaTreeMenuState(locationType, locationId);
+
+            if (state) {
+                if (state.isShown) {
+                    showContentAreaTreeMenu();
+                } else {
+                    hideContentAreaTreeMenu();
+                }
+            }
+        }
+
+        function loadContentAreaTreeMenuState(locationType, locationId) {
+            if (window.history.state && window.history.state.contentAreaTreeMenuIsShown !== undefined) {
+                return {
+                    isShown: window.history.state.contentAreaTreeMenuIsShown
+                };
+            }
+
+            if (window.sessionStorage) {
+                var contentAreaTreeMenuState = JSON.parse(window.sessionStorage.getItem('contentAreaTreeMenuState') || '{}');
+                if (contentAreaTreeMenuState) {
+                    if (contentAreaTreeMenuState.locationType === locationType && contentAreaTreeMenuState.locationId === locationId) {
+                        return contentAreaTreeMenuState;
+                    }
+                }
+            }
+
+            return undefined;
+        }
+
+        function updateContentAreaTreeMenuState(isShown, locationType, locationId) {
+            
+            var historyState = window.history.state || {};
+
+            historyState.contentAreaTreeMenuIsShown = isShown;
+
+            window.history.replaceState(historyState, null, null);
+
+            
+            if (window.sessionStorage) {
+                var contentAreaTreeMenuState = {
+                    locationType: locationType,
+                    locationId: locationId,
+                    isShown: isShown
+                };
+
+                window.sessionStorage.setItem('contentAreaTreeMenuState', JSON.stringify(contentAreaTreeMenuState));
+            }
+        }
+
+        /**
+        * Selects an item in the tree. If the item is not visible ( by being in a lazy node ), it will attempt to load the folder with it
+        */
+        function SelectCurrentNavigationItem(navItem, stopReload, doNotSelectElementOnAdd) {
+            if (window.itslTop[CCL.CommonWindowMessages.MessageNames.suspendUpdateBreadCrumbsAndNavigation]) {
+                return;
+            }
+            var selectedId;
+            // Usually navItem is on the form itemxxx. Exceptions are Planner, settings, status.
+            if (navItem == 'planner') {
+                selectedId = $('#planner');
+            } else if (navItem == 'settings') {
+                selectedId = $('#settings');
+            } else if (navItem == 'status') {
+                selectedId = $('#status');
+            } else if (navItem == 'dashboard') {
+                selectedId = $('#dashboard');
+            } else if (navItem == 'participants') {
+                selectedId = $('#participants');
+            } else if (navItem == 'links') {
+                selectedId = $('#links');
+            } else if (navItem == '#student360reports') {
+                selectedId = $('# 360reports');
+            } else {
+                selectedId = $('#' + navItem);
+            }
+
+            if (selectedId && selectedId.length) {
+                // Checks if selectedId node is a folder
+                var isFolder = false;
+                if (selectedId.hasClass('folder')) {
+                    isFolder = true;
+                }
+
+                treeMenu.jstree('deselect_all');
+                treeMenu.jstree('select_node', selectedId);
+                selectedId = selectedId.find("a").first();
+
+                // If the node is a folder we dont want to expand it automatically, because this will cause an issue if you drag and drop a folder when is already expanded
+                if (!isFolder && !doNotSelectElementOnAdd) {
+                    selectedId.trigger('trigger_selected');
+                }
+            } else {
+                // Node was not visible. We have to try and open the folders by reloading root and selecting that item (this will open all parent folders needed)
+                selectedElementId = navItem.split('item')[1];
+                if (selectedElementId > 0 && !stopReload) {
+                    var contentAreaRootFolderId = "item757434";
+                    if (!isRefreshing) {
+                        // This call may interfere with opening nodes on initial get, which is why we need to check the isRefreshing variable
+                        reloadFolder(contentAreaRootFolderId, navItem);
+                    }
+                }
+            }
+
+            setIframeDefaultHeight();
+
+            if (navItem.length > 3 && (navItem.startsWith("item") && navItem.split("item")[1] > 0 || navItem.startsWith("add"))) {
+                navItem = "resources";
+            }
+
+            var isNewMainMenuEnabled = true;
+            if (isNewMainMenuEnabled) {
+                document.dispatchEvent(
+                    new CustomEvent('setSelectedSecondaryMenuItem',
+                    {
+                        detail: { id: navItem }
+                    })
+                );
+            } else {
+                var menu = $(".l-main-content-nav");
+                var selectedMenuItem = menu.find("#link-" + navItem);
+
+                if (selectedMenuItem.length) {
+                    menu.find("a").removeClass("active");
+                    selectedMenuItem.addClass("active");
+                }
+            }
+
+            
+        }
+
+        
+        function isTreeEmpty() {
+            var folders = $(".folder");
+            return folders.length === 1 && $(folders[0]).hasClass("jstree-leaf");
+        }
+
+        // This function is normally used when tree is simple menu. It will trigger a page refresh to go to the requested folderId
+        function openFolder(folderId, forcePageRefresh, elementId) {
+            var navItem = $("#item" + folderId);
+            // Only refresh page if folder is not present or if refresh if forced (e.g. folder title is changed, so folder should be reloaded fully)
+            if (usesSimpleMenu === "True") {
+                if (!isTreeEmpty() && (navItem.length < 1 || navItem.hasClass("jstree-leaf") || forcePageRefresh)) {
+                    var currentBaseUrl = window.location.href.split('?')[0];
+                    var url = currentBaseUrl + "?FolderID=" + folderId;
+                    if (elementId) {
+                        url = url + "&ElementID=" + elementId;
+                    }
+                    setNewLocationHref(url);
+                }
+            } else {
+                treeMenu.jstree("open_node", navItem, null, false);
+            }
+        }
+
+        function setNewLocationHref(href) {
+            var locationId = getUrlParameterByName('LocationID');
+            if (locationId && locationId.length > 0) {
+                href += '&LocationID=' + locationId;
+            }
+            var locationType = getUrlParameterByName('LocationType');
+            if (locationType && locationType.length > 0) {
+                href += '&LocationType=' + locationType;
+            }
+            window.location.href = href;
+        }
+
+        function isNodeSelected(nodeId) {
+            var selectedNodeId = treeMenu.jstree("get_selected").attr("id");
+            return (selectedNodeId == nodeId);
+        }
+
+        // Listen for postmessages in order to do crossdomain javascript calls to refresh tree menu
+        CommonFunctions.attachPostMessageEventListener($(window), 'RefreshTreeMenu', function (data) {
+            reloadFolder('item' + data.folderId, 'item' + data.elementId);
+            notFocusingOnElement = data.notFocusingOnElement;
+        });
+
+        CommonFunctions.attachPostMessageEventListener($(window), CommonWindowMessages.MessageNames.refreshTreeMenuRootFolder, function (data) {
+            if (!isRefreshing) {
+                var contentAreaRootFolderId = "item" + 757434;
+                reloadFolder(contentAreaRootFolderId, contentAreaRootFolderId);
+            }
+        });
+        //]]>
+    </script>
+
+                    <footer id="sidebar-footer" class="treemenu-viewport">
+                        
+    <a href="#" id="ctl00_TreeMenuTogglerPlaceHolder_TreeToggler" onclick="toggleTree();" aria-hidden="true" style="display: block; float: right;" title="Piilota valikko">
+            <svg id="expand_tree" width="30px" height="30px" style="display: none;">
+                <polyline points="9,9 17,15 9,21" stroke="#757575" stroke-width="2" fill="none" />
+                <polyline points="15,9 24,15 15,21" stroke="#757575" stroke-width="2" fill="none" />
+            </svg>
+            <svg id="collapse_tree" width="30px" height="30px">
+                <polyline points="15,9 7,15 15,21" stroke="#757575" stroke-width="2" fill="none" />
+                <polyline points="21,9 14,15 21,21" stroke="#757575" stroke-width="2" fill="none" />
+            </svg>
+        </a>
+        <script type="text/javascript">
+            var isCollapsed = false;
+            var orgSidebarWidth = null;
+            function toggleTree() {
+                var toggler = $('#ctl00_TreeMenuTogglerPlaceHolder_TreeToggler');
+            var sidebar = $('#ctl00_Sidebar');
+            if (isCollapsed) {
+                treeMenu.show();
+                toggler.attr('title', 'Piilota valikko');
+                document.getElementById('expand_tree').style.display = 'none';
+                document.getElementById('collapse_tree').style.display = 'block';
+                sidebar.width(orgSidebarWidth);
+            } else {
+                if (orgSidebarWidth === null) {
+                    orgSidebarWidth = sidebar.width();
+                }
+                treeMenu.hide();
+                toggler.attr('title', 'Näytä valikko');
+                    document.getElementById('expand_tree').style.display = 'block';
+                    document.getElementById('collapse_tree').style.display = 'none';
+                    sidebar.width('32px');
+                }
+                isCollapsed = !isCollapsed;
+            }
+        </script>
+    
+
+                    </footer>
+                </aside>
+                <section class="l-main-content">
+                    <a id="main" class="h-hidden"></a>
+                    
+                    <div style="-webkit-overflow-scrolling:touch;overflow:auto;">
+                        <iframe src="/Course/course.aspx?CourseId=10098" id="ctl00_ContentAreaIframe" height="800" style="width: 100%; border: none;" name="mainmenu" webkitAllowFullScreen="true" mozallowfullscreen="true" allowFullScreen="true" allow="camera *; microphone *"></iframe>
+                    </div>
+
+                </section>
+            </section>
+        </main>
+        <div id="ctl00_GlobalFeedback_Container">
+	
+    <div id="ctl00_GlobalFeedback_Feedback_InformationFeedbackContainer" class="ccl-info-feedback" style="display:none;">
+		<div id="ctl00_GlobalFeedback_Feedback_InformationFeedbackBodyContainer" class="ccl-info-feedback-body">
+			<span class="ccl-info-feedback-message"></span>
+		</div><div class="ccl-info-feedback-close-container">
+
+		</div><div class="ccl-info-feedback-buttons">
+			<div class="ccl-info-feedback-extra-container">
+
+			</div><div class="ccl-info-feedback-dismiss-container">
+
+			</div>
+		</div>
+	</div>
+
+</div>
+    
+
+<script type="text/javascript">
+//<![CDATA[
+
+var settings = {"serviceUrl":"/RestApi/personal/statistics/events/v1","antiForgery":{"headerName":"__ITSL_ANTIFORGERY_TOKEN__","headerValue":"ke0Qqmqd2wEDoggAAMZWBgBscHI0c3VpeG40enJieWsxMmJpdXN0bG7JvB8gs0zPJPqom8i14J5wt0ELCvCYrpSYxv3WPjzf8Y9h7B1+AAujbgW7KW3/oDhlYBcP+Ooipz2YCigyedMN"},"trackIframeFocus":true};
+window.personActivityLogger = window.personActivityLogger || new PersonActivityLogger(settings);
+window.personActivityLogger.initialize(60, 
+                    [{"Type":0,"DateTime":null,"Payload":{"LocationType":1,"LocationId":10098,"EndDateTime":null}}]);
+
+window.addEventListener('load', () => {
+var p = new PersonalResponsiveMenuInit('PersonalMenuInboxInstance');
+p.settings = {"isIos":false,"searchTextEvent":"textSearch","searchPlaceholder":"***","isAndroidBrowser":false,"shouldOpenMessagesPopUp":false,"hasInternalMessages":true,"isInternalMessagesDefaultAccount":true,"hasCloudEmail":false,"hasEmail":false,"isModernMainMenuEnabled":true,"cssClasses":{"popupContainer":"itsl-legacymessages-popup","opaque":"h-opaque","unreadMessageItem":"itsl-message-item-unread"},"messageCounterIds":{"internalMessagesCounter":"pm-inbox-messages-not-mobile","cloudMessagesCounter":"pm-inbox-cloud-email-not-mobile","emailMessagesCounter":"pm-inbox-email-not-mobile"},"terms":{"errorMessage":"Tapahtui järjestelmävirhe. Yritä uudelleen tai ota yhteys hallinnoijaan.","close":"Sulje"},"urls":{"personalMessageSourceUrl":"/RestApi/message/getPersonalMessages"},"onlineInfoCookie":{"name":"OnlineInfo","unreadMessagesKey":"ui","unreadEmailKey":"ue"},"primaryCloudEmailType":"Gmail","queryStringParameters":{"emailAccountsRedirect":"EmailAccountsRedirect","emailRedirect":"EmailRedirect","accountID":"AccountID","textURL":"TextURL"}};
+p.controls = 
+{
+    personalMenuLink: $('#personal-menu-link'),
+    personalMenuDropDown: $('#personal-menu-dd'),
+    inboxMenuLink: $('#Messages'),
+    messageDialogContent: $('#ctl00_PersonalResponsiveMenu_MessagesPopup'),
+    notificationLink: $('#Notification'),
+    notificationsBadge: $('#notifications-badge'),
+    messagesBadge: $('#ctl00_PersonalResponsiveMenu_InboxLink_badge'),
+    gmailCloudEmailIconLink: $('#ctl00_PersonalResponsiveMenu_GmailCloudEmailIconLink'),
+    gmailCloudEmailBadge: $('#ctl00_PersonalResponsiveMenu_GmailCloudEmailIconLink_badge'),
+    office365CloudEmailIconLink: $('#ctl00_PersonalResponsiveMenu_Office365CloudEmailIconLink'),
+    office365CloudEmailBadge: $('#ctl00_PersonalResponsiveMenu_Office365CloudEmailIconLink_badge'),
+    emailMenuLink: $('#ctl00_PersonalResponsiveMenu_EmailInboxLink'),
+    emailBadge: $('#ctl00_PersonalResponsiveMenu_EmailInboxLink_badge')
+};
+p.toggleMenuLinkFunction = function() {
+    var link = document.getElementById('personal-menu-link');
+    var pmUserStatusImage = document.getElementById('pm-user-status-image');
+    link.dataset.menuOpen === 'true' ? 
+        pmUserStatusImage.title = 'Avaa oma valikko' :  
+        pmUserStatusImage.title = 'Sulje oma valikko';
+
+    link.dataset.menuOpen = link.dataset.menuOpen === 'true' ? false : true;
+    link.setAttribute('aria-expanded', link.getAttribute('aria-expanded') === 'false');
+    var personalMenuDropDown = document.getElementById('personal-menu-dd');
+    personalMenuDropDown.hidden = !personalMenuDropDown.hidden;
+};
+p.initialize();
+
+window.OnUpdateInboxInfo = function(unreadInternalMessages, office365CloudEmailUnreadMessages, gmailCloudEmailUnreadMessages, unseenNotifications, unreadEmailMessages, topEmailAccountId)
+{
+    p.setUnreadInternalMessages(unreadInternalMessages);
+    p.setUnreadCloudEmailMessages(office365CloudEmailUnreadMessages, gmailCloudEmailUnreadMessages);
+    p.unseenNotifications = unseenNotifications;
+    p.setUnreadEmailMessages(unreadEmailMessages, topEmailAccountId);
+    p.setCounts();
+};
+
+});
+function OpenWindow(url)
+{
+    window.open(url,"","height=340,width=560,toolbar=no,scrollbars=yes,status=no,menubars=no,resizable=no");
+}
+
+ TrackNetworkLatency({"networkLatencyPingUrl":"/RestApi/networklatency/ping/v1","networkLatencySaveMeasureUrl":"/RestApi/networklatency/measure/v1"});
+
+function SelectCurrentMenuItem(menuItem, currentUrl)
+{ 
+    var top = window.itslTop || window.top;
+
+    if(top[CCL.CommonWindowMessages.MessageNames.suspendUpdateBreadCrumbsAndNavigation])
+    {
+        return;
+    }
+
+    if (menuItem)
+    {
+        setTimeout( function () {
+            document.dispatchEvent(new CustomEvent('setSelectedMenuItem', {
+                detail: {
+                    id: menuItem
+                }
+            })
+        );
+        }, 100 );
+    }
+}
+CCL.CommonFunctions.attachPostMessageEventListener($(window), 'selectCurrentMenuItem', function(data) {
+    SelectCurrentMenuItem(data.extendedData.menuItemCssClass, data.extendedData.currentUrl);
+});
+
+                function HideSubMenu(menuItem, currentUrl)
+                    {
+                    var submenu = document.querySelector('.l-main-content-header');
+
+                    if (submenu)
+                    { 
+                        submenu.hidden = true;
+                    }
+                }
+            
+document.addEventListener('DOMContentLoaded', function()
+{
+var l = new LeftMenu();
+l.settings = {"treeMenuClientID":"ctl00_TreeMenu_ViewPort","contentAreaIframeClientID":"ctl00_ContentAreaIframe"};
+l.initialize();
+window["resizeCallback"] = function(iframeSize)
+{
+    l.recalculateHeight(iframeSize.height);
+    
+};
+}
+);document.addEventListener('DOMContentLoaded', function() { IframeResizer.registerDefaultHeight({"iframeClientId":"ctl00_ContentAreaIframe","setIframeDefaultHeightFunctionName":"setIframeDefaultHeight","setIframeDefaultHeightImmediatelyAndOnResize":true}, resizeCallback);});window.addEventListener('load', function() { IframeResizer.registerDefaultHeight({"iframeClientId":"ctl00_ContentAreaIframe","setIframeDefaultHeightFunctionName":"setIframeDefaultHeight","setIframeDefaultHeightImmediatelyAndOnResize":true}, resizeCallback);});$(function() { IframeClickEventHelper.handleDocumentClickBubblingOnTop(); });
+CommonFunctions.attachPostMessageEventListener($(window), ['maskNavigationBar', 'unmaskNavigationBar'], function(data, source) {
+    var showMask = (data.messageName === 'maskNavigationBar');
+    $('.l-header-mask, .l-sidebar-mask').toggle(showMask);
+    $('body').toggleClass('l-has-mask', showMask);
+    if(source !== source.top) {
+        CommonFunctions.makePostMessageCall(source, new CommonWindowMessages.GenericMessage(data.messageName));
+    }
+});
+new ItslearningWeb.TreeLink.GenericTreeLinkNavigationHandler({"TreeLinksGetInfoForCustomNavigation":"/RestApi/treelinks/treeLinks/{id}/{sourceElementId}/v1","Terms":{"ErrorOccurred":"Tapahtui virhe.","TreeLinkIsInLibrary":"Tämä linkki vie toiseen resurssiin, jota ei voi esikatsella kirjastossa."},"KpiSettings":{"url":"/RestApi/common/kpi/v1","section":74,"context":1,"addTreeLinkMeasurement":1387,"clickOnTreeLinkMeasurement":1388}}, 'ctl00_GlobalFeedback_Container');
+$(function() {
+    var $informationFeedback = $("#ctl00_GlobalFeedback_Feedback_InformationFeedbackContainer");
+    var settings = {"MainContainerClientId":"ctl00_GlobalFeedback_Container","HideDismissButton":true,"InitialMessage":null,"OnSeenCallback":null,"DismissButtonText":"Ok","CloseButtonInnerHtml":"\u003csvg viewBox=\"0 0 2000 2000\" role=\"presentation\"\u003e\u003cpath xmlns=\"http://www.w3.org/2000/svg\" d=\"M998.039 1108.56l722.974 721.26c29.792 29.722 77.998 29.796 107.882.165l.002-.001a76.498 76.498 0 0 0 .199-108.442l-722.448-721.591 722.904-721.19a76.084 76.084 0 0 0 .064-107.667l-.975-.974c-29.701-29.702-77.852-29.717-107.57-.033L998.039 892.262 279.176 174.254c-29.987-29.952-78.573-29.937-108.543.033l-.002.002a76.778 76.778 0 0 0-22.487 54.332 76.781 76.781 0 0 0 22.553 54.308L889.43 999.951 170.446 1718.08a76.183 76.183 0 0 0 .197 108.004l.439.435c29.764 29.511 77.776 29.439 107.449-.165l719.508-717.794z\" /\u003e\u003c/svg\u003e","CloseButtonTitle":"Sulje","CssClasses":{"FeedbackContainer":"ccl-info-feedback","BodyContainer":"ccl-info-feedback-body","ButtonsContainer":"ccl-info-feedback-buttons","CloseButtonContainer":"ccl-info-feedback-close-container","MessageText":"ccl-info-feedback-message","CloseButton":"ccl-info-feedback-closebutton","ExtraButton":"ccl-info-feedback-extrabutton","DismissButton":"ccl-info-feedback-dismissbutton","IsVisible":null}};
+    new CCL.InformationFeedback($informationFeedback, settings);
+
+    if (settings.InitialMessage) {
+        var feedbackContainer = $('#ctl00_GlobalFeedback_Container');
+        CCL.InformationFeedback.showFeedback(feedbackContainer, settings.InitialMessage);
+    }
+});
+$(function() { IframeClickEventHelper.registerDocumentClickBubblingOnTop(); });attachOnReadySendTitleToParent();$(function(){ItslearningWeb.TopMenu.NavigationControlScript({"MenuIframe":$("#ctl00_ContentAreaIframe"),"LeftArea":$("#ctl00_Sidebar"),"MainSidebar":$(".l-main-sidebar")}, {"TopmenuExpanded":true,"UseLeftmenuToggler":true,"LeftMenuExpanded":true,"ClientIds":{"TopMenuArea":"l-header","TopNavigationContainer":"ctl00_TopNavigationContainer","CourseOverviewBackLinkContainer":null,"LeftArea":"ctl00_Sidebar"},"CssClasses":{"DesktopLeftmenuVisible":"l-desktop-leftmenu-visible","DesktopLeftmenuHidden":"l-desktop-leftmenu-hidden","DesktopLefttoggleExpand":"l-desktop-lefttoggle-expand","DesktopLefttoggleCollapse":"l-desktop-lefttoggle-collapse"},"IsEmbedded":false});});
+$(function () {
+
+$("#ctl00_TreeMenu_TreeMenu_C").focusin(function() {   $("#ctl00_TreeMenu_TreeMenu_C").jstree("enable_hotkeys"); });
+
+$("#ctl00_TreeMenu_TreeMenu_C").jstree({
+    "plugins": [ "html_data", "ui", "hotkeys"  ],
+    "core" : { 
+                "animation": 0,
+                "initially_open": ["item757434"],
+                "open_parents": true,
+                "set_focus_on_init": false,
+                "strings":
+                    {
+                        "loading": "Ladataan..."
+                    }
+             },
+    "ui" : {
+                "initially_select": [""],
+                "selected_parent_close": false
+             }
+       
+    ,"html_data" : {"data" : "<ul><li id='item757434' class=' folder  jstree-closed'><a href='https://space.itslearning.com/Folder/processfolder.aspx?FolderID=757434' target='mainmenu'><img src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCB1jYAAAAAIAAc/INeUAAAAASUVORK5CYII=' alt=''>Resurssit</a></li></ul>"
+,"ajax" : {"url" : 
+function (nodeToBeOpened) {
+    if (nodeToBeOpened.length){
+        nodeToBeOpened.children(".temp-loading-container").remove();
+        var indicator = $("<ul class='temp-loading-container'><li class='temp-loading'>Ladataan...</li></ul>");
+        nodeToBeOpened.append(indicator);
+        indicator.show();
+    }
+
+    var url = "/ContentArea/ContentArea.aspx?LocationID=10098&LocationType=1";
+    
+    if (!nodeToBeOpened.hasClass("jstree-alternate"))
+    {
+        url += url.indexOf('?') >= 0 ? '&' : '?';
+        url += "isAlternate=true";
+    }
+    
+url += "&ElementId="+selectedElementId;
+
+
+    return url  ;
+},
+"success" : 
+function (data, status, xhr){
+    $(".temp-loading-container").remove();
+    
+}
+,
+"error" : 
+function (xhr, status, error){
+    $(".temp-loading").addClass("jstree-error").text('');
+    
+}
+,
+"data" : function (n) { return { id : n.attr ? n.attr("id") : 0 }; }
+}}
+    
+    
+    ,"hotkeys" : 
+            { 
+                "return": function() { 
+                    
+                    if (this.data.ui.hovered) { 
+                        this.data.ui.hovered.children("a:eq(0)").click();                         
+                        this.data.ui.hovered.children("input[type='checkbox']").click();
+                        //this is needed for IE8 to respond to click.
+                        this.data.ui.hovered.children("input[type='checkbox']").trigger('change');
+                    }
+                    return false; 
+                },
+                "shift+tab": function() {
+                    if (this.data.ui.tab_to_prev_element)
+                    {
+                        this.data.ui.tab_to_prev_element++;
+                        // clean this flag after 2 clicks)
+                        if (this.data.ui.tab_to_prev_element == 3) {
+                            this.data.ui.tab_to_prev_element = false;
+                        }
+                        return true;
+                    }
+                    this.data.ui.tab_to_prev_element = false; 
+                    var o = this.data.ui.hovered || this.data.ui.last_selected || -1;
+                    var hoveredNode = this._get_prev(o);
+                    if (hoveredNode && hoveredNode.length > 0)
+                    {
+                        this.hover_node(hoveredNode);
+                        var hovered = $(".jstree-hovered").first(); 
+                        if (hovered.length){
+                            hovered.focus();
+                        }
+                        return false;
+                    }                   
+                    this.data.ui.tab_to_prev_element = 1;
+                    this.dehover_node();
+                    this.deselect_all();
+                    this.disable_hotkeys();
+                    return true;
+                },
+                "tab": function() { 
+                    this.data.ui.tab_to_prev_element = false;
+                    var o = this.data.ui.hovered || this.data.ui.last_selected || -1;
+                    var hoveredNode = this._get_next(o);			    
+                    if (hoveredNode && hoveredNode.length > 0)
+                    {
+                        this.hover_node(hoveredNode);
+                        var hovered = $(".jstree-hovered").first(); 
+                        if (hovered.length){
+                            hovered.focus();
+                        }
+                        return false;
+                    }                                        
+                    this.dehover_node();
+                    this.deselect_all();
+                    this.disable_hotkeys();
+                    return true;
+                },
+                "down": function() { 
+                    var o = this.data.ui.hovered || this.data.ui.last_selected || -1;
+                    var hoveredNode = this._get_next(o);
+                    if (hoveredNode && hoveredNode.length > 0)
+                    {
+                        this.hover_node(hoveredNode);
+                        var hovered = $(".jstree-hovered").first(); 
+                        if (hovered.length){
+                            hovered.focus();
+                        }                        
+                        return false;
+
+                    }                    
+                    return true;
+                },
+                "up": function() { 
+                    var o = this.data.ui.hovered || this.data.ui.last_selected || -1;
+                    var hoveredNode = this._get_prev(o);
+                    if (hoveredNode && hoveredNode.length > 0)
+                    {
+                        this.hover_node(hoveredNode);
+                        var hovered = $(".jstree-hovered").first(); 
+                        if (hovered.length){
+                            hovered.focus();
+                        }
+                        return false;
+                    }  
+                    return true;
+                },
+                "left": function() {
+                    var o = this.data.ui.hovered || this.data.ui.last_selected;
+                    if (o) {
+                        if (o.hasClass("jstree-open")) { this.close_node(o); }
+                        else 
+                        { 
+                            var hoveredNode = this._get_prev(o);
+                            if (hoveredNode && hoveredNode.length > 0)
+                            {
+                                this.hover_node(hoveredNode);
+                                var hovered = $(".jstree-hovered").first(); 
+                                if (hovered.length){
+                                    hovered.focus();
+                                }
+                                return false;
+                            }
+                        }
+                    }
+                    return false;
+                },
+                "right": function() {
+                    var o = this.data.ui.hovered || this.data.ui.last_selected;
+                    if (o) {
+                        if (o.hasClass("jstree-closed")) { this.open_node(o); }
+                        else 
+                        {
+                            var hoveredNode = this._get_next(o);
+                            if (hoveredNode && hoveredNode.length > 0)
+                            {
+                                this.hover_node(hoveredNode);
+                                var hovered = $(".jstree-hovered").first(); 
+                                if (hovered.length){
+                                    hovered.focus();
+                                }
+                                return false;
+                            }
+                        }
+                    }
+                    return false;
+                },
+                "f2": false,
+                "del": false
+            }
+
+    
+    }
+)}
+).delegate(".ccl-treemenu a","click", function(e) {
+    // Do not open the node when in iframe-less mode, because clicking on a link refreshes the page and it will close the tree.
+    // This will save a call to the server. This request is done when the page has refreshed.
+    if (true) {
+        // Make the click on the link also open the node in addition to opening the url with correct target
+        if ($(this).parent().hasClass("jstree-togglable")) {
+            $("#ctl00_TreeMenu_TreeMenu_C").jstree("toggle_node"); // Nodes with the class that should be toggled
+        } else {
+            $("#ctl00_TreeMenu_TreeMenu_C").jstree("open_node");   // default is to only open, not close on link click
+        }
+    }
+
+    if (this.attributes.href && this.attributes.href.value && this.attributes.href.value.substr(this.attributes.href.value.length-1) != '#'){
+        if (parent.frames && this.target in parent.frames){
+            parent.frames[this.target].location.replace(this.attributes.href.value);
+        }
+        else {
+            window.open(this.href, this.target);
+        }
+    }
+    else {
+        return false;
+    }
+});
+//]]>
+</script>
+</form>
+
+    <script>
+        CommonFunctions.attachPostMessageEventListener($(window), ['registerExtraNavBar', 'unregisterExtraNavBar'], function(data, source) {
+            var addedNavBar = (data.messageName === 'registerExtraNavBar');
+            $('.l-main-content-header, #l-header').toggleClass("l-extra-nav-bar", addedNavBar);
+            CommonFunctions.makePostMessageCall(source, new CommonWindowMessages.GenericMessage(data.messageName));
+        });
+        CommonFunctions.attachPostMessageEventListener($(window), 'GetWindowLocationUrl', function (data, source) {
+            var message = {
+                messageName: 'GetWindowLocationUrl',
+                origin: window.location.protocol + '//' + window.location.host
+            };
+            CommonFunctions.makePostMessageCall(source, message);
+        });
+        CommonFunctions.attachPostMessageEventListener($(window), 'GetIframeScrollPosition', function (data, source) {
+            var message = {
+                messageName: 'GetIframeScrollPosition',
+                position: window.top.pageYOffset
+            };
+            CommonFunctions.makePostMessageCall(source, message);
+        });
+        attachSetIFrameTitlePostMessageEventListener('ctl00_ContentAreaIframe');
+
+        window[CCL.CommonWindowMessages.MessageNames.suspendUpdateBreadCrumbsAndNavigation] = false;
+        CommonFunctions.attachPostMessageEventListener($(window), CCL.CommonWindowMessages.MessageNames.suspendUpdateBreadCrumbsAndNavigation, function(data) {
+            window[CCL.CommonWindowMessages.MessageNames.suspendUpdateBreadCrumbsAndNavigation] = data.extendedData.suspend;
+        });
+
+        window[CCL.CommonWindowMessages.MessageNames.suspendExpandCollaplseContentAreaFrame] = false;
+        CommonFunctions.attachPostMessageEventListener($(window), CCL.CommonWindowMessages.MessageNames.suspendExpandCollaplseContentAreaFrame, function(data) {
+            window[CCL.CommonWindowMessages.MessageNames.suspendExpandCollaplseContentAreaFrame] = data.extendedData.suspend;
+        });
+
+         CommonFunctions.attachPostMessageEventListener($(window), 'setPopStatePropagationToBottom', function (data, source) {
+            window.addEventListener('popstate', function () {
+                var message = {
+                    messageName: 'handlePopStateFromTop'
+                };
+                CommonFunctions.makePostMessageCall(source, message);
+            });
+        });
+
+        CommonFunctions.attachPostMessageEventListener($(window), CommonWindowMessages.MessageNames.replaceTopFrame, (data) => {
+            if (data && data.url) {
+                window.location.replace(data.url);
+            }
+        });
+
+        CommonFunctions.attachPostMessageEventListener($(window), CommonWindowMessages.MessageNames.askWhetherItslearningIsEmbedded, (data, source) => {
+            
+        });
+
+        if ( itslTop.history.state ) {
+            SelectCurrentMenuItem( itslTop.history.state.menuItem );
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const skiplink = document.querySelector('#skipToContent');
+
+            if (skiplink) {
+                skiplink.addEventListener('click', () => {
+                    document.querySelector('#ctl00_ContentAreaIframe').contentWindow.focus();
+                })
+            }
+        });
+    </script>
+
+    
+
+        <div id="profileCard"></div>
+
+      
+            <div id="addCourse"></div>
+     
+	<script src="https://cdn.itslearning.com/v2025.3.3.13981/javascript/Controls/MainMenuDropDown.js"></script>
+    
+    <div id="AutoLogout">
+        <script>
+            window.autologout = function () { LogOut(); };
+            window.AutoLogout = {"antiForgeryHeaderName":"__ITSL_ANTIFORGERY_TOKEN__","antiForgeryHeaderValue":"zKQoqmqd2wEDoggAAMZWBgBscHI0c3VpeG40enJieWsxMmJpdXN0bG5wIczE+IOGXjrLbSxao6o996N5AfkuMX3sMr//hvIf9azrhvaJ7iK960/TTLw+cw2TyuUSgr7eL7LS0wYzqaiW","i18n":{"autologout_dialog_heading":"Haluatko pysyä kirjautuneena?","autologout_dialog_text":"Et ole ollut hetkeen aktiivinen, joten sinut kirjataan ulos {0} minuutin päästä.","autologout_dialog_stay_logged_in_button_text":"Pysy kirjautuneena"},"logoutFunctionName":"autologout","settings":{"idleTimeBeforeAutoLogoutInMinutes":60,"timeToPreventAutoLogoutInMinutes":20},"isAutoLogoutEnabled":true,"logoutFunction":"\r\nfunction LogOut() {\r\n    top.location = \"https://space.itslearning.com/elogin/logout.aspx\";\r\n}\r\n"}
+        </script>
+    </div>
+    <script type="module" src="https://cdn.itslearning.com/v2025.3.3.13981/application/autologout/index.bundle.js"></script>
+    <link rel="stylesheet" href="https://cdn.itslearning.com/v2025.3.3.13981/application/autologout/modern.bundle.css">
+
+    <script>
+        
+function LogOut() {
+    top.location = "https://space.itslearning.com/elogin/logout.aspx";
+}
+
+    </script>
+
+
+
+    <link rel="stylesheet" href="https://cdn.itslearning.com/v2025.3.3.13981/Skins/JQuery/theme/jquery-ui-1.11.4.custom.css" />
+    <link href='https://cdn.itslearning.com/v2025.3.3.13981/skins/itsl-inuit.min.css' rel="stylesheet" />
+
+    
+<script>
+    window.newProfileCardEnabled = true;
+    window.profileCardTerms = {"close":"Sulje","loading":"Ladataan...","yourRelationships":"Omat suhteesi","commaSeparator":", ","viewEPortfolio":"e-portfolio","seeFullProfile":"Katso koko profiili","userPersonalInfoIsProtected":"Käyttäjän {0} henkilökohtaiset tiedot on suojattu.","predefinedAvatars":{"avatar1":"Keltainen ympyrän muotoinen hymiö vaaleansinisellä taustalla","avatar2":"Keltaiset pisaranmuotoiset iloiset kasvot violetilla taustalla","avatar3":"Keltainen abstrakti muoto, jossa on suutelevat kasvot ja suljetut silmät vihreällä taustalla","avatar4":"Oranssi abstrakti muoto, avoin suu ja suljetut silmät harmaalla taustalla","avatar5":"Vaaleanpunaiset sydämen muotoiset suutelevat kasvot, joissa suljetut silmät sinisellä taustalla","avatar6":"Vaaleansininen sateenkaaren muoto, jossa kasvot vaaleanpunaisella taustalla","avatar7":"Keltaiset auringon muotoiset iloiset kasvot vaaleansinisellä taustalla","avatar8":"Vaaleankeltainen kaareva muoto, jossa hymyilevät kasvot ja vaaleanpunaiset posket sinisellä taustalla","avatar9":"Keltaiset kuun muotoiset suutelevat kasvot vihreällä taustalla","avatar10":"Vaaleanvihreät kolmion muotoiset kasvot vaaleanpunaisella taustalla","avatar11":"Vaaleanoranssi abstrakti muoto, jossa on iloiset kasvot vihreällä taustalla","avatar12":"Vaaleanvihreä abstrakti muoto, jossa avoin suu ja suljetut silmät violetilla taustalla","avatar13":"Vaaleanpunaiset tähdenmuotoiset kasvot vaaleanvihreällä taustalla","avatar14":"Vaaleanvihreät u:n muotoiset iloiset kasvot oranssilla taustalla","avatar15":"Vaaleansiniset pilvenmuotoiset kasvot tummanpinkillä taustalla","avatar16":"Vaaleansininen abstrakti muoto, jossa on suutelevat kasvot ja suljetut silmät sinisellä taustalla","avatar17":"Violetti hahmo, jolla on iloiset kasvot ja suljetut silmät vaaleanpunaisella taustalla","avatar18":"Vaaleanvihreä abstrakti muoto, jossa on iloiset kasvot ja suljetut silmät sinisellä taustalla","avatar19":"Vaaleansininen kaareva muoto, jossa on suutelevat kasvot ja suljetut silmät keltaisella taustalla","avatar20":"Keltainen nelipisteinen tähti, jossa yllättyneet kasvot vihreällä taustalla","avatar21":"Vaaleanvihreä abstrakti muoto, jossa avoin suu ja suljetut silmät violetilla taustalla","avatar22":"Vaaleanpunainen abstrakti muoto, jossa avoin suu ja suljetut silmät sinisellä taustalla","avatar23":"Vaaleankeltaiset sydämen muotoiset suutelevat kasvot vaaleansinisellä taustalla","avatar24":"Vaaleanvihreä abstrakti muoto, jossa on iloiset kasvot ja suljetut silmät vaaleanpunaisella taustalla","avatar25":"Keltaiset kukan muotoiset kasvot sinisellä taustalla"}};
+</script>
+    
+
+    <div id="itsl-profile-card-dialog"></div>
+    <script type="module" src="https://cdn.itslearning.com/v2025.3.3.13981/apps/profile-card-dialog/index.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.itslearning.com/v2025.3.3.13981/apps/profile-card-dialog/index.min.css" />
+</body>
+</html>
