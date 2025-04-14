@@ -11,8 +11,14 @@ Esimerkkivastaukset:
 "NaN" (kun syöte ei kelpaa).
 
  */
-let userInput = "25.75 omenaa";
-let numberValue = parseFloat("userInput");
-let roundValue = numberValue.toFixed(1);
 
-console.log(roundValue);
+
+let userInput = "25.75 omenaa";
+
+let numString = parseFloat(userInput);
+let rounded = numString.toFixed(1);
+
+console.log(rounded);
+
+
+

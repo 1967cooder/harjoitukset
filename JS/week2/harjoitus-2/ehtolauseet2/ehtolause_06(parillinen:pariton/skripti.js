@@ -11,4 +11,4 @@ let num1 = 4
 let num2 = 7
 
 console.log(isEven (num1) ? "Numero on parillinen!" : "Numero on pariton!")
-console.log(isEven (num1) ? "Numero on pariton!" : "Numero on pariton!")
+console.log(isEven (num1) ? "Numero on pariton!" : "Numero on parillinen!")

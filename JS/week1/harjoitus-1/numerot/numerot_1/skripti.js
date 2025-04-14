@@ -5,7 +5,8 @@
 console.log
 function funktio(){
 
-    let vastaus = 42;
+
+let vastaus = 42;
     let merkkijonoVastaus = vastaus.toString()
 
     console.log(convertNumberToString(42)); // haluttu vastaus: "42"

@@ -8,10 +8,11 @@ Kutsu funktiota eri isHungry ja hasFood yhdistelmillä.
 
 function canEat(isHungry, hasFood) {
     if (isHungry && hasFood) {
-        return "Aika syödä!"
+        return "Aika syödä!";
+
         } else {
-            return "Sinun täytyy löytää ruokaa!"
-        }
+        return "Sinun täytyy löytää ruokaa!";
+    }
 }
 console.log(canEat(true, true))
 console.log(canEat(true, false))

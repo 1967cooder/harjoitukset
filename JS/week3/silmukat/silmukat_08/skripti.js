@@ -16,7 +16,7 @@ function findMinMax(){
 
     for(let i = 0; i < numeroita; i++ ){
         let newValue = parseFloat(priomt("Anna uusi arvo"))
-    if ( i == 0){
+    if (i == 0){
     min = newValue
     max = newValue
 

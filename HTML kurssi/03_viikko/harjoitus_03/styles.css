@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+header {
+    background-size: cover;
+    background: #690136;
+    background-image: url("images/logo-matala.png");
+    background-repeat: no-repeat;
+    background-size: 20%;
+    background-position: left center;
+    padding: 25px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 20px; /*leveys*/
+} 
+
+.hero p{
+    text-align: center;
+    color: #fff;
+    margin-bottom: 20px;/*heron leveys*/
+}
+
+.hero__button {
+    text-align: center;
+}
+/*hover käytetään matkimaan hiiren tekstin päällä*/
+button:hover {
+    background-color: beige;
+    transform: scale(1.05); /* kevyt zoom-efekti */
+}
+
+h1{
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.logo_link img{
+    width: 150px;
+}
+
+ body {
+    /*text-align: center;*/
+    font-family: Arial, sans-serif;
+    
+    background-color: #f3d9d5
+         
+} 
+main {
+    color:#690136;
+
+}
+
+p {
+    
+    color: #0a0a0a;
+    font-family: "Open Sans", sans-serif ;
+    margin: 5px; 
+}
+
+ul li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav  li {
+        display: inline;
+        margin: 5px;
+}
+.gradient-box { /*"Luo pehmeän siirtymän kahden värin välillä."*/
+        
+        font-weight: bold;
+        background-image: linear-gradient(#d6adad, #f6b8b8); 
+    }
+
+strong{
+    color: #690136;
+}
+
+
+
+.bottom_img{
+    position: fixed;
+    bottom: 0;/*ulottuu sivun alaosan lopuun asti*/
+    left: 0;
+    width: 2000px;
+    height: 200px;
+}
+
+ul:hover{
+color: darkgreen;
+}
+ul li:first-child:hover{
+    color: aqua;
+}  
+ul li:nth-child(2):hover{
+   color:chartreuse;
+}
+
+.hello ::before, ::after{ 
+    color:rgb(24, 24, 230);
+}

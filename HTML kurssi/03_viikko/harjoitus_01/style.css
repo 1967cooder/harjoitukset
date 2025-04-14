@@ -43,5 +43,5 @@ p {
 }
 .gradient-box{ /*"Luo pehmeän siirtymän kahden värin välillä."*/
     height: 100px;
-    background-image: linear-gradient(#eef0f6, #d575b0); 
+    background-image: linear-gradient(#eef0f6, #f5adad); 
 }

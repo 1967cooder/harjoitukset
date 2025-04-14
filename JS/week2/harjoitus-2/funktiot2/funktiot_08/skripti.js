@@ -7,9 +7,15 @@ Tulosta tulos käyttäen console.log().
 Vinkki: Käytä .toFixed().
 */
 function roundNumber (num, precision){
-    return parseFloat(num.toFixed(precision));
+    return parseFloat(num.toFixed(precision))
 }
-console.log(roundNumber(19.56789, 2));
+let result = roundNumber(19.56789, 2)
+
+console.log(result)
+
+
 
 const roundNumberArrow = (num, precision) => parseFloat(num.toFixed(precision));
 console.log(roundNumberArrow(19.56789, 2));
+
+

@@ -18,3 +18,4 @@ const generateRandomNumberArrow = (min, max) =>
 
 console.log(generateRandomNumberArrow(1, 10));
 
+

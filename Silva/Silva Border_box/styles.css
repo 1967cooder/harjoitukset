@@ -1,0 +1,49 @@
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+background-color: rgb(243, 229, 236)
+}
+
+header{
+background-color: rgba(176, 77, 128, 0.606);
+padding: 25px;
+color: rgb(245, 239, 242);
+}
+
+main{
+    padding: 25px;
+}
+
+div{
+
+   background: antiquewhite;
+   height: 200px;
+   width: 200px;
+   margin: 0 10 px 0 0;
+   display:  inline-block;
+
+}
+
+.box1{
+    border: 5px dotted white;
+
+}
+
+.box2{
+    border: 7px double seagreen;
+    background-color: cornflowerblue;
+}
+
+.box3{
+    border-style: groove;
+    border-width: 10px;
+    border-color: white blue red yellow;
+   
+
+}

@@ -4,17 +4,22 @@
 
 // Koska käytössä on prompt, tämä toimii selaimessa html-sivun kautta.
 function countEvenNumbers() {
-    let evenCount = 0
-    for (let i = 0; i < 20; i++) {
+    let evenCount = 0;
+    for (let i = 0; i <= 20; i++) {
         let input = prompt (`Syötä luku ${i + 1}/20:`)
+
+        let number = parseFloat(input);
         if (!isNaN(number)) {
-            if (number % 2 === 0) {
+            
+        if (number % 2 === 0) {
               evenCount++;
       }
     } else {
-        ("Et syöttänyt kelvollisia likuja. yritetään uudelleen")
-        1--
+       alert ("Et syöttänyt kelvollisia likuja. yritetään uudelleen");
+        i--;
     }
 }
 }
-console.log(`Syötit ${evenCount} parillista lukua.`)
+console.log(`Syötit ${evenCount} parillista lukua.`);
+
+countEvenNumbers();

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="skripti.js"defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function findMinMax(){
+        let numeroita = parseFloat(prompt("Monta numeroa haluat?"))
+        console.log(input)
+        let min = 100000
+        let max = 0
+        
+        //Kysytää (numeroita) verran kertoja
+    
+        for(let i = 0; i < numeroita; i++ ){
+            let newValue = parseFloat(priomt("Anna uusi arvo"))
+        if (i == 0){
+        min = newValue
+        max = newValue
+    
+        }
+    
+        if(newValue > max){
+         max = newValue
+        }
+        if (newValue < min) {
+            min = newValue
+    
+        }
+    
+    }
+    
+    console.log("Min is:", min)
+    console.log("Max is:", max)
+    
+    }
+    findMinMax()
+    </script>
+</body>
+</html>

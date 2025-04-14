@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="skripti.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+    function countEvenNumbers() {
+        let evenCount = 0;
+        for (let i = 0; i < 20; i++) {
+            let input = prompt (`Syötä luku ${i + 1}/20:`)
+    
+            let number = parseFloat(input);
+            if (!isNaN(number)) {
+                if (number % 2 === 0) {
+                  evenCount++;
+          }
+        } else {
+           alert ("Et syöttänyt kelvollisia likuja. yritetään uudelleen");
+            i--;
+        }
+    }
+    }
+    console.log(`Syötit ${evenCount} parillista lukua.`); 
+
+    countEvenNumbers();
+    </script> 
+</body>
+</html>

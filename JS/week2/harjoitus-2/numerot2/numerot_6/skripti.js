@@ -15,5 +15,5 @@ let kokonaisluku = parseInt(numString1);
 let liukuluku = parseFloat(numString2);
 
 
-console.log("kokonaisluku");
-console.log("liukuluku");
+console.log(kokonaisluku);
+console.log(liukuluku);

@@ -9,10 +9,12 @@ function canVote (age){
 }
     if (true) {
         console.log("Saat äänestää")
-    }else{
-         console.log(false)
-        
+
+    
     }
+
+       
+
     canVote(18)
     
 

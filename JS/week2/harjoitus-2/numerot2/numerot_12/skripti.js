@@ -12,5 +12,5 @@ let c = 20;
 let maximum = Math.max[a, b, c];
 let minimum = Math.min[a, b, c];
 
-console.log("The largest number is 20.");
-console.log("The smallest number is 7.");
+console.log(maximum);
+console.log(minimum);
