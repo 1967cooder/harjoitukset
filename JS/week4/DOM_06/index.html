@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 6</title>
+    <!--eikitään että tämä on virhe-->
+<style>
+    .error {
+      color: red;
+    }
+
+</style>
+
+
+</head>
+<body>
+    <h2>Lomakkeen validointitehtevä</h2>
+    <form id="userForm">
+      <label for="name">Nimi:</label>
+      <input type="text" id="name" name="name"required /> <br> <br/><!--setää lähettäminen-->
+      <label for="email">Sähköpost:
+      <input type="email" id="email" name="email" /> <br> <br/>
+      <button type="submit">Lähetä</button>
+      <p class="error" id="errorMessage"></p><!--tämä on virheen yhteydessä-->
+      </label>
+    </form>
+
+  <script src="script.js"></script>  
+</body>
+</html>

@@ -6,9 +6,9 @@ Lisää napille getElementById:n avulla tapahtumakäsittelijä, joka kuuntelee
 
 */
 
-document.getElementById("myButton").addEventListener("click", function() {
-document.getElementById("counter").textContent = current + 1;
-})
+document.getElementById("nappi").addEventListener("click", function() {
+document.getElementById("numero").textContent++;
+});
 
 
     

@@ -12,20 +12,9 @@ Lisää sivulle toinen nappi, jota klikkaamalla laskurin arvo vähenee yhdellä.
 Muista lisätä uudelle napille oma id ja sille oma tapahtumankuuntelija. Tee kaksi funktiota, jotka muuttavat saman muuttujan arvoa. 
 */
 
-    let current = 0
-
-    document.getElementById("oldButton").addEventListener("click", countUp);
-    function countUp () {
-    document.getElementById("counter").textContent = current += 1;
-
-    }
-    
-    
-    document.getElementById("newButton").addEventListener("click", countDown);
-    function  countDown () {
-    document.getElementById("counter").textContent = current -=1;
-
-    }
-    countUp (current)
-    countDown (current)
-
+document.getElementById("lisaaNappi").addEventListener("click", function() {
+    document.getElementById("numero").textContent++;
+    });
+ 
+document.getElementById("vahennaNappi").addEventListener("click", function() {
+    document.getElementById("numero").textContent--;});

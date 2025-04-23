@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/styles.css"/>
+    <title>Portfolio Silvana Lindholm</title>
+</head>
+
+<header>
+   <h1>Portfolio of Silvana Lindholm</h1>
+   <p>Projects</p>
+   <p>About</p>
+   <p>Contact</p>
+   <p></p>
+ </header>
+ 
+ <body>
+  <main>
+  <div class="container">
+ <img src="images/backgrImage.webp" alt="Background image" width="1000" height="900" />
+   
+  <h2>Projects</h2>
+
+  
+    <div class="image-container">
+      <img src="images/lamp.webp" alt="Lamp" width="400" height="300" />
+      <img src="images/joi.webp" alt="Joi" width="400" height="300" />
+      <img src="images/puzzle.webp" alt="Puzzle" width="400" height="300" />
+    </div>
+
+    <div class="About">
+    <h2>About</h2>
+
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores,
+     laboriosam dolorum debitis corrupti ut rem ipsa dolorem saepe nam 
+     ducimus deserunt eveniet perferendis, libero sequi beatae, molestiae 
+     asperiores labore hic.</p>
+     <img src="images/imageSilvana.png" alt="Silvana" width="300" height="400" />
+  </div><!--About-->
+
+
+  </div><!--container-->
+
+
+  <div class="form-wrap"><!--Luo laattikon(div lomakkeelle); form-wrap käytetään tyylitykseen CSS-ssä-->
+    <h1>Contact Us</h1><br/>
+    
+    
+<form id="userForm"><!--Mahdollistaa, että siihen voidaan viitata javascriptillä-->
+
+    <label for="name">Your name:</label>
+    <input type="name" id="yourName" name="yourName"required ><!--setää lähettäminen-->
+
+    <label for="email">Your Email: </label>
+    <input type="email" id="yourEmail" name="yourEmail"required >
+
+    <label for="messageToMe">Message to me: </label>
+    <input type="message" id="messageToMe" name="messageToMe" >
+
+
+    <button type="sendMessage">SEND MESSAGE</button>
+ 
+</form>
+     
+
+
+<div class="attribution">
+  Copiright<a href="#">Silvana Lindholm/a>
+</div>
+</div><!--form-wrap-->
+</main>
+
+  <script src="JS/script.js"></script>
+</body>
+</html>
