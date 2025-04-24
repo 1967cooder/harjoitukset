@@ -1,0 +1,74 @@
+* {
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.form-wrap { /*tarkoittaa sisältö*/
+    background: white;
+    text-align: center;
+    padding: 20px;/*sisältö ei osu reunoihin*/
+    border-radius: 5px;/*pyöristetyt kulmat*/
+    margin-bottom: 20px;/*tila muiden elementien alle*/
+}
+
+
+.form-wrap h1,
+.form-wrap p {
+    margin-bottom: 20px;/*Antaa väliä otsikon ja kappaleen alle*/
+}
+
+label {
+
+    display: block; /*järjästää paremmalla tavalla*/
+    text-align: left;
+    text-align: left;
+    font-size: 10px;
+    color: #474747;
+    margin-bottom: 5px;/*väliä kentän ja tekstin välillä*/
+
+}
+
+input {
+    width:100%;/*leveys 100% konttistä*/
+    margin-bottom: 20px;/*tyhjä kentien välillä*/
+    padding: 10px; /*tekstin ulkopuolella tila*/
+}
+
+button{
+    background: coral;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 20px;
+    text-transform: uppercase;/*Teksti isoin kirjaimin*/
+    width: 80%; /*levenää, näyttää paremmalta kuin 100%*/
+}
+#condions{
+    font-size: 0.75em;/* em - fontin koko yleisesti, kaunis*/
+
+}
+
+#footertext {
+
+    color:white;
+}
