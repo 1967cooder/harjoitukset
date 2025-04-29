@@ -3,74 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="CSS/styles.css"/>
     <title>Portfolio Silvana Lindholm</title>
 </head>
 
+<body>
+
 <header>
    <h1>Portfolio of Silvana Lindholm</h1>
-   <p>Projects</p>
-   <p>About</p>
-   <p>Contact</p>
-   <p></p>
+   <nav>
+      <p>Projects</p>
+      <p>About</p>
+      <p>Contact</p>
+  </nav>
  </header>
  
- <body>
-  <main>
-  <div class="container">
- <img src="images/backgrImage.webp" alt="Background image" />
-   
-  <h2>Projects</h2>
+ <!--------------Taustakuva-------------------------------->
+<div class="backgrImage">
+  <img src="images/backgrImage.webp" alt="Background image" />
+  <div id="backgrImage-text">
+    <h1>Portfolio of Silvana  Lindholm</h1> 
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet assumenda quas nemo illo ipsam accusamus odio, modi voluptate,</p>
+  
+     <button type="button">See more</button>
+   <!--backgrImage-button-->
+  </div><!--backgrImage-text-->
+</div><!--BackgrImage loppuu-->
+
 
   
-    <div class="image-container">
-      <img src="images/lamp.webp" alt="Lamp" width="400" height="300" />
-      <img src="images/joi.webp" alt="Joi" width="400" height="300" />
-      <img src="images/puzzle.webp" alt="Puzzle" width="400" height="300" />
-    </div>
+<main>
+  <!----------the hall container with 1.container with 3 projects; 2 About with oun image; 3.Form-wrap------>
+
+  <div class="container">
+ 
+  <h2>Projects</h2>
+<!-----------------------Kontainer with 3 projects------------------------------------------------>
+  <div class="image-container">
+      <div class="project" id="lamp">
+          <img src="images/lamp.webp" alt="Lamp" width="300" height="200" />
+          <h3>Business College Projects</h3>
+      <a href="#">See more</a>
+   </div>
+
+      <div class="project" id="joi">
+          <img src="images/joi.webp" alt="Joi" width="300" height="200" />
+          <h3>Lorem ipsum, dolor sit</h3>
+          <a href="#">See more</a>
+      </div>
+
+      <div class="project" id="puzzle">
+          <img src="images/puzzle.webp" alt="Puzzle" width="300" height="200" />
+          <h3>Lorem ipsum, dolor sit</h3>
+          <a href="#">See more</a>
+      </div>
+  </div><!--tässä loppuu div class image container-->
+
+
+<!--------------------------About with oun image----------------------------------------------->
 
     <div class="About">
-    <h2>About</h2>
+        <h2>About</h2>
+        <div class="about-content">
+        <img src="images/imageSilvana.png" alt="Silvana" width="300" height="400" />
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores,
+        laboriosam dolorum debitis corrupti ut rem ipsa dolorem saepe nam 
+        ducimus deserunt eveniet perferendis, libero sequi beatae, molestiae 
+        asperiores labore hic.</p>
+        </div>
 
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores,
-     laboriosam dolorum debitis corrupti ut rem ipsa dolorem saepe nam 
-     ducimus deserunt eveniet perferendis, libero sequi beatae, molestiae 
-     asperiores labore hic.</p>
-     <img src="images/imageSilvana.png" alt="Silvana" width="300" height="400" />
-  </div><!--About-->
+    </div><!--About finish---------->
 
-
-  </div><!--container-->
+  </div><!--container finish--------->
 
 
   <div class="form-wrap"><!--Luo laattikon(div lomakkeelle); form-wrap käytetään tyylitykseen CSS-ssä-->
-    <h1>Contact Us</h1><br/>
+      <h2>Contact Us</h2><br/>
+      
+   <form id="userForm"><!--Mahdollistaa, että siihen voidaan viitata javascriptillä-->
+
+     
+        <label for="yourName">Your Name:</label>
+        <input type="name" id="yourName" name="yourName"required ><!--setää lähettäminen-->
     
+
+   
+        <label for="yourEmail">Your Email: </label>
+        <input type="email" id="yourEmail" name="yourEmail">
     
-<form id="userForm"><!--Mahdollistaa, että siihen voidaan viitata javascriptillä-->
+   
+        <label for="messageToMe">Message to me: </label>
+        <textarea id="messageToMe" name="messageToMe"></textarea>
 
-    <label for="name">Your name:</label>
-    <input type="name" id="yourName" name="yourName"required ><!--setää lähettäminen-->
-
-    <label for="email">Your Email: </label>
-    <input type="email" id="yourEmail" name="yourEmail"required >
-
-    <label for="messageToMe">Message to me: </label>
-    <input type="message" id="messageToMe" name="messageToMe" >
-
-
-    <button type="sendMessage">SEND MESSAGE</button>
- 
-</form>
+        
+        
+        
+        <button type="submit">Send Message</button>
+        <p class="error" id="errorMessage"></p>
      
 
-
-<div class="attribution">
-  Copiright<a href="#">Silvana Lindholm/a>
-</div>
+        
+  </form>
+  
+  <div class="attribution">
+    Copyright <a href="#">Silvana Lindholm</a>
+  </div>
 </div><!--form-wrap-->
+
 </main>
 
-  <script src="JS/script.js"></script>
+<button id="toTopBtn">TOP ↑</button>
+  
+<script src="JS/script.js"></script>
 </body>
 </html>

@@ -58,6 +58,8 @@ document.addEventListener("DOMContentLoaded", function() {
    const toppingCheckboxes = document.querySelectorAll(".topping");
    const extraCheckboxes = document.querySelectorAll(".extra");
 
+
+
    typeSelect.addEventListener("change", updatePrice);
    console.log("type of order changed");
    toppingCheckboxes.forEach((topping) => {
