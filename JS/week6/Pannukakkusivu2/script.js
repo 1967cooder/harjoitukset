@@ -35,35 +35,68 @@ form.addEventListener('change', (event) => {
 
     document.addEventListener("DOMContentLoaded", function() {
 //nämä muuttujatnovat vapaaehtoisia
-   const form = document.getElementById("panckakeForm");
+   const form = document.getElementById("pancakeForm");
    const totalPriceBanner = document.getElementById("totalPrice");
    const totalPriceDisplay = document.getElementById("totalPriceDisplay");
    const seeOrderButton = document.getElementById("seeOrder");
     const summaryText = document.getElementById("summaryText");
 
-    //nämä taulukot tarvitaan
+    //nämä taulukot tarvitaan, Ne ovat tyhjiä taulukoita aluksi.
     let toppings = [];
     let extras = [];
 
-    //Yksi tapahtumakäsittälij koko lomakkeelle
+    //Yksi tapahtumakäsittälijä koko lomakkeelle.Kun lomakkeella tapahtuu muutos (esim. checkbox valitaan), 
+    // tämä koodi aktivoituu. target = elementti, johon käyttäjä vaikutti.
     form.addEventListener("change", function (event) {
-        const target = event.target;//onko tullut checkboxiin muutos
+        const target = event.target;
 
-        if (target.classeList.contains("topping")){// onko tullut checkboxiin muutos
+        if (target.classList.contains("topping")){// onko tullut checkboxiin muutos
         handleToppings(target);//kutsuttu funktiolta
-    } else if (target.classeList.contains("extra")) {
+    } else if (target.classList.contains("extra")) {
         handleExtras(target);
     }
-    updatePrice();
-    }) ; 
+    updatePrice();//päivitetään hinta
+    }) 
+
+    //updatePrice-funktio  laskee hinnan jokaisen muutoksen jälkeen.
+function updatePrice(){
+        const pancakeType = document.getElementById("type");
+        const selectedType = pancakeType.options[pancakeType.selectedIndex];
+        let total = parseFloat(selectedType.getAttribute("data-price"));
+
+    //täytteen lisääminen, lisätään loppusummaan jokaisesta täytteestä 1€
+        total = total + toppings.length * 1;
+
+
+    //haetaan lisukkeet listaan ja käsitellään lista. Lisätään valittujen hinta
+        let extraChoices = document.querySelectorAll(".extra");
+        extraChoices.forEach((checkbox) => {
+            if (checkbox.checked) {
+                    total = total + parseFloat(checkbox.getAttribute("data-price"));
+            }
+        });
+    //haetaan kuljetuksen atvo ja lisätään hinta(hinta voi olla 0)
+        let delivery = document.querySelector("input[name='delivery']:checked");
+         total += parseFloat(delivery.getAttribute("data-price"));
+
+        
+
+    //muotoillaan kokonaishinta desimaaliluvuksi.Pyöristetään kahden desimaalin tarkkuuteen 
+    // ja näytetään molemmissa hintaelementeissä.
+        let formattedTotal = total.toFixed(2) + "€"
+        totalPriceBanner.textContent = formattedTotal ;
+        totalPriceDisplay.textContent = formattedTotal ;
+    
+    }
 
 function handleToppings(checkbox) {//mennää topings ja extras kautta
 
     const toppingName = checkbox.parentElement.textContent.trim()//parentElement on Lable; trim ottaa pois htmlstä välilyönnit
-    if (checkbox.checked) {
+    if (checkbox.checked) { //Jos täyte on valittu, lisätään listaan
         toppings.push(toppingName)
     } else {
-        toppings = toppings.filter((t) => t !== toppingName);//menee ja valitsee ne jotka eivät ole valittuja ja luo uuden toppingtaulukon, t on topping
+        toppings = toppings.filter((t) => t !== toppingName);//menee ja valitsee ne jotka eivät ole valittuja 
+        // ja luo uuden toppingtaulukon, t on topping
     }
     console.log("täytteet:", toppings);
   
@@ -81,17 +114,20 @@ function handleExtras(checkbox) {
     console.log("lisukkeet:", extras);
   
 }
+//Tilauksen näyttö
+seeOrderButton.addEventListener("click", function(){ 
+    //haetaan tilaajan niumi
+    const customerName = document.getElementById("customerName").value.trim();
 
-function updatePrice(){
-    const pancakeType = document.getElementById("type");
-    const selectedType = pancakeType.options[pancakeType.selectedIndex];
-    let total = parseFloat(selectedType.getAttribute("data-price"));
+//Näytetään tilauksen tiedot.Kun käyttäjä painaa "Näytä tilaus" -nappia, näytetään asiakkaan nimi.
+    let summary = `<strong>Asiakas:</strong> ${customerName || "(ei nimeä)"}<br>`;
 
-    totalPriceBanner.textContent = total;
-    totalPriceDisplay.textContent = total;
 
-}
+    summaryText.innerHTML = summary;
+
+    })
 });
+
 
 
 

@@ -13,7 +13,6 @@
   /* --- Header & nav --- */
   .header {
     display: flex; 
-    flex-direction: row;
     justify-content: space-between;
     padding: 1rem 2rem;
     background: #222;
@@ -22,12 +21,29 @@
   .nav {
     display: flex;
     gap: 1.5rem; /* navigaation linkkien väli */
+    justify-content: right;/*eventualno moje i bez tova*/
   }
   .nav a {
     color: #fff;
     text-decoration: none;
+    position: relative;/*eventualno moje i bez tova*/
   }
   
+  .nav a::after { /*aleviivattu*/
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: #FF6A00;
+    transition: width 0.5s ease;
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .nav a:hover::after {
+    width: 100%;
+  }
+    
   /* --- Hero --- */
   .hero {
     display: flex; 
@@ -48,8 +64,6 @@
   /* --- Ohjelmakalenteri --- */
   .calendar {
     display: flex; /* Flexbox-määrittelyt poistettu */
-    flex-wrap: wrap;
-    justify-content: center;
     justify-content: space-evenly;
     background: #fff;
     gap: 2rem;
@@ -57,11 +71,12 @@
   }
   .day-card {
     display: flex;/* Flex-määrittelyt poistettu */
-    flex-wrap: wrap;
+    flex-direction: column;
     flex-basis: 200px;
     background: #f4f4f4;
     padding: 1rem;
     border-radius: 0.5rem;
+    flex:1;
   }
   .day-card h2 {
     margin-bottom: 0.5rem;
@@ -69,8 +84,8 @@
   .artist {
     margin: 0.25rem 0;
     display: flex;/* Flex-määrittelyt poistettu */
-    flex-wrap:wrap;
-  
+    flex-wrap:wrap; /*mikä on oikea wrap tai center?*/
+    align-items: center;/*mikä on oikea wrap tai center?*/
 
 
   }
@@ -99,10 +114,11 @@
     padding: 1.5rem;
     border: 2px solid #ccc;
     border-radius: 0.5rem;
+    
   }
   .ticket-card.vip {
   
-    /* Flex-määrittelyt poistettu */
+    order: -1;/* Flex-määrittelyt poistettu */
     border-color: gold;
   }
   .ticket-card h3 {
@@ -119,17 +135,13 @@
   /* --- Sijainti & kartta --- */
   .location {
     display: flex;
-    flex-wrap: wrap;
-    justify-content:space-around;
     align-items: center;/* Flexbox-määrittelyt poistettu */
     gap: 2rem;
     padding: 2rem;
   }
   /* Kartan kontaineri vie 1/3 vaakatilasta desktopilla */
   .map {
-    display: flex;
-    flex-wrap: wrap;
-    /* Flex-määrittelyt poistettu */
+    flex:2;/* Flex-määrittelyt poistettu */
   }
   .map img {
     width: 100%;
@@ -138,14 +150,53 @@
   }
   /* Osoiteteksti vie loput tilasta */
   .address {
-    display: flex;
-   flex-direction: column;
-    justify-content: left; /* Flex-määrittelyt poistettu */
+     flex: 3;/* Flex-määrittelyt poistettu */
   }
   .address h2 {
     margin-bottom: 0.5rem;
   }
   
+  /*-----Kuvaagaleria grid-----*/
+
+  .gallery {
+    background-color: white;
+    padding: 20px; /* Creates spacing inside the frame */
+    margin: 2rem auto; /* Space around the frame */
+    max-width: 1200px; /* Optional: limits frame width */
+    border: 5px solid white; /* White border - stands out on dark background */
+  }
+
+  .gallery .grid {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 200px);
+  grid-template-areas:
+   "one    two     three   three   three   four"
+   "one    five    five    five    five    six"
+   "seven  seven   eight   eight   nine    six";
+  }
+  
+  .gallery .grid img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;  
+  }
+
+  img.one   { grid-area: one; }
+  img.two   { grid-area: two; }
+  img.three { grid-area: three; }
+  img.four  { grid-area: four; }
+  img.five  { grid-area: five; }
+  img.six   {grid-area: six; }
+  img.seven { grid-area: seven; }
+  img.eight { grid-area: eight; }
+  img.nine  { grid-area: nine; }
+
+  
+
+
   /* --- Footer --- */
   .footer {
     display: flex; 
