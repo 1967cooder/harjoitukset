@@ -34,14 +34,16 @@ form.addEventListener('change', (event) => {
     const toppingName = target.parentElement.textContent.trim(); */
 
     document.addEventListener("DOMContentLoaded", function() {
-//nämä muuttujatnovat vapaaehtoisia
+//nämä muuttujat ovat vapaaehtoisia
    const form = document.getElementById("pancakeForm");
    const totalPriceBanner = document.getElementById("totalPrice");
    const totalPriceDisplay = document.getElementById("totalPriceDisplay");
    const seeOrderButton = document.getElementById("seeOrder");
     const summaryText = document.getElementById("summaryText");
+    const typeSelect = document.getElementById("type");
 
-    //nämä taulukot tarvitaan, Ne ovat tyhjiä taulukoita aluksi.
+
+    //nämä taulukot tarvitaan, ne ovat tyhjiä taulukoita aluksi.
     let toppings = [];
     let extras = [];
 
@@ -59,7 +61,7 @@ form.addEventListener('change', (event) => {
     }) 
 
     //updatePrice-funktio  laskee hinnan jokaisen muutoksen jälkeen.
-function updatePrice(){
+    function updatePrice(){
         const pancakeType = document.getElementById("type");
         const selectedType = pancakeType.options[pancakeType.selectedIndex];
         let total = parseFloat(selectedType.getAttribute("data-price"));
@@ -75,7 +77,7 @@ function updatePrice(){
                     total = total + parseFloat(checkbox.getAttribute("data-price"));
             }
         });
-    //haetaan kuljetuksen atvo ja lisätään hinta(hinta voi olla 0)
+    //haetaan kuljetuksen arvo ja lisätään hinta(hinta voi olla 0)
         let delivery = document.querySelector("input[name='delivery']:checked");
          total += parseFloat(delivery.getAttribute("data-price"));
 
@@ -89,7 +91,7 @@ function updatePrice(){
     
     }
 
-function handleToppings(checkbox) {//mennää topings ja extras kautta
+function handleToppings(checkbox) {//mennää topings kautta
 
     const toppingName = checkbox.parentElement.textContent.trim()//parentElement on Lable; trim ottaa pois htmlstä välilyönnit
     if (checkbox.checked) { //Jos täyte on valittu, lisätään listaan
@@ -103,7 +105,7 @@ function handleToppings(checkbox) {//mennää topings ja extras kautta
     
 }
 
-function handleExtras(checkbox) {
+function handleExtras(checkbox) {//mennää textras kautta
 
     const extraName = checkbox.parentElement.textContent.trim()
     if (checkbox.checked) {
@@ -118,10 +120,18 @@ function handleExtras(checkbox) {
 seeOrderButton.addEventListener("click", function(){ 
     //haetaan tilaajan niumi
     const customerName = document.getElementById("customerName").value.trim();
+    const selectedType = typeSelect.options[typeSelect.selectedIndex];
+    const delivery = document.querySelector("input[name=delivery]:checked").parentElement.textContent.trim();
 
 //Näytetään tilauksen tiedot.Kun käyttäjä painaa "Näytä tilaus" -nappia, näytetään asiakkaan nimi.
-    let summary = `<strong>Asiakas:</strong> ${customerName || "(ei nimeä)"}<br>`;
+    let summary = `<strong>Asiakas:</strong> ${customerName || "(ei nimeä)"
+}<br>`;
 
+summary += `Tyyppi: ${selectedType.value}<br>`;
+summary +=  `Täytteet: ${toppings.length > 0 ? toppings.join(", ") : "Ei täytteitä"}<br>`;
+summary +=  `Lisukkeet: ${extras.length > 0 ? extras.join(", ") : "Ei lisukkeitä"}<br>`;
+summary +=  `Toimitustapa: ${delivery}<br>`;
+summary += `Kokonaishinta: ${totalPriceDisplay.textContent}`;
 
     summaryText.innerHTML = summary;
 
