@@ -98,84 +98,50 @@ body {
     color: hsl(235, 36%, 46%);
 }
 
-.project-container{
-    display: flex;        /* jätjästää kaikki vieräkkäin horizontaalilla linjalla */
-    justify-content: center; /* keskelle*/
-    gap: 30px;            /* tila projectien välillä */
-    flex-wrap: wrap;      /* jos näyttö on pieni,että kuvat putoavat toselle riville */
-    padding: 20px;
-    
-}
-   
 
-.project {
-    background: hsl(235, 36%, 46%);
-    border-radius: 10px;
+
+
+/*-----Kuvaagaleria grid -----*/
+
+
+  
+.gallery {
+    background-color:white;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 200px; /* височината се базира на ширината */
+    gap: 1rem;
+    width: 100%;
+  }
+  
+  .gallery_item {
     overflow: hidden;
-    text-align: center;
-    width: 300px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-}
-
-.project h3 {
-    margin: 15px 0 10px;
-    color: white
-}
-.project a {
-    display: inline-block;
-    margin-bottom: 15px;
-    color: #50dfff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.project:hover {
-    transform: translateY(-5px); /* nosto efekti */
-}
-
-
-.about {
-    text-align: center;
-    padding: 50px 20px;
-   
-   
-
-}
-
-.about h2 {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
     
-}
-
-.about-content {
-    display: flex;
-    justify-content: center; /* Центрира по хоризонтала */
-    align-items: center; /* Подравнява по вертикала */
-    gap: 40px; /* Разстояние между снимката и текста */
-    flex-wrap: wrap; /* За да се пренарежда на мобилни устройства */
+  }
+  
+  .gallery_item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  /* Размери за различни типове изображения */
+  .img_vertical {
+    grid-row: span 2;
     
-}
-
-.about-content img {
-    width: 300px;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.about-content p {
-    max-width: 500px;
-    text-align: left;
-    font-size: 18px;
-    line-height: 1.6;
-    color: hsl(235, 36%, 46%);
-
-}
-
-
-
+  }
+  
+  .img_vertical--big {
+    grid-row: span 2;
+    grid-column: span 2;
+  }
+  
+  .img_horisontal--big {
+ 
+    grid-column: span 2;
+    
+  }
 /*--------------------------------CONTACT FORM-------------------------------------------------------*/
 
 

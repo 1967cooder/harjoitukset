@@ -164,38 +164,35 @@
     margin: 2rem auto; /* Space around the frame */
     max-width: 1200px; /* Optional: limits frame width */
     border: 5px solid white; /* White border - stands out on dark background */
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
   }
 
-  .gallery .grid {
-  display: grid;
-  gap: 12px;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(3, 200px);
-  grid-template-areas:
-   "one    two     three   three   three   four"
-   "one    five    five    five    five    six"
-   "seven  seven   eight   eight   nine    six";
-  }
-  
-  .gallery .grid img {
+ 
+
+.img_vertical--long {
+    grid-column: span 1;
+    grid-row:span 2;
+}                    
+
+.img_horisontal--long {
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+.img_big {
+    grid-column: span 2;
+    grid-row: span 2; 
+}
+
+  .gallery_item img {
     width: 100%;
     height: 100%;
     display: block;
     object-fit: cover;  
   }
-
-  img.one   { grid-area: one; }
-  img.two   { grid-area: two; }
-  img.three { grid-area: three; }
-  img.four  { grid-area: four; }
-  img.five  { grid-area: five; }
-  img.six   {grid-area: six; }
-  img.seven { grid-area: seven; }
-  img.eight { grid-area: eight; }
-  img.nine  { grid-area: nine; }
-
-  
-
 
   /* --- Footer --- */
   .footer {

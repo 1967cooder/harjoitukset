@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/stylesContact.css"/>
+</head>
+<body>
+<!-- HEADER & NAV -->
+<header class="header">
+    <div class="logo">Portfolio of Silvana Lindholm</div>
+    <nav class="nav">
+      <a href="#Projects">Projects</a>
+      <a href="#About">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+    <main>
+
+      <!--------------BackgroundImage-------------------------------->
+<section class="hero">
+  <img src="images/backgrImage.webp" alt="Background image" />
+  <div id="backgrImage-text">
+    <h1>Portfolio of Silvana  Lindholm</h1> 
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet assumenda quas nemo illo ipsam accusamus odio, modi voluptate,</p>
+  
+     <button type="button">See more</button><!--backgrImage-button-->
+   
+  
+</div><!--BackgrImage loppuu-->
+
+</section>
+    <!--------------------------Form-------------------------------------------------------->
+  <div class="form-wrap"><!--Luo laattikon(div lomakkeelle); form-wrap käytetään tyylitykseen CSS-ssä-->
+    <h2>Contact Us</h2><br/>
+    
+ <form id="userForm"><!--Mahdollistaa, että siihen voidaan viitata javascriptillä-->
+
+   
+      <label for="yourName">Your Name:</label>
+      <input type="text" id="yourName" name="yourName"required ><!--setää lähettäminen-->
+  
+
+ 
+      <label for="yourEmail">Your Email: </label>
+      <input type="email" id="yourEmail" name="yourEmail">
+  
+ 
+      <label for="messageToMe">Message to me: </label>
+      <textarea id="messageToMe" name="messageToMe"></textarea>
+
+      
+      
+      
+      <button type="submit">Send Message</button>
+      <p class="error" id="errorMessage"></p>
+   
+
+      
+</form>
+
+<div class="attribution">
+  Copyright <a href="#">Silvana Lindholm</a>
+</div>
+</div><!--form-wrap-->
+
+</main>
+
+<button id="toTopBtn">TOP ↑</button>
+
+<script src="JS/script.js"></script>
+
+</body>
+</html>
