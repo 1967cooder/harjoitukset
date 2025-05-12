@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pikku Eläintarha</title>
+    <link rel="icon" href="images/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="css/style.css" />
+    
+  </head>
+  <body>
+    <div class="container">
+      <h1>Pikku Eläintarha🦊🐻🦅</h1>
+
+      <!-- Haku ja suodatus osio -->
+      <div class="controls">
+        <input type="text" id="searchAnimal" placeholder="Etsi nimellä..." />
+        <select id="filterType">
+          <option value="Kaikki">Kaikki eläimet</option>
+          <option value="Nisäkäs">Nisäkkäät</option>
+          <option value="Lintu">Linnut</option>
+          <option value="Matelija">Matelijat</option>
+          <option value="Sammakkoeläin">Sammakkoeläimet</option>
+          <option value="Kala">Kalat</option>
+        </select>
+        <button id="sortAnimals">Järjestä A-Ö</button>
+      </div>
+
+      <!-- Eläinten listanäkymä -->
+      <ul id="animalList"></ul>
+
+      <!-- Uuden eläimen lisääminen -->
+      <div class="add-animal">
+        <h2>Lisää uusi eläin</h2>
+        <input type="text" id="newAnimalName" placeholder="Eläimen nimi" />
+        <select id="newAnimalType">
+          <option value="Nisäkäs">Nisäkäs</option>
+          <option value="Lintu">Lintu</option>
+          <option value="Matelija">Matelija</option>
+          <option value="Sammakkoeläin">Sammakkoeläin</option>
+          <option value="Kala">Kala</option>
+        </select>
+        <button id="addAnimal">Lisää eläin</button>
+      </div>
+    </div>
+    <script src="js/script.js" defer></script>
+  </body>
+</html>

@@ -106,6 +106,7 @@
     justify-content: space-evenly;
     gap: 1rem;
     padding: 2rem;
+    flex: 1;/*tekee laattikot samankokoiseksi*/
   }
   .ticket-card {
     display:flex;/* Flex-määrittelyt poistettu */
@@ -114,6 +115,7 @@
     padding: 1.5rem;
     border: 2px solid #ccc;
     border-radius: 0.5rem;
+    flex: 1;
     
   }
   .ticket-card.vip {

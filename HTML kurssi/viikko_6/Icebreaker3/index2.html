@@ -1,0 +1,75 @@
+<!--<!DOCTYPE html> ei toimi kunnolla
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="/styles.css"/>
+  <title>Ice Breaker 2</title>
+</head>
+<body>
+
+  <div class="form-wrap">
+  <h1>Three Claims, One Lie</h1>
+  
+  <form id="userForm">
+
+    <label for="fname">Claim 1:</label>
+    <input type="text" id="fname" name="fname">
+    <input type="checkbox" id="totuus1" name="t1" class="checkbox"/>
+    <label for="t1">This is true</label><br/>
+
+    <label for="lname">Claim 2:</label>
+    <input type="text" id="lname" name="lname">
+    <input type="checkbox" id="totuus2" name="totuus2">
+    <label for="totuus2">This is true</label><br/>
+
+    <label for="claim3">Claim 3:</label>
+    <input type="text" id="claim3" name="claim3">
+    <input type="checkbox" id="totuus3" name="totuus3">
+    <label for="totuus3">This is true</label><br/><br/>
+
+    <input type="button" value="Statement 1 is FALSE" onclick="checkStatement(1)">
+    <input type="button" value="Statement 2 is FALSE" onclick="checkStatement(2)">
+    <input type="button" value="Statement 3 is FALSE" onclick="checkStatement(3)">
+  </form>
+
+  <br>
+  <button onclick="revealTruth()">Reveal TRUTH</button>
+  </div>
+</div>
+  <!-- Bonus-nappi
+  <br><br><br><br><br>
+  <button onclick="alert('VÄÄRIN!')">Minulla on 3 koiraa</button>
+
+  <script>
+    function checkStatement(number) {
+      const truths = {
+        1: document.getElementById("totuus1").checked,
+        2: document.getElementById("totuus2").checked,
+        3: document.getElementById("totuus3").checked
+      };
+
+      if (!truths[number]) {
+        alert(`✅ Statement ${number} is FALSE. Correct!`);
+      } else {
+        alert(`❌ Statement ${number} is TRUE. Wrong!`);
+      }
+    }
+
+    function revealTruth() {
+      const t1 = document.getElementById("totuus1").checked;
+      const t2 = document.getElementById("totuus2").checked;
+      const t3 = document.getElementById("totuus3").checked;
+
+      alert(`Truths:
+- Statement 1: ${t1 ? "TRUE" : "FALSE"}
+- Statement 2: ${t2 ? "TRUE" : "FALSE"}
+- Statement 3: ${t3 ? "TRUE" : "FALSE"}`);
+    }
+  </script>
+
+
+</body>
+
+</html>
+ --->

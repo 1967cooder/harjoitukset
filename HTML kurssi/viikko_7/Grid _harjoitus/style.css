@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(135, 140, 235);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;    
+}
+
+.grid1 {
+    display: grid;
+    grid-template-columns: repeat(4fr, 1fr);
+    grid-template-rows: repeat(4, 100px);
+    background: #b3b3b3;
+    gap: 1rem;
+    margin: 50px auto;
+    max-width: 1000px;
+}
+.item {
+    background: white;
+}
+.item:first-child {/*tämä käytetää jos ei tarvitse tehdä html:ssa toista class luokkaa*/
+    background: green;
+    grid-column: 1 / span 4; /* ensim.linjasta viiteen, span käytetään jos on row, se on sama 1/ span 4*/
+}
+.item:nth-child(2) {
+    background: blue;
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
+}
+.item:last-child {
+    background-color: yellow;
+    grid-column: 1 / 5;
+}

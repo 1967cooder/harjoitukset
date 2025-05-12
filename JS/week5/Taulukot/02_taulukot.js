@@ -6,8 +6,14 @@ let pituus = myAlphabet.length // Määritetään taulukon pituus
 
 console.log(myAlphabet)
 console.log("Taulukon pituus on:",  myAlphabet.length)
-//tai
-const myAlphabetLength = (){
+
+/*
+Luo funktio nimeltä myAlphabetLength, joka tulostaa myAlphabet-taulukon pituuden.
+Jos pituus on 5 tai enemmän, tulosta: "Taulukon pituus on riittävä".
+Muussa tapauksessa tulosta: "Taulukon pituus on liian lyhyt."
+*/
+
+function myAlphabetLength (){
     console.log("Taulukon pituus:", myAlphabetLength)
     if (myAlphabetLength >= 5) {
         console.log("Riittava")
@@ -16,13 +22,10 @@ const myAlphabetLength = (){
     }
 }
 //tai
-let ans = myAlphabet.length >= 5 ? "Riittävä" : "Ei riittävä"
+let ans = myAlphabet.length >= 5 ? "Riittävä" : "Ei riittävä";
 console.log("Tämä on vastaus:", ans)
-/*
-Luo funktio nimeltä myAlphabetLength, joka tulostaa myAlphabet-taulukon pituuden.
-Jos pituus on 5 tai enemmän, tulosta: "Taulukon pituus on riittävä".
-Muussa tapauksessa tulosta: "Taulukon pituus on liian lyhyt."
-*/
+
+ //tai
 // Tarkistetaan ehto: onko taulukossa vähintään 5 kirjainta?
 function myAlphabetLength(){
  let length = 7// tai 7 paikalle --> myAlphabetLength.length
@@ -49,8 +52,8 @@ for (let i = 0; i < planets.length; i++)
     console.log("Planeetta: "  + planets[i] + ", Indeksi: " + i)
 
 //tai
-planets.map("Planeetta: ${planet}, Indeksi: ${index}")
-
+const result = planets.map((planet, index) => `Planeetta: ${planet}, Indeksi: ${index}`);
+console.log(result);
 
 
 // Harjoitus 3: Tulosta taulukon alkioiden tyypit käyttäen mixedValues-taulukkoa
@@ -62,8 +65,15 @@ Odotettu tulos:
 ...
 "Alkio: undefined, Indeksi: 5, Tyyppi: undefined"
 */
-mixedValues.forEach((arvo, indeksi) => {
-    console.log(`Alkio: ${arvo}, Indeksi: ${indeksi}, Tyyppi: ${typeof arvo}`)
+for (let i = 0; i < mixedValues.length; i++) {
+    console.log(`Alkio: ${mixedValues[i]}, Indeksi: ${i}, Tyyppi: ${typeof mixedValues[i]}`
+    );
+  }
+
+
+//tai
+mixedValues.forEach((value, index) => {
+    console.log(`Alkio: ${value}, Indeksi: ${index}, Tyyppi: ${typeof value}`)
 })
 
 
@@ -99,9 +109,26 @@ elainvarasto1.forEach((elain) => {// forEach menee kaiki eleimien  läpi elainva
     if (elainvarasto2.includes(elain)){//includes tarkistaa onko elain elainvarasto2:ssa. Jos on --> tulosta consolista
         console.log("Yhteinen  laji:" + elain)
     }
-
 })
 
+//tai
+for (let i = 0; i < elainvarasto1.length; i++) {
+    if (elainvarasto2.includes(elainvarasto1[i])) {
+      console.log(`Yhteinen laji: ${elainvarasto1[i]}`);
+    }
+  }
+
+//tai
+let yhteiset = elainvarasto1.filter((elain) => elainvarasto2.includes(elain));
+yhteiset.forEach((elain) => console.log(`Yhteinen laji: ${elain}`));
+
+//tai
+for (let elain of elainvarasto1) {
+    if (elainvarasto2.indexOf(elain) !== -1) {
+      console.log(`Yhteinen laji: ${elain}`);
+    }
+  }
+  
 
 
 // Harjoitus 6: Tulosta jokaisen eläinnimen kirjaimet animalNames-taulukosta
@@ -119,6 +146,11 @@ animalNames.forEach((animal) => {
     //tai console.log("kirjaimet sanassa", name, ", ", letters)
 })
 
+//tai
+for (let i = 0; i < animalNames.length; i++) {
+    let kirjaimet = animalNames[i].split("").join(", ");
+    console.log(`Kirjaimet sanassa '${animalNames[i]}': ${kirjaimet}`);
+  }
 
 
 // Harjoitus 7: Suodata vain positiiviset lämpötilat temperatures-taulukosta
@@ -131,11 +163,22 @@ let positiiviset = temperatures.filter(function(lampotila){
     return lampotila > 0
 })
 console.log(positiiviset);
+
 //tai
-let positiiviset = [...temperatures].filter((temp) => > 0)
-console.log(positiiviset);
+let positiiviset1 = [...temperatures].filter((temp) => temp > 0)
+console.log(positiiviset1);
 
+/*
+Kirjoita funktio getPositiveTemperatures, joka palauttaa uuden taulukon,
+joka sisältää vain lämpötilat, jotka ovat suurempia kuin 0 temperatures-taulukosta.
+Odotettu tulos: [5, 15, 20, 2]
+*/
+// Kirjoita funktiosi tähän
 
+function getPositiveTemperatures(temps) {
+    return temps.filter((t) => t > 0);
+  }
+  console.log(getPositiveTemperatures(temperatures)); // [5, 15, 20, 2]
 
 
 // Harjoitus 8: Etsi "Kettu":n indeksi zooAnimals-taulukosta
@@ -151,11 +194,13 @@ for(let i = 0; i < zooAnimals.length; i++) {
 }
 //or
 let indeksi = zooAnimals.indexOf("Kettu")
-console.log("Kettu:n indeksi:" + index)
+console.log("Kettu:n indeksi:" + indeksi)
 //or
   let foxIndex = zooAnimals.indexOf("Kettu")
 console.log(`Ketunvindeksi: ${foxIndex}`)
-
+//or
+let kettuIndex = zooAnimals.indexOf("Kettu");
+console.log("Ketun indeksi:", kettuIndex);
 
 
 // Harjoitus 9: Yritä etsiä eläin, jota ei ole zooAnimals-taulukossa
@@ -164,19 +209,19 @@ Etsi "Pingviini":n indeksi zooAnimals-taulukosta.
 Jos sitä ei löydy, tulosta "Pingviini ei ole eläintarhassa."
 Odotettu tulos: -1*/
 
-let index = zooAnimals.indexOf("Pingviini")
+let pingviiniIndex = zooAnimals.indexOf("Pingviini")
 
-if (index ===  -1) {
+if (pingviiniIndex === -1) {
     console.log("Pingviini ei ole eläintarhassa.")
 } else {
-    console.log("Pingviini:n indeksi: " + index);
+    console.log("Pingviini:n indeksi: " + pingviiniIndex);
 }
 //or
 const etsiElain = (elain) => {
     let elainIndex = zooAnimals.indexOf(elain)
     if (elainIndex== -1) {
        console.log(`${elain} ei ole eläintarhassa`) 
-        console.log(elainIndex)
+       console.log(elainIndex)
     }
 }
 
@@ -202,9 +247,8 @@ Odotettu tulos: ['Elefantti', 'Gazelli', 'Leopardi', 'Zeebra']
 safariAnimals.sort()
 console.log(safariAnimals)
 //or
-let sortedAnimals = [...safariAnimals].sort(
-    console.log(sortedAnimals)
-)
+let sortedAnimals = [...safariAnimals].sort()
+console.log(sortedAnimals)
 
 
 // Harjoitus 12: Käännä safariAnimals-taulukon järjestys
@@ -245,6 +289,7 @@ let attendees = ["Jonna", "Santtu", "Jonna", "Alex", "Jonna"];
 Etsi kaikki kohdat, joissa "Jonna" esiintyy attendees-taulukossa.
 Odotettu tulos: [0, 2, 4]
 */
+//tämä on helpompi ymmärtämään
 let jonnaIndexes = []
 attendees.forEach ((name, index) => {
     if (name == "Jonna") {
@@ -253,6 +298,14 @@ jonnaIndexes.push(index)
 })
 console.log(jonnaIndexes)
 
+//tai
+let jonnaIndeksit = [];
+for (let i = 0; i < attendees.length; i++) {
+  if (attendees[i] === "Jonna") {
+    jonnaIndeksit.push(i);
+  }
+}
+console.log(jonnaIndeksit);
 
 
 
@@ -265,6 +318,8 @@ let upperCaseNames = [...attendees].map((name) => name.toUpperCase());
 console.log(upperCaseNames); 
 
 //or
+let attendeesBig = attendees.map((name) => name.toUpperCase())
+console.log(attendeesBig);
 
 
 
@@ -278,8 +333,10 @@ Odotettu tulos: ["Peura", "Karhu", "Susi", "Hevonen", "Lammas", "Vuohi"]
 let animals = [...forestAnimals, ...farmAnimals]
 console.log(animals.join(", "))
 //or
-let allAnimals = forestAnimals.contact(farmAnimals)
+let allAnimals = forestAnimals.concat(farmAnimals)
 console.log(allAnimals)
+
+
 
 
 // Harjoitus 17: Poista ensimmäinen ja viimeinen alkio birdSpecies-taulukosta
@@ -291,9 +348,13 @@ birdSpecies.unshift("Kotka")
 birdSpecies.pop("Pingviini")
 console.log(birdSpecies)
 
-//or
+//or- tämä on paras
 let newArray = birdSpecies.slice(1, -1)
 console.log(newArray)
+
+//or Laura / vaikea
+let middleBirds = birdSpecies.slice(1, birdSpecies.length - 1);
+console.log("keskellä olevat linnut:", middleBirds);
 
 
 
@@ -306,7 +367,6 @@ Odotettu tulos: [10, 20, 25, 27, 40, 50]
 */
 numbers.splice(2,1, 25, 27)
 console.log(numbers )
-//or
 
 
 

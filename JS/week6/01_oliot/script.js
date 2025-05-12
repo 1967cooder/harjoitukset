@@ -59,7 +59,7 @@ Testaa `createBook`-funktiota luomalla uusi kirja käyttäjän antamilla arvoill
 */
 
 
-//tehdään se myöhemmin
+
 
 /* Tehtävä 6
 Muunna `library`-kokoelma JSON-merkkijonoksi ja tulosta se konsoliin.
@@ -84,7 +84,7 @@ let goodGrades = students.filter(student => student.grade > 90)
 
 //tulostetaan hyvien opiskelijoiden pelkät nimet
 goodGrades.forEach(topStudent => {
-console.log(topStudent.age) //age paikalla voi olla name tai grade tulostukseen mitä halutaan
+console.log(topStudent.name) //name paikalla voi olla age tai grade tulostukseen mitä halutaan
 })
 
 
@@ -141,8 +141,38 @@ goodRatings.forEach(topMovie => {
 /* Tehtävä 10
 Kirjoita funktio `findOldestCar`, joka ottaa vastaan taulukon auto-olioita ja palauttaa auton, jolla on varhaisin `year`.
 */
+function findOldestCar(cars){
+  if(cars.length === 0) {
+    return null;// ilman tätä ohjelma kaatuu, jos taulukko on tyhjä
+  }
+  // Aloitetaan ensimmäisestä
+  let oldest  = cars[0]
 
-// Kirjoita koodisi tähän
+  // Käydään läpi loput ja vertaa niitä edelliseen
+  for(let i = 1; i < cars.length; i++){
+    if(cars[i].year < oldest.year){
+      oldest = cars[i];
+    }
+}
+return oldest;
+}
+
+// vaihtoehtoisesti voit käyttää taulukon reduce()-metodia
+function findOldestCar2(cars) {
+  return cars.reduce((oldest, current) =>
+    current.year < oldest.year ? current : oldest
+  );
+}
+
+const carList = [
+  { brand: "Volvo", model: "240", year: 1985 },
+  { brand: "Toyota", model: "Corolla", year: 1992 },
+  { brand: "Ford", model: "Model T", year: 1927 },
+];
+
+// Kutsu funkiota:
+console.log("Vanhin auto on:", findOldestCar(carList));
+console.log("Vanhin auto on 2:", findOldestCar2(carList));
 
 /* Tehtävä 11
 Määrittele `userProfiles`-taulukko, joka sisältää käyttäjäolioita.
@@ -194,13 +224,17 @@ const smartphone = {
   batteryLife: "5 yars",
   is5GEnabled: true,
 }
+
 if (smartphone.is5GEnabled){
   console.log("This phone supports 5G!")
 } else {
   console.log("This phone does not support 5G.")
-}
+  }   
+
 //tai
 smartphone.is5GEnabled ? console.log("This phone supports 5G!"): console.log("This phone does not support 5G.");
+
+
 
 /* Tehtävä 14
 Määrittele olio nimeltä `fox`, jolla on ominaisuudet `name`, `age` ja `habitat`.
@@ -230,6 +264,18 @@ const employees = [
 
 ]
 function getTotalSalarys(){
-  return employees.reduce((total,employee) => total + employee.salary, 0)
+  return employees.reduce((sum,employee) => sum + employee.salary, 0)
 }
 console.log(getTotalSalarys())
+
+
+//tai
+function getTotalSalary(people) {
+  let total = 0;
+  for (const person of people) {
+    total += person.salary;
+  }
+  return total;
+}
+
+console.log("Yhteenlaskettu palkka:", getTotalSalary(employees)); // 11000
