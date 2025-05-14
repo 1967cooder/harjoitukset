@@ -74,10 +74,16 @@ for(let i = 0; i < animals.length; i++){//käy kaikien elementien läpi
         if (name) {//10
         animals.push({ name, type });//(laitta nimi)
          newNameInput.value = "";//tyhjentää kentä
-         renderList();
-        
+         renderList(); 
     }
 
+    });
+
+//Sort aakkoksen mukaan
+    sortButton.addEventListener("click", () => {
+        console.log("Sort button clicked")
+        animals.sort((a, b) => a.name.localeCompare(b.name));
+renderList();
     });
 
     filterSelect.addEventListener("change", renderList);
