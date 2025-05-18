@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css" />
+    <title>Pankkiautomaatti</title>
+</head>
+
+<body>
+    <div class="container"><!--Laattikon aloitaminen-->
+        <h1>Pankkiautomaatti</h1>
+
+<!--PIN-koodin kirjautuminen-->
+        <div id="loginSection">
+            <input type="password" id="pinInput" placeholder="Syötä PIN-koodi" />
+            <button id="loginBtn">Kirjaudu</button>
+            <div id="loginMessage" class="message"></div>
+          </div>
+
+<!--Pankkitoiminnot-->
+          <div id="atmSection" style="display:none;">
+    <div>
+        <h2>Saldo: <span id="balance">0></span> €</h2> <!--osio-->
+   
+        
+            <input type="number" id="depositAmount" placeholder="Summa talletukseen" /> <!--syöttökenttä ja painike- rahan tallettamista varten-->
+            <button id="depositBtn">Talleta</button>
+    </div>
+
+    <div>
+            <input type="number" id="withdrawAmount" placeholder="Summa nostoon" /> <!--syöttökenttä ja painike rahan nostamista varten-->
+            <button id="withdrawBtn">Nosta</button>
+    </div>
+        
+        <div id="message" class="message"></div> <!--viestialue-->
+    </div><!--Tähän loppuu "atmSection eli pankin osa"-->
+    </div><!--Tähän loppuu laattikkoa-->
+    <script src="script.js"></script>
+</body>
+</html>

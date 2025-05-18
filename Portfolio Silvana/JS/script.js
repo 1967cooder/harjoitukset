@@ -12,13 +12,7 @@
 
 
 
-
-
-
-
-
 //userForm----------------------------------------------------------------
-
 
 const form = document.getElementById("userForm");
 const errorMessage = document.getElementById("errorMessage");
@@ -43,7 +37,6 @@ form.addEventListener("submit", function (event) {
 
   }
 
-
 //jos kaikki on ok
     alert('Thank you, ' + name + '! Your message has been sent.');// Näyttää viesti
 
@@ -51,7 +44,6 @@ form.addEventListener("submit", function (event) {
     console.log('Email:', email);
     console.log('Message:', message);
 
- 
 form.reset();
 
 });

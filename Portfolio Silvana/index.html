@@ -4,27 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="CSS/styles.css"/>
-
-    <title>Portfolio Silvana Lindholm</title>
+    <title>Portfolio Silvana Lindholm</title>  
 </head>
 
 <body>
 <!-- HEADER & NAV -->
   <header class="header">
+
     <div class="logo">Portfolio of Silvana Lindholm</div>
+
     <nav class="nav">
       <a href="index.html">Home</a>
       <a href="projects.html">Projects</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
     </nav>
+
   </header>
 
-  
-  <main>
+<main>
  <!--------------BackgroundImage-------------------------------->
 <section class="hero">
   <img src="images/backgrImage.webp" alt="Background image" />
@@ -32,8 +33,10 @@
     <h1>Portfolio of Silvana  Lindholm</h1> 
     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet assumenda quas nemo illo ipsam accusamus odio, modi voluptate,</p>
   
-     <button type="button">See more</button><!--backgrImage-button-->
-   
+    <!---- <button type="projects.html">See more</button>--backgrImage-button-->
+    <a href="about.html">
+      <button>See more</button>
+    </a>
   
 </div><!--BackgrImage loppuu-->
 
@@ -50,20 +53,20 @@
 <div class="project-container">
    
       <div class="project" id="lamp">
-          <img src="images/lamp.webp" alt="Lamp" width="300" height="200" />
-          <h3>Business College Projects</h3>
+          <img src="images/lamp.webp" alt="lamp" width="300" height="200" />
+          <h3>Html_Css</h3>
       <a href="#">See more</a>
    </div>
 
       <div class="project" id="joi">
           <img src="images/joi.webp" alt="Joi" width="300" height="200" />
-          <h3>Lorem ipsum, dolor sit</h3>
+          <h3>JavaScript</h3>
           <a href="#">See more</a>
       </div>
 
       <div class="project" id="puzzle">
           <img src="images/puzzle.webp" alt="Puzzle" width="300" height="200" />
-          <h3>Lorem ipsum, dolor sit</h3>
+          <h3>Others</h3>
           <a href="#">See more</a>
       </div>
   </div><!--tässä loppuu div class project-container-->
@@ -74,11 +77,21 @@
     <div class="About">
        
         <div class="about-content">
-        <img src="images/imageSilvana.png" alt="Silvana" width="300" height="400" />
-        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores,
-        laboriosam dolorum debitis corrupti ut rem ipsa dolorem saepe nam 
-        ducimus deserunt eveniet perferendis, libero sequi beatae, molestiae 
-        asperiores labore hic.</p>
+       <!---<img src="images/imageSilvana.png" alt="Silvana" width="300" height="400" />---> 
+        <p> Hello! My name is Silvana Lindholm and I am currently studying at a Business College, 
+          specializing in the Tieto- ja viestintätekniikan perustutkinto (Vocational Qualification 
+          in Information and Communication Technology). The program is very practical compared to 
+          similar university studies. The studies focus entirely on acquiring the key skills 
+          essential or a software developer. The main modules of the qualification are:</p>
+          <ul>
+            <br>
+              <li>Programming</li>
+              <li>Working as a software developer</li>
+            <li>Implementing software using a software component library</li>
+        </ul>
+        <br>
+          <p>The core of the studies includes</p><p><strong>React, WordPress, JavaScript, and PHP</strong>.</p>
+          <p>For more information about me, please<a href="about.html">click here</a>.</p>
         </div>
 
     </div><!--Div class About finish---------->
@@ -105,12 +118,9 @@
         <textarea id="messageToMe" name="messageToMe"></textarea>
 
         
-        
-        
         <button type="submit">Send Message</button>
         <p class="error" id="errorMessage"></p>
-     
-
+    
         
   </form>
   

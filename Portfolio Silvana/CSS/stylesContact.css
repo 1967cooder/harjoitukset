@@ -78,6 +78,21 @@ header {
     color:white;
     }
     
+    @keyframes fadeIn {/*sulavat siirtymät*/
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      
+      #backgrImage-text h1,
+      #backgrImage-text p {
+        animation: fadeIn 1s ease forwards;
+      }
 
 
   body {

@@ -6,7 +6,7 @@
 
 header {
     width: 100%;
-    background-color: hsl(235, 36%, 46%); /* opcionalno pozadina */
+    background-color: hsl(235, 36%, 46%); 
     padding: 1rem 2rem;
     font-family: "Red Hat Display";
     color:white;
@@ -44,12 +44,14 @@ header {
     transform: translateX(-50%);
   }
 
-.nav a:hover::after {
+.nav a:hover::after {/*sulavat siirtymät*/
     width: 100%;
   }
 
 
+
 /*-------------------------Background image-------------------------------*/
+
 .hero {
     position: relative;
     display: flex; 
@@ -80,7 +82,21 @@ header {
     color:white;
     }
     
-
+    @keyframes fadeIn {/*sulavat siirtymät*/
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      
+      #backgrImage-text h1,
+      #backgrImage-text p {
+        animation: fadeIn 1s ease forwards;
+      }
 
 /*-----------------------------------------------------------------------------*/
 body {
@@ -134,12 +150,11 @@ body {
 .project:hover {
     transform: translateY(-5px); /* nosto efekti */
 }
-
+/*----------About content-----------*/
 
 .about {
     text-align: center;
     padding: 50px 20px;
-   
    
 
 }
@@ -154,25 +169,25 @@ body {
     display: flex;
     justify-content: center; /* Центрира по хоризонтала */
     align-items: center; /* Подравнява по вертикала */
-    gap: 40px; /* Разстояние между снимката и текста */
+   /* gap: 40px;  Разстояние между снимката и текста */
     flex-wrap: wrap; /* За да се пренарежда на мобилни устройства */
-    
+    flex-direction: column;
 }
-
+/*
 .about-content img {
     width: 300px;
     height: auto;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);   
 }
-
+*/
 .about-content p {
-    max-width: 500px;
+    max-width: 750px;
     text-align: left;
     font-size: 18px;
     line-height: 1.6;
     color: hsl(235, 36%, 46%);
-
+    margin-left: 0;
 }
 
 
@@ -271,11 +286,11 @@ button:hover {
     font-weight: bold;
     cursor: pointer;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: background 0.3s, transform 0.3s;
+    transition: background 0.3s, transform 0.3s;/*sulavat siirtymät*/
     /* display: none;  <-- Махаме този ред! */
 }
 
 #toTopBtn:hover {
     background-color: #38c0da;
-    transform: scale(1.1);
+    transform: scale(1.1);/*sulavat siirtymät*/
 }

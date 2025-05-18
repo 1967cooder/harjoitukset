@@ -48,6 +48,18 @@ header {
     width: 100%;
   }
 
+  #projectsSelect {/*piilotettu Projects takana*/
+    display: none;
+  }
+
+  select,/*koko selecti on laatikossa*/
+  label {
+    display: block;
+    margin-top: 10px;
+  }
+
+
+
 
 /*-------------------------Background image-------------------------------*/
 .hero {
@@ -77,18 +89,60 @@ header {
     transform: translate(-50%, -40%);
     text-align: center;
     color:white;
+
     }
     
+    @keyframes fadeIn {/*sulavat siirtymät*/
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      
+      #backgrImage-text h1,
+      #backgrImage-text p {
+        animation: fadeIn 1s ease forwards;
+      }
 
 
 /*-----------------------------------------------------------------------------*/
 body {
     background-color: rgb(135, 219, 250);
     font-family: "Red Hat Display", sans-serif;
-   
-
+    transition: background-color 0.3s, color 0.3s;/**/
 }
+/*------------------Vaalea/tumma teemanvaihtaja -------------------------------*/
+.center-box {
+    height: 30vh;                /* Височина на целия екран */
+    display: flex;
+    flex-direction: column;       /* Подреди елементите вертикално */
+    justify-content: center;      /* Центриране вертикално */
+    align-items: center;          /* Центриране хоризонтално */
+    text-align: center;
+    gap: 20px;                    /* Разстояние между h1, p и бутона */
+  }
 
+
+body.light-theme {/**/
+    background-color:  rgb(135, 219, 250);
+    color: #000000;
+  }
+
+body.dark-theme {/**/
+    background-color: #121212;
+    color: #ffffff;
+  } 
+
+.theme-toggle {/**/
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  } 
+/*------------------------------------------------------*/
 .container {
    padding: 40px;
    color:  hsl(235, 36%, 46%); 

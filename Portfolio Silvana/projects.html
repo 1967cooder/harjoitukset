@@ -15,12 +15,26 @@
 <!-- HEADER & NAV -->
   <header class="header">
     <div class="logo">Portfolio of Silvana Lindholm</div>
+
+
     <nav class="nav">
       <a href="index.html">Home</a>
-      <a href="projects.html">Projects</a>
+
+     <div class="dropdown">
+        <a href="#" class="dropbtn" onclick="toggleDropdown(event)">Projects</a>
+        <select id="projectsSelect" onchange="navigateToPage(this)">
+          <option value="">-- Choose --</option>
+          <option value="html_css.html">Html_Css</option>
+          <option value="javascript.html">JavaScript</option>
+          <option value="others.html">Others</option>
+        </select>
+      </div>
+      
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
     </nav>
+
+    
   </header>
 
   
@@ -32,9 +46,10 @@
     <h1>Portfolio of Silvana  Lindholm</h1> 
     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet assumenda quas nemo illo ipsam accusamus odio, modi voluptate,</p>
   
-     <button type="button">See more</button><!--backgrImage-button-->
-   
-  
+    <!---- <button type="button">See more</button>--backgrImage-button-->
+   <a href="about.html">
+      <button>See more</button>
+    </a>
 </div><!--BackgrImage loppuu-->
 
 </section>
@@ -48,24 +63,32 @@
 <!-----------------------Kontainer with 3 projects------------------------------------------------>
 <h2>Projects</h2>
 
+<body class="light-theme">
+
+<div class="center-box">
+  <h1>Welcome!</h1>
+  <p>Here are my projects</p>
+  <button class="theme-toggle" onclick="toggleTheme()">Vaihda teema</button>
+</div>
+
 <div class="project-container">
    
     <div class="project" id="lamp">
         <img src="images/lamp.webp" alt="Lamp" width="300" height="200" />
-        <h3>Business College Projects</h3>
-    <a href="lomake(task.png) copy/index.html">See more</a>
+        <h3>Html_Css</h3>
+    <a href="html_css.html">See more</a>
  </div>
 
     <div class="project" id="joi">
         <img src="images/joi.webp" alt="Joi" width="300" height="200" />
-        <h3>Lorem ipsum, dolor sit</h3>
-        <a href="#">See more</a>
+        <h3>JavaScript</h3>
+        <a href="JavaScript.html">See more</a>
     </div>
 
     <div class="project" id="puzzle">
         <img src="images/puzzle.webp" alt="Puzzle" width="300" height="200" />
-        <h3>Lorem ipsum, dolor sit</h3>
-        <a href="#">See more</a>
+        <h3>Others</h3>
+        <a href="Others.html">See more</a>
     </div>
 </div><!--tässä loppuu div class project-container-->
 
@@ -83,7 +106,6 @@
         <label for="yourName">Your Name:</label>
         <input type="text" id="yourName" name="yourName"required ><!--setää lähettäminen-->
     
-
    
         <label for="yourEmail">Your Email: </label>
         <input type="email" id="yourEmail" name="yourEmail">
@@ -92,8 +114,6 @@
         <label for="messageToMe">Message to me: </label>
         <textarea id="messageToMe" name="messageToMe"></textarea>
 
-        
-        
         
         <button type="submit">Send Message</button>
         <p class="error" id="errorMessage"></p>
@@ -111,6 +131,6 @@
 
 <button id="toTopBtn">TOP ↑</button>
   
-<script src="JS/script.js"></script>
+<script src="JS/projects.js"></script>
 </body>
 </html>

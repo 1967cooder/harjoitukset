@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <title>Teemanvaihtaja</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    /* Vaalea teema (oletus) */
+    body.light-theme {
+      background-color: #ffffff;
+      color: #000000;
+    }
+
+    /* Tumma teema */
+    body.dark-theme {
+      background-color: #121212;
+      color: #ffffff;
+    }
+
+    .theme-toggle {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body class="light-theme">
+  <h1>Welcome!</h1>
+  <p>This is my projets site:</p>
+  <button class="theme-toggle" onclick="toggleTheme()">Vaihda teema</button>
+
+  <script>
+    function toggleTheme() {
+      const body = document.body;
+      // Vaihdetaan teemaluokka
+      if (body.classList.contains('light-theme')) {
+        body.classList.replace('light-theme', 'dark-theme');
+      } else {
+        body.classList.replace('dark-theme', 'light-theme');
+      }
+    }
+  </script>
+</body>
+</html>
