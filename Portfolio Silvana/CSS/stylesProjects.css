@@ -13,7 +13,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-   
+    flex-wrap: wrap; /* tarvitaan mobiilissa */
+    box-sizing: border-box;
 }
 
 
@@ -174,7 +175,7 @@ body.dark-theme {/**/
 
 .project h3 {
     margin: 15px 0 10px;
-    color: white
+    color: white;
 }
 .project a {
     display: inline-block;
