@@ -51,6 +51,8 @@ document.addEventListener("DOMContentLoaded", () => {
   document.addEventListener("DOMContentLoaded", () => {
     const ordersList = document.getElementById("ordersList");
     const statusFilter = document.getElementById("statusFilter");
+    const scrollBtn = document.getElementById("scrollTopBtn");
+
     let orders = JSON.parse(localStorage.getItem("orders")) || [];
 
     // Järjestys uusimmat ensin
@@ -80,9 +82,9 @@ document.addEventListener("DOMContentLoaded", () => {
           <p><strong>Hinta:</strong> ${order.totalPrice}€</p>
           <label>Tila:
             <select data-id="${order.id}">
-              <option value="waiting" ${order.status === "waiting" ? "selected" : ""}>⏳ waiting</option>
-              <option value="ready" ${order.status === "ready" ? "selected" : ""}>✅ ready</option>
-              <option value="delivered" ${order.status === "delivered" ? "selected" : ""}>📦 delivered</option>
+              <option value="waiting" ${order.status === "waiting" ? "selected" : ""}>🟡 waiting</option>
+              <option value="ready" ${order.status === "ready" ? "selected" : ""}> 🔵 ready</option>
+              <option value="delivered" ${order.status === "delivered" ? "selected" : ""}>🟢 delivered</option>
             </select>
           </label>
           <button class="deleteBtn" data-id="${order.id}">🗑 Poista</button>
@@ -120,5 +122,25 @@ document.addEventListener("DOMContentLoaded", () => {
       renderOrders(statusFilter.value);
     });
 
-    renderOrders();
+    
+
+
+  //scroll button
+  
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      scrollBtn.style.display = "block";
+    } else {
+      scrollBtn.style.display = "none";
+    }
   });
+
+  scrollBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+
+  renderOrders();
+});

@@ -6,23 +6,29 @@
   <link rel="stylesheet" href="orders.css">
 </head>
 
-</header>
+<body>
+
+<header class="header">
 <h1>Kaikki tilaukset</h1>
   <p><a href="index.html">⬅ Takaisin etusivulle</a></p>
-</header>
+
 
 <label for="statusFilter">Suodata tilan mukaan:</label>
   <select id="statusFilter">
     <option value="all">Kaikki</option>
-    <option value="waiting">⏳ waiting</option>
-    <option value="ready">✅ ready</option>
-    <option value="delivered">📦 delivered</option>
+    <option value="waiting"> 🟡 waiting</option>
+    <option value="ready"> 🔵 ready</option>
+    <option value="delivered"> 🟢 delivered</option>
   </select>
+</header>
 
-<body>
-  
+
+
+<main class="main-content">
   <div id="ordersList"></div>
-  
+</main>
+
+<button id="scrollTopBtn" title="Palaa ylös">⬆</button>
   <script src="orders.js"></script>
 </body>
 </html>
