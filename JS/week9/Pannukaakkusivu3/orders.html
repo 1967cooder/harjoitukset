@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <title>Kaikki tilaukset</title>
+  <link rel="stylesheet" href="orders.css">
+</head>
+
+</header>
+<h1>Kaikki tilaukset</h1>
+  <p><a href="index.html">⬅ Takaisin etusivulle</a></p>
+</header>
+
+<label for="statusFilter">Suodata tilan mukaan:</label>
+  <select id="statusFilter">
+    <option value="all">Kaikki</option>
+    <option value="waiting">⏳ waiting</option>
+    <option value="ready">✅ ready</option>
+    <option value="delivered">📦 delivered</option>
+  </select>
+
+<body>
+  
+  <div id="ordersList"></div>
+  
+  <script src="orders.js"></script>
+</body>
+</html>

@@ -31,7 +31,9 @@ header {
     font-size: 1rem;
     color: white;
     position: relative;/*eventualno moje i bez tova*/
+    text-decoration: none;
 }
+
 
 .nav a::after { /*aleviivattu*/
     content: "";

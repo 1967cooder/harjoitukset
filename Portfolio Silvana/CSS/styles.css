@@ -34,6 +34,7 @@ header {
     font-size: 1rem;
     color: white;
     position: relative;/*eventualno moje i bez tova*/
+    text-decoration: none;
 }
 
 
@@ -119,8 +120,8 @@ body {
 .container h2 {
     color: hsl(235, 36%, 46%);
 }
-
-.project-container{
+/*----------------*/
+.job-container{
     display: flex;        /* jätjästää kaikki vieräkkäin horizontaalilla linjalla */
     justify-content: center; /* keskelle*/
     gap: 30px;            /* tila projectien välillä */
@@ -130,7 +131,7 @@ body {
 }
    
 
-.project {
+.job {
     background: hsl(235, 36%, 46%);
     border-radius: 10px;
     overflow: hidden;
@@ -140,11 +141,11 @@ body {
     transition: transform 0.3s ease;
 }
 
-.project h3 {
+.job h3 {
     margin: 15px 0 10px;
     color: white;
 }
-.project a {
+.job a {
     display: inline-block;
     margin-bottom: 15px;
     color: #50dfff;
@@ -152,7 +153,7 @@ body {
     font-weight: bold;
 }
 
-.project:hover {
+.job:hover {
     transform: translateY(-5px); /* nosto efekti */
 }
 /*----------About content-----------*/
@@ -299,4 +300,11 @@ button:hover {
 }
 
 
-    
+@media (max-width: 400px) {
+    .nav {
+        display: flex;
+        gap: 2rem; /* etäisyys  Projects, About, Contact  välillä*/
+        justify-content: flex-end;
+        
+    }
+}

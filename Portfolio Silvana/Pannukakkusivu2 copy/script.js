@@ -136,10 +136,8 @@ summary += `Kokonaishinta: ${totalPriceDisplay.textContent}`;
     summaryText.innerHTML = summary;
 
     })
+
+
 });
-
-
-
-
 
 
