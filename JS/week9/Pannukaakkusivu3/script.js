@@ -1,37 +1,5 @@
 
-/*
-const form = document.getElementById('pancakeForm');
-const totalPriceDisplay = document.getElementById('totalPriceDisplay');//alhalla
-const priceBanner = document.getElementById('totalPrice');
-const seeOrderButton = document.getElementById('seeOrder');//button
-const summaryText = document.getElementById('summaryText');//tilauksen yhteenvetolet toppings = [];
 
-let toppings = [];
-let extras = [];
-let deliveryPrice = 0;
-let basePrice = 5;
-
-function updateTotalPrice() {
-    let toppingsPrice = toppings.length * 1;
-    let extrasPrice = extras.reduce((sum, item) => sum + item.price, 0);
-    let total = basePrice + toppingsPrice + extrasPrice + deliveryPrice;
-
-    totalPriceDisplay.textContent = `${total}€`;
-  priceBanner.textContent = `${total}€`;
-}
-
-// Lomakkeen change-kuuntelija
-form.addEventListener('change', (event) => {
-    const target = event.target;
-
-    // Jos pannukakun tyyppi vaihtuu
-  if (target.id === 'type') {
-    basePrice = parseInt(target.selectedOptions[0].dataset.price);
-  }
-
-   // Jos täyte valitaan tai poistetaan
-   if (target.classList.contains('topping')) {
-    const toppingName = target.parentElement.textContent.trim(); */
 
     document.addEventListener("DOMContentLoaded", function() {
         //nämä muuttujat ovat vapaaehtoisia
@@ -145,6 +113,7 @@ form.addEventListener('change', (event) => {
                 const customerName = document.getElementById("customerName").value.trim();
                 const selectedType = typeSelect.options[typeSelect.selectedIndex];
                 const delivery = document.querySelector("input[name=delivery]:checked").parentElement.textContent.trim();
+
 
         // Luo yksilöllinen ID
         const orderId = Date.now();

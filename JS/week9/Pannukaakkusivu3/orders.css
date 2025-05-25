@@ -20,8 +20,9 @@
     position: fixed;/**/
     top: 0;
     left: 0;
-    z-index: 1000; /* стойност над другите елементи */
+    z-index: 1000; /* Elementille on annettu erittäin korkea prioriteetti pinoutumisessa, asettuu muiden elmentien päälle. */ 
 }
+
 
 a {
     color: white;
@@ -42,16 +43,28 @@ body {
 
 .main-content {
     flex: 1;
-    overflow-y: auto;
     padding: 1rem;
-    max-height: calc(100vh - 100px);
-  }
+    /*overflow-y: auto; täm estää napin nostaa ylös
+    max-height: calc(100vh - 100px); tämä estää napin nostaa ylös*/
 
-  select,
+}
+
+
+select,
   label {
     display: block;
     margin-top: 10px;
-  }
+    font-weight: bold;
+}
+
+select,
+input[type="text"] {
+  padding: 0.4rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  max-width: 300px;
+}
 
 #ordersList {
     display: flex;        /* jätjästää kaikki vieräkkäin horizontaalilla linjalla */
@@ -66,26 +79,43 @@ body {
     padding: 10px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  }
+}
 
 .order.waiting {
     background-color: #fff8c4;
     border-left: 5px solid #ffd700;
     padding: 10px;
     margin-bottom: 10px;
-  }
+}
   
-  .order.ready {
+.order.ready {
     background-color: #cce5ff;
     border-left: 5px solid #3399ff;
-  }
+}
   
-  .order.delivered {
+.order.delivered {
     background-color: #d4edda;
     border-left: 5px solid #28a745;
-  }
+}
 
-  #scrollTopBtn {
+.deleteBtn {
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    background:  hsl(298, 48%, 50%);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.deleteBtn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}  
+
+#scrollTopBtn {
+    display: none;
     position: fixed;
     bottom: 30px;
     right: 30px;
@@ -98,17 +128,18 @@ body {
     width: 50px;
     height: 50px;
     cursor: pointer;
-    display: none; /* Скрит по подразбиране */
+    align-items: center;
+    justify-content: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     transition: opacity 0.3s ease;
-  }
+}
   
-  #scrollTopBtn:hover {
+#scrollTopBtn:hover {
     background-color: hsl(298, 48%, 40%);
-  }
+}
   
 
-  @media (max-width: 600px) {
+@media (max-width: 600px) {
     .order {
       width: 100%;
     }
