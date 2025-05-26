@@ -1,4 +1,5 @@
 
+# Pannukakkusivu 3 – Tilauksien hallinta
 
 
 Täässä projectissa kesiteltiin tilauksia ja tallennettiin ne taulukkoon. Lisäksi uuden "Kaikki tilaukset" -sivun luotin, jossa "kokki" voi hallita jokaisen tilauksen tilaa.
