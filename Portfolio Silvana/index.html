@@ -6,6 +6,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+   <!-- Добави под другите <link> елементи в <head> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+   
     <link rel="stylesheet" href="CSS/styles.css"/>
     <title>Portfolio Silvana Lindholm</title>  
 </head>
@@ -106,6 +109,21 @@
 <!--------------------------Form-------------------------------------------------------->
   <div class="form-wrap"><!--Luo laattikon(div lomakkeelle); form-wrap käytetään tyylitykseen CSS-ssä-->
       <h2>Contact Us</h2><br/>
+
+      <div class="social content">
+        <!-- ИКОНКИ ВЛЯВО -->
+        <div class="social-icons-left">
+          <a href="https://discord.com/users/TUNNUS" target="_blank" aria-label="Discord">
+            <i class="fab fa-discord"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/KAYTTAJANIMI" target="_blank" aria-label="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/KAYTTAJANIMI" target="_blank" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+        </div> 
+
       
    <form id="userForm"><!--Mahdollistaa, että siihen voidaan viitata javascriptillä-->
 
@@ -126,9 +144,8 @@
         <button type="submit">Send Message</button>
         <p class="error" id="errorMessage"></p>
     
-        <div class="fa-brands fa-discord"></div>
   </form>
-  <div class="fa-brands fa-discord"></div>
+      </div>
   
   <div class="attribution">
     Copyright <a href="#">Silvana Lindholm</a>

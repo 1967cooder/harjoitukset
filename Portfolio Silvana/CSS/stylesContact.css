@@ -108,31 +108,28 @@ header {
 
 /*----------------Form---------------------------------------*/
 
-
-
 .form-wrap {
-    min-height: 40vh; /* määrittelee korkeus, да покрива целия екран */
+    min-height: 40vh;
     background: hsl(235, 36%, 46%);
     display: flex;
     flex-direction: column;
-    justify-content: center; /* центрира вертикално */
-    align-items: center; /* центрира хоризонтално */
+    align-items: center;
     padding: 20px;
     box-sizing: border-box;
-    overflow: auto; /* sallii vierityksen, jos sisältö menee yli */
 }
-h2 {
-color:white;
 
+h2 {
+    color:white;
 }
+
 form {
+    flex-grow: 1;                /* Заема останалото място */
+    max-width: 500px;
     width: 100%;
-    max-width: 500px; /* формата няма да е по-широка от 500px */
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
-
-
 
 
 label {
@@ -140,11 +137,9 @@ label {
     margin-top: 20px;
     margin-bottom: 5px;
     font-size: 16px;
-    
 }
 
 input, textarea {
-    
     width: 100%;
     padding: 12px;
     border-radius: 5px;
@@ -185,6 +180,7 @@ button:hover {
     color: aqua;
     text-decoration: none;
 }
+
 #toTopBtn {
     position: fixed;
     bottom: 30px;
@@ -206,4 +202,53 @@ button:hover {
 #toTopBtn:hover {
     background-color: #38c0da;
     transform: scale(1.1);
+}
+
+.social.content {
+    display: flex;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;              /* Центрира целия блок по хоризонталата */
+    align-items: flex-start;
+    gap: 60px;
+    margin-top: 40px;
+}
+  
+.social-icons-left {
+    width: 200px;                /* Принуждава иконките да стоят вляво */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 60px;
+    font-size: 2rem;
+    margin-top: 40px;
+}
+  
+.social-icons-left a {
+    color: white;
+    transition: color 0.3s ease;
+}
+  
+.social-icons-left a:hover {
+    color: #50dfff;
+}
+  
+@media (max-width: 468px) {
+    .social.content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .social-icons-left {
+        flex-direction: row;
+        justify-content: center;
+        width: auto;
+        gap: 60px;
+        font-size: 2rem;
+        margin-top: 40px;
+    }
+
+    form {
+        width: 90%;
+    }
 }

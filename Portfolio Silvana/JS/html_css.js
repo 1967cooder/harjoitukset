@@ -36,6 +36,12 @@
       img: "images/turquoise-light.webp",
       link: "Transition harjoitus copy/index.html"
     },
+    {
+      id: "order-summary",
+      title: "Order-summary",
+      img: "images/turquoise-light.webp",
+      link: "order-summary-component-main/index.html"
+    },
        
   ];
 
