@@ -186,8 +186,30 @@ fetchData("invalid-url"); // Tulostaa verkkovirheen
 */
 
 async function fetchData(url) {
-  // Laita koodisi tähän
+  try {
+const response = await fetch(url);
+if(!response.ok){
+    throw new Error(`Virheellinen vastaus: ${response.status}`)
 }
+const data = await response.json();
+console.log(data);
+  } catch (error){
+    console.error("Verkkovirhe", error.message);
+  }
+}
+Testitapaukset:
+fetchData("https://jsonplaceholder.typicode.com/users"); // Tulostaa API-datan
+fetchData("invalid-url"); // Tulostaa verkkovirheen
+
+//Tehtävän testaaminen nappien avulla:
+document.getElementById("goodApi").addEventListener("click", () =>
+    fetchData("https://jsonplaceholder.typicode.com/users")
+);
+document.getElementById("badApi").addEventListener("click", () =>
+    fetchData ("invalid-url")
+);
+
+
 
 /* Tehtävä 9: Korjaa URI-virhe
 /*
@@ -199,8 +221,24 @@ task9("%"); // Pitäisi kirjata URIError
 */
 
 function task9(malformedURI) {
-  // Laita koodisi tähän
+ try {
+    const decoded = decodedURIcomponent(malformedURI);
+    console.log(decoded);
+ } catch (error) {
+    if (error instanceof URIError) {
+        console.error("URI-virhe", error.message);
+    } else {
+        console.log("Virhe", error.message)
+    }
+ }
 }
+Testitapaukset:
+task9("https%3A%2F%2Fexample.com"); // Pitäisi dekoodata oikein
+task9("%"); // Pitäisi kirjata URIError
+
+document.getElementById("URIok").addEventListener("click", () =>
+task9("%"));
+
 
 /* Tehtävä 10: Tyhjennä LocalStorage
 /*
@@ -211,5 +249,10 @@ clearStorage(); // Pitäisi kirjata "LocalStorage tyhjennetty."
 */
 
 function clearStorage() {
-  // Laita koodisi tähän
+    try {
+        localStorage.clear();
+        console.log("localStorage tyhjennetty.");
+    } catch (error) {
+        console.log("Virhe tyhjennettäessä LocalStoragea", error.message);
+    }
 }
