@@ -1,5 +1,7 @@
 "use strict";
 
+const { reject } = require("async");
+
 /* 
 Tehtävä 1: Viivästetty tervehdys (Callback)  
 ---------------------------------------
@@ -8,7 +10,9 @@ Kahden (2) sekunnin kuluttua sen tulee kutsua `callback` arvolla `"Hei, [name]!"
 */
 
 function delayedGreet(name, callback) {
-  // Laita koodisi tähän
+  setTimeout(() => {
+    callback(`Hei, ${name}`);
+  }, 2000);
 }
 
 // Testitapaus
@@ -24,7 +28,9 @@ Sen tulee odottaa 3 sekuntia ja sen jälkeen kutsua callbackia seuraavalla viest
 */
 
 function processOrder(orderNumber, callback) {
-  // Laita koodisi tähän
+  setTimeout(() => {
+    callback(`Tilaus €{orderNumber} on noudettavissa.`);
+  }, 3000);
 }
 
 // Testitapaus
@@ -40,7 +46,13 @@ Jos `validUser === false`, kutsu callbackia heti viestillä `"Virheellinen kirja
 */
 
 function loginUser(username, validUser, callback) {
-  // Laita koodisi tähän
+  if (validUser) {
+    setTimeout (() => {
+      callback(`Tervetuloa, ${username}!`);
+    }, 10000);
+  } else {
+    callback("Virheellinen kirjautuminen");
+  }
 }
 
 // Testitapaukset
@@ -58,7 +70,15 @@ Jos `shouldFail === true`, **hylkää 2 sekunnin jälkeen** viestillä `"Virhe k
 */
 
 function fetchUserData(shouldFail) {
-  // Laita koodisi tähän
+  return new Promise((resolve, reject) => {
+    setTimeout (() => {
+      if (shouldFail) {
+        reject("Virhe käyttäjätietojen haussa");
+      } else {
+        resolve ("Käyttäjätiedot haettu");
+      }
+    }, 2000);
+  })
 }
 
 // Testitapaukset
@@ -66,6 +86,8 @@ fetchUserData(false).then(console.log).catch(console.error);
 // Odotettu: "Käyttäjätiedot haettu" (2 sekunnin kuluttua)
 fetchUserData(true).then(console.log).catch(console.error);
 // Odotettu: "Virhe käyttäjätietojen haussa" (2 sekunnin kuluttua)
+
+
 
 /* 
 Tehtävä 5: Tilauskäsittely (Promise-ketju)  
@@ -77,9 +99,22 @@ Muunna `processOrderPromise()` palauttamaan promise-ketjun:
 */
 
 function processOrderPromise() {
-  // Laita koodisi tähän
+  return new Promise((resolve) => {
+    setTimeout(() => resolve("Tilaus vastaanotettu"), 2000);
+  })
+  .then((message) => {
+    console.log(message);
+    return new Promise((resolve) => {
+      setTimeout(() => resolve("Tilausta valmistellaan"), 3000); 
+    });
+  })
+  .then((message) => {
+    console.log(message);
+    return new Promise((resolve) => {
+      setTimeout(() => resolve("Tilaus valmis noudettavaksi"), 1000);
+  })
+})
 }
-
 // Testitapaus
 processOrderPromise().then(console.log);
 // Odotettu: kolmen viestin ketju viiveineen
@@ -93,14 +128,22 @@ Jos `userExists === false`, **hylkää 2 sekunnin kuluttua** viestillä `"Käytt
 */
 
 function getUserProfile(userExists) {
-  // Laita koodisi tähän
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (userExists) {
+        resolve("Käyttäjäprofiili ladattu");
+      } else {
+        reject("Käyttäjää ei löytynyt");
+      }
+    }, 2000)
+  })
 }
-
 // Testitapaukset
 getUserProfile(true).then(console.log).catch(console.error);
 // Odotettu: "Käyttäjäprofiili ladattu" (2 sekunnin kuluttua)
 getUserProfile(false).then(console.log).catch(console.error);
 // Odotettu: "Käyttäjää ei löytynyt" (2 sekunnin kuluttua)
+
 
 /* 
 Tehtävä 7: Käyttäjätietojen haku (Async/Await)  
@@ -111,14 +154,23 @@ Jos `shouldFail === true`, odota **2 sekuntia** ja heitä virhe `"Tietojen haku 
 */
 
 async function fetchUserDataAsync(shouldFail) {
-  // Laita koodisi tähän
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (shouldFail) {
+        reject("Käyttäjätiedot ladattu");
+      } else {
+        resolve("Tietojen haku epäonnistui")
+      }
+}, 2000);
+});
 }
-
 // Testitapaukset
 fetchUserDataAsync(false).then(console.log).catch(console.error);
 // Odotettu: "Käyttäjätiedot ladattu" (2 sekunnin kuluttua)
 fetchUserDataAsync(true).then(console.log).catch(console.error);
 // Odotettu: "Tietojen haku epäonnistui" (2 sekunnin kuluttua)
+
+
 
 /* 
 Tehtävä 8: Verkkokaupan kassaprosessi (Async/Await)  
@@ -130,7 +182,16 @@ Muunna `checkoutCart()` käyttämään `async/await`
 */
 
 async function checkoutCart() {
-  // Laita koodisi tähän
+  const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+  await wait(1000);
+  console.log("Varaston tarkistus...");
+
+  await wait(2000);
+  console.log("Maksu käsitelty");
+
+  await wait(1000);
+  console.log("Tilaus valmis!")
 }
 
 // Testitapaus
@@ -140,6 +201,7 @@ checkoutCart().then(() => console.log("Kiitos ostoksista!"));
 // "Maksu käsitelty" (2 s lisää)
 // "Tilaus valmis!" (1 s lisää)
 // "Kiitos ostoksista!" lopuksi
+
 
 /* 
 Tehtävä 9: Tuotetietojen haku (Async/Await)  
@@ -151,7 +213,17 @@ Käytä **try/catch** virheenkäsittelyyn
 */
 
 async function fetchProductDetails(hasError) {
-  // Laita koodisi tähän
+  const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+  try {
+    await wait(3000);
+    if (hasError) {
+      throw new Error("Virhe tuotteen haussa");
+    } else {
+      return "Tuotetiedot haettu";
+    }
+  } catch (error) {
+    throw error;
+  }
 }
 
 // Testitapaukset
