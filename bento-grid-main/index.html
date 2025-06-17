@@ -6,9 +6,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   
+  <link rel="stylesheet" href="styles.css" />
+ 
   <title>Frontend Mentor | Bento grid</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -19,54 +20,61 @@
 </head>
 
 <body>
-<main>
-  <div class="bentoGrid">
+<main class="bento-grid">
     <header></header>
-    <section>
+   
 
-   <div class="fiveStars">
-  <p>Social Media 10x Faster with AI</p>
+<article class="card five-stars">
+  <h1>Social Media <span class="highlight">10x</span>  <em>Faster</em> with AI</h1>
   <img src="assets/images/illustration-five-stars.webp" alt="">
   <p>Over 4,000 5-star reviews</p>
-</div>
+</article>
 
-<div class="multiplePlatforms">
-<img src="assets/images/illustration-multiple-platforms.webp" alt="">
+<article class="card multiple-platforms">
+ <img src="assets/images/illustration-multiple-platforms.webp" alt="">
   <p>Manage multiple accounts and platforms.</p>
-</div>
+</article>
 
-  Maintain a consistent posting schedule.
+<article class="card consistent-schedule">
+  <p>Maintain a consistent posting schedule.</p>
+  <img src="assets/images/illustration-consistent-schedule.webp" alt="">
+</article>
 
-  Schedule to social media.
-  Optimize post timings to publish content at the perfect time for your audience.
+<article class="card schedule-posts">
+  <p><strong>Schedule to social media</strong>.</p>
+  <img src="assets/images/illustration-schedule-posts.webp" alt="">
+  <p>Optimize post timings to publish content at the perfect time for your audience.</p>
+</article>
   
-  <div class="growFollowers">
+<article class="card grow-followers">
   <img src="assets/images/illustration-grow-followers.webp" alt="">
-  <p>Grow followers with non-stop content.</p>
-</div>
+  <h2>Grow followers with non-stop content.</h2>
+ </article>
 
-  <div class="audienceGrowth">
-<img src="assets/images/illustration-audience-growth.webp" alt="">
-  <p>>56% faster audience growth</p>
-</div>
+<article class="card audience-growth">
+  <img src="assets/images/illustration-audience-growth.webp" alt="">
+  <p><strong>56%</strong> faster audience growth</p>
+</article>
   
-  <div class="createPost">
-  <p>Create and schedule content quicker.</p>
+<article class="card create-post">
+  <p>Create and schedule content <em>quicker</em>.</p>
+  <a href="create-post.html">
   <img src="assets/images/illustration-create-post.webp" alt="">
-</div>
+  </a>
+</article>
 
-<div class="aiContent">
-  <p>Write your content using AI.</p>
+<article class="card ai-content">
+  <p>Write your content using <strong>AI</strong>.</p>
   <img src="assets/images/illustration-ai-content.webp" alt="">
-</div>
+</article>
 
-</section>
-</div>
+
+
 </main>
 
-  <div class="attribution">
+  <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+    Coded by <a href="#">Silvana Lindholm</a>.
+  </footer>
 </body>
 </html>
