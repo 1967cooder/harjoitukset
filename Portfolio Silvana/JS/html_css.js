@@ -42,6 +42,12 @@
       img: "images/turquoise-light.webp",
       link: "order-summary-component-main/index.html"
     },
+    {
+      id: "bento-grid-main",
+      title: "Bento-grid-main",
+      img: "images/turquoise-light.webp",
+      link: "bento-grid-main copy/index.html"
+    },
        
   ];
 
