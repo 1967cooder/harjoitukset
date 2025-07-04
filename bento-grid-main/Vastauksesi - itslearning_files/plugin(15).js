@@ -1,0 +1,1 @@
+"use strict";CKEDITOR.plugins.add("hangouts",TextEditorManager.setupIframePlugin("hangouts",{dialogName:"hangouts_dialog",useBuiltInCloseButton:!0}));

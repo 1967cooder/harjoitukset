@@ -1,0 +1,1 @@
+﻿CKEDITOR.plugins.setLang("collapsetoolbar","fi",{moreOptions:"Lisää vaihtoehtoja",hideOptions:"Piilota vaihtoehdot",moreOptionsToolTip:"Näytä lisää muokkausvaihtoehtoja",hideOptionsToolTip:"Piilota muokkausvaihtoehdot"});

@@ -1,0 +1,1 @@
+"use strict";CKEDITOR.plugins.add("msteams",TextEditorManager.setupIframePlugin("msteams",{dialogName:"msteams_dialog",useBuiltInCloseButton:!0}));
