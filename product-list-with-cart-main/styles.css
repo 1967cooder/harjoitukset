@@ -3,3 +3,55 @@
     padding: 0;
     box-sizing: border-box;
 }
+body {
+    font-family: 'Red Hat Text', sans-serif;
+  }
+  
+  .product-card {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin: 1rem;
+    background: #fff;
+    max-width: 300px;
+  }
+  
+  .product-card img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .product-info {
+    padding: 1rem;
+  }
+  
+  .product-name {
+    font-size: 1.125rem;
+    font-weight: 700;
+  }
+  
+  .product-category {
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  .product-price {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0.5rem 0;
+  }
+  
+  .add-to-cart-btn {
+    background-color: hsl(14, 86%, 42%);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 4px;
+  }
+  
+  .add-to-cart-btn:hover {
+    background-color: hsl(14, 86%, 35%);
+  }
+  

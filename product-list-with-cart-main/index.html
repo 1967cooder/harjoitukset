@@ -3,9 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  
+  <!----<link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">---->
+  
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+
+  
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   
   <link rel="stylesheet" href="styles.css" />
@@ -26,15 +31,28 @@
 
  <div class="desserts">
 
-  Waffle with Berries
-  Waffle
-  6.50
-  Add to Cart
+  <div class="product-card">
 
-  Vanilla Bean Crème Brûlée
-  Crème Brûlée
-  7.00
-  Add to Cart
+    <img src="assets/images/image-waffle-mobile.jpg" alt="Waffle with Berries" />
+    <div class="product-info">
+      <h3 class="product-name">Waffle with Berries</h3>
+      <p class="product-category">Waffle</p>
+      <p class="product-price">$6.50</p>
+      <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+    
+    <img src="assets/images/image-creme-brulee-mobile.jpg" alt="Vanilla Bean Crème Brûlée" />
+    <div class="product-info">
+      <h3 class="product-name">Vanilla Bean Crème Brûlée</h3>
+      <p class="product-category">Crème Brûlée</p>
+      <p class="product-price">$7.00</p>
+      <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+
+  </div>
+  
+
+  
 
   Macaron Mix of Five
   Macaron
@@ -72,6 +90,11 @@
   Add to Cart
 
 </div>
+
+<section class="cart">
+  <h3>Your Cart (<span id="cart-quantity">0</span>)</h3>
+  <div id="cart-items">Your added items will appear here</div>
+</section>
 
   Your Cart (<!-- Quantity -->)
   Your added items will appear here
