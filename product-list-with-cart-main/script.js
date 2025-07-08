@@ -121,10 +121,11 @@ document.addEventListener("DOMContentLoaded", () => {
               sizes="(max-width: 768px) 100vw, (max-width: 1440px) 50vw, 33vw"
             />
             <div class="product-info">
-              <h3 class="product-name">${product.name}</h3>
-              <p class="product-category">${product.category}</p>
-              <p class="product-price">$${product.price.toFixed(2)}</p>
               <button class="add-to-cart-btn">Add to Cart</button>
+               <p class="product-category">${product.category}</p>
+              <h3 class="product-name">${product.name}</h3>
+              <p class="product-price">$${product.price.toFixed(2)}</p>
+              
             </div>
           `;
           dessertsContainer.appendChild(card);
