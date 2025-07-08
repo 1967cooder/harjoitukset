@@ -99,7 +99,7 @@ const data = [
       "price": 6.50
    }
 ]
-
+/*
 document.addEventListener("DOMContentLoaded", () => {
     const dessertsContainer = document.querySelector(".desserts");
   
@@ -110,7 +110,8 @@ document.addEventListener("DOMContentLoaded", () => {
           const card = document.createElement('div');
           card.className = 'product-card';
           card.innerHTML = `
-            <img 
+             <div class="product-image-wrapper">
+          <img 
               src="${product.image.mobile}" 
               alt="${product.name}" 
               srcset="
@@ -120,8 +121,12 @@ document.addEventListener("DOMContentLoaded", () => {
               "
               sizes="(max-width: 768px) 100vw, (max-width: 1440px) 50vw, 33vw"
             />
-            <div class="product-info">
-              <button class="add-to-cart-btn">Add to Cart</button>
+
+
+
+            <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+            <div class="product-info">           
                <p class="product-category">${product.category}</p>
               <h3 class="product-name">${product.name}</h3>
               <p class="product-price">$${product.price.toFixed(2)}</p>
@@ -133,4 +138,58 @@ document.addEventListener("DOMContentLoaded", () => {
       })
       .catch(err => console.error('Error loading product data:', err));
   });
-  
+*/
+document.addEventListener("DOMContentLoaded", () => {
+  const dessertsContainer = document.querySelector(".desserts");
+
+  fetch('data.json')
+    .then(res => res.json())
+    .then(data => {
+      data.forEach(product => {
+        const card = document.createElement('div');
+        card.className = 'product-card';
+        card.innerHTML = `
+          <div class="product-image-wrapper">
+            <img 
+              src="${product.image.mobile}" 
+              alt="${product.name}" 
+              srcset="
+                ${product.image.mobile} 375w,
+                ${product.image.tablet} 768w,
+                ${product.image.desktop} 1440w
+              "
+              sizes="(max-width: 768px) 100vw, (max-width: 1440px) 50vw, 33vw"
+            />
+            <div class="cart-panel">
+              <button class="minus">−</button>
+              <span class="quantity">1</span>
+              <button class="plus">+</button>
+            </div>
+            <button class="add-to-cart-btn">Add to Cart</button>
+          </div>
+          <div class="product-info">
+            <p class="product-category">${product.category}</p>
+            <h3 class="product-name">${product.name}</h3>
+            <p class="product-price">$${product.price.toFixed(2)}</p>
+          </div>
+        `;
+        dessertsContainer.appendChild(card);
+
+        const plus = card.querySelector(".plus");
+        const minus = card.querySelector(".minus");
+        const quantity = card.querySelector(".quantity");
+
+        plus.addEventListener("click", () => {
+          quantity.textContent = parseInt(quantity.textContent) + 1;
+        });
+
+        minus.addEventListener("click", () => {
+          const current = parseInt(quantity.textContent);
+          if (current > 1) {
+            quantity.textContent = current - 1;
+          }
+        });
+      });
+    })
+    .catch(err => console.error('Error loading product data:', err));
+});

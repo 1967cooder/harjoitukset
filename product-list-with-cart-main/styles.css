@@ -17,8 +17,7 @@ body {
   }
   
   .product-card img {
-    position: relative;
-    display: inline-block;
+  
     width: 100%;
     height: auto;
   }
@@ -45,19 +44,96 @@ body {
     color:hsl(7, 20%, 60%);
   }
   
-  .add-to-cart-btn {
-   
-    background-color: hsl(20, 50%, 98%);
-    color:hsl(14, 65%, 9%);
-    border-color:hsl(14, 25%, 72%);
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    font-weight: 600;
-    border-radius: 20px;
-    
+  .product-image-wrapper {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    border-radius: 12px;
   }
   
-  .add-to-cart-btn:hover {
+  .product-image-wrapper img {
+    width: 100%;
+    display: block;
+    border-radius: 12px;
+  }
+  
+  .add-to-cart-btn {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: hsl(20, 50%, 98%);
+    color:hsl(14, 65%, 9%);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  
+    transition: opacity 0.3s ease;
+  z-index: 1;
+  }
+  .cart-panel {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 2;
+  }
+  
+  .cart-panel button {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border:none;
     background-color: hsl(14, 86%, 35%);
+    font-size: 18px;
+    cursor: pointer;
+    color:hsl(20, 50%, 98%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    box-sizing: border-box;
+  }
+
+  
+  
+  .cart-panel .quantity {
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  .product-image-wrapper:hover .add-to-cart-btn {
+    opacity: 0;
+    pointer-events: none;
+  
+  }
+  
+  .product-image-wrapper:hover .cart-panel {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+
+  .cart-panel button:hover {
+    border: 2px solid hsl(20, 50%, 98%); 
+    background-color: hsl(14, 86%, 35%);
+    color: hsl(20, 50%, 98%);
   }
  
+  .cart-panel:hover {
+    background-color: hsl(14, 86%, 35%);
+    color: hsl(20, 50%, 98%);
+  }
