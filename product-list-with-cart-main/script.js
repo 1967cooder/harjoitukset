@@ -165,8 +165,8 @@ document.addEventListener("DOMContentLoaded", () => {
               <span class="quantity">1</span>
               <button class="plus">+</button>
             </div>
-            <button class="add-to-cart-btn">Add to Cart</button>
-          </div>
+             <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
           <div class="product-info">
             <p class="product-category">${product.category}</p>
             <h3 class="product-name">${product.name}</h3>
