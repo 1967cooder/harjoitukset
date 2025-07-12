@@ -48,7 +48,7 @@ body {
   .product-image-wrapper {
     position: relative;
     display: block;
-    overflow: hidden;
+    overflow: visible;
     border-radius: 12px;
   }
   
@@ -60,9 +60,12 @@ body {
   
   .add-to-cart-btn {
     position: absolute;
+    display: flex;
+  align-items: center;
+  gap: 0.5rem; /* разстояние между иконата и текста */
     bottom: 0px;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, 50%);  /* изместен хоризонтално и вертикално надолу с 50% от височината му */
     background-color: hsl(20, 50%, 98%);
     color:hsl(14, 65%, 9%);
     border: none;
@@ -74,12 +77,18 @@ body {
     transition: opacity 0.3s ease;
     z-index: 1;
   }
-  
+  .cart-icon {
+    width: 16px !important;
+    height: 16px !important;
+    object-fit: contain;
+    display: inline-block;
+  }
+
   .cart-panel {
     position: absolute;
     bottom: 0px;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, 50%);
     background-color: hsl(14, 86%, 35%);
     border-radius: 20px;
     display: flex;
@@ -109,16 +118,15 @@ body {
     box-sizing: border-box;
   }
 
- 
-  
-  
-  
-  
 
   .cart-panel .quantity {
     font-weight: bold;
     font-size: 16px;
     color: hsl(20, 50%, 98%); /* бели числа */
+    font-weight: bold;
+    margin-left: 0.5em;
+    border-radius: 999px;
+    padding: 0.2em 0.6em;
   }
   
   .product-image-wrapper:hover .add-to-cart-btn {

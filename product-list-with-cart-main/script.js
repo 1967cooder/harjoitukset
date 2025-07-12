@@ -141,10 +141,11 @@ document.addEventListener("DOMContentLoaded", () => {
 */
 document.addEventListener("DOMContentLoaded", () => {
   const dessertsContainer = document.querySelector(".desserts");
+  let totalCartCount = 0;
+  const cartCountDisplay = document.getElementById("cart-quantity");
 
-  fetch('data.json')
-    .then(res => res.json())
-    .then(data => {
+  
+  
       data.forEach(product => {
         const card = document.createElement('div');
         card.className = 'product-card';
@@ -165,7 +166,10 @@ document.addEventListener("DOMContentLoaded", () => {
               <span class="quantity">1</span>
               <button class="plus">+</button>
             </div>
-             <button class="add-to-cart-btn">Add to Cart</button>
+            <button class="add-to-cart-btn">
+  <img src="assets/images/icon-add-to-cart.svg" alt="Cart icon" class="cart-icon" />
+  Add to Cart
+</button>
             </div>
           <div class="product-info">
             <p class="product-category">${product.category}</p>
@@ -173,11 +177,15 @@ document.addEventListener("DOMContentLoaded", () => {
             <p class="product-price">$${product.price.toFixed(2)}</p>
           </div>
         `;
+
         dessertsContainer.appendChild(card);
 
         const plus = card.querySelector(".plus");
         const minus = card.querySelector(".minus");
         const quantity = card.querySelector(".quantity");
+        const addToCartBtn = card.querySelector(".add-to-cart-btn");
+        
+
 
         plus.addEventListener("click", () => {
           quantity.textContent = parseInt(quantity.textContent) + 1;
@@ -187,8 +195,15 @@ document.addEventListener("DOMContentLoaded", () => {
           const current = parseInt(quantity.textContent);
           if (current > 1) {
             quantity.textContent = current - 1;
+          
+
           }
         });
+        addToCartBtn.addEventListener("click", () => {
+          const count = parseInt(quantity.textContent);
+          totalCartCount += count;
+          cartCountDisplay.textContent = totalCartCount;
+
       });
     })
     .catch(err => console.error('Error loading product data:', err));
