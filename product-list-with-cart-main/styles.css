@@ -12,12 +12,36 @@ body {
   flex-direction: column;
   }
 
+  
+
   .desserts {
     display: grid;
-  grid-template-columns: repeat(3,auto); /* 3 колони */
-  grid-template-rows: repeat(3, 1fr);   /* 3 реда */
-  gap: 0.5rem;
-    padding-bottom: 4rem; /* 👉 за да има място под картите */
+    grid-template-columns: repeat(4, 1fr); /* 3 колони за продукти + 1 колона за cart */
+    gap: 2rem;
+    padding: 2rem;
+    align-items: start;
+  }
+  
+  .cart {
+    grid-column: 4;   /* четвърта колона */
+    grid-row: 1 / span 3; /* заемай 3 реда, така че кошницата да бъде по-висока */
+    align-self: start;
+    justify-self: end;
+    background-color: hsl(20, 50%, 98%);
+    color: hsl(14, 65%, 9%);
+    padding: 1rem 1.5rem;
+    border-radius: 16px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    
+  }
+
+  
+  
+  .cart-panel button {
+    border: none;
+    background: none;
+    font-size: 1.2rem;
+    cursor: pointer;
   }
   
 
@@ -28,6 +52,7 @@ body {
     margin: 1rem;
     background: #fff;
     max-width: 300px;
+    grid-column: span 1;
   }
   
   .product-card img {
@@ -211,4 +236,25 @@ body {
     color: hsl(20, 50%, 98%);
   }
 
-  
+  /*-------*/
+.cart h3 {
+  color: hsl(14, 86%, 35%);
+  font-size: 18px;
+}
+.cart p {
+  color: hsl(14, 65%, 9%);
+  font-size: 14px;
+}
+
+/* Бутоните в cart */
+#confirm-order {
+  display: block;
+  margin-top: 1rem;
+  width: 100%;
+  padding: 8px;
+  background: hsl(14, 86%, 35%);
+  color: white;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+}

@@ -1,3 +1,5 @@
+
+
 const data = [
   {
      "image": {
@@ -98,113 +100,105 @@ const data = [
       "category": "Panna Cotta",
       "price": 6.50
    }
-]
-/*
+];
+
 document.addEventListener("DOMContentLoaded", () => {
-    const dessertsContainer = document.querySelector(".desserts");
-  
-    fetch('data.json')
-      .then(res => res.json())
-      .then(data => {
-        data.forEach(product => {
-          const card = document.createElement('div');
-          card.className = 'product-card';
-          card.innerHTML = `
-             <div class="product-image-wrapper">
-          <img 
-              src="${product.image.mobile}" 
-              alt="${product.name}" 
-              srcset="
-                ${product.image.mobile} 375w,
-                ${product.image.tablet} 768w,
-                ${product.image.desktop} 1440w
-              "
-              sizes="(max-width: 768px) 100vw, (max-width: 1440px) 50vw, 33vw"
-            />
+  console.log("DOM loaded");
+  console.log("Dessert data:", data);
 
-
-
-            <button class="add-to-cart-btn">Add to Cart</button>
-            </div>
-            <div class="product-info">           
-               <p class="product-category">${product.category}</p>
-              <h3 class="product-name">${product.name}</h3>
-              <p class="product-price">$${product.price.toFixed(2)}</p>
-              
-            </div>
-          `;
-          dessertsContainer.appendChild(card);
-        });
-      })
-      .catch(err => console.error('Error loading product data:', err));
-  });
-*/
-document.addEventListener("DOMContentLoaded", () => {
   const dessertsContainer = document.querySelector(".desserts");
-  let totalCartCount = 0;
   const cartCountDisplay = document.getElementById("cart-quantity");
+  const cartItemsContainer = document.getElementById("cart-items");
+  let totalCartCount = 0;
 
-  
-  
-      data.forEach(product => {
-        const card = document.createElement('div');
-        card.className = 'product-card';
-        card.innerHTML = `
-          <div class="product-image-wrapper">
-            <img 
-              src="${product.image.mobile}" 
-              alt="${product.name}" 
-              srcset="
-                ${product.image.mobile} 375w,
-                ${product.image.tablet} 768w,
-                ${product.image.desktop} 1440w
-              "
-              sizes="(max-width: 768px) 100vw, (max-width: 1440px) 50vw, 33vw"
-            />
-            <div class="cart-panel">
-              <button class="minus">−</button>
-              <span class="quantity">1</span>
-              <button class="plus">+</button>
-            </div>
-            <button class="add-to-cart-btn">
-  <img src="assets/images/icon-add-to-cart.svg" alt="Cart icon" class="cart-icon" />
-  Add to Cart
-</button>
-            </div>
-          <div class="product-info">
-            <p class="product-category">${product.category}</p>
-            <h3 class="product-name">${product.name}</h3>
-            <p class="product-price">$${product.price.toFixed(2)}</p>
-          </div>
-        `;
+  const cart = {}; // Обект за проследяване на продуктите и количествата
 
-        dessertsContainer.appendChild(card);
+  if (!dessertsContainer || !cartCountDisplay || !cartItemsContainer) {
+    console.error("Missing essential elements (desserts container, cart quantity display, or cart items container).");
+    return;
+  }
 
-        const plus = card.querySelector(".plus");
-        const minus = card.querySelector(".minus");
-        const quantity = card.querySelector(".quantity");
-        const addToCartBtn = card.querySelector(".add-to-cart-btn");
-        
+  data.forEach(product => {
+    const card = document.createElement('div');
+    card.className = 'product-card';
+    card.innerHTML = `
+      <div class="product-image-wrapper">
+        <img 
+          src="${product.image.mobile}" 
+          alt="${product.name}" 
+          srcset="
+            ${product.image.mobile} 375w,
+            ${product.image.tablet} 768w,
+            ${product.image.desktop} 1440w
+          "
+          sizes="(max-width: 768px) 100vw, (max-width: 1440px) 50vw, 33vw"
+        />
+        <div class="cart-panel">
+          <button class="minus">−</button>
+          <span class="quantity">1</span>
+          <button class="plus">+</button>
+        </div>
+        <button class="add-to-cart-btn">
+          <img src="assets/images/icon-add-to-cart.svg" alt="Cart icon" class="cart-icon" />
+          Add to Cart
+        </button>
+      </div>
+      <div class="product-info">
+        <p class="product-category">${product.category}</p>
+        <h3 class="product-name">${product.name}</h3>
+        <p class="product-price">$${product.price.toFixed(2)}</p>
+      </div>
+    `;
 
+    dessertsContainer.appendChild(card);
 
-        plus.addEventListener("click", () => {
-          quantity.textContent = parseInt(quantity.textContent) + 1;
-        });
+    const plus = card.querySelector(".plus");
+    const minus = card.querySelector(".minus");
+    const quantity = card.querySelector(".quantity");
+    const addToCartBtn = card.querySelector(".add-to-cart-btn");
 
-        minus.addEventListener("click", () => {
-          const current = parseInt(quantity.textContent);
-          if (current > 1) {
-            quantity.textContent = current - 1;
-          
+    plus.addEventListener("click", () => {
+      quantity.textContent = parseInt(quantity.textContent) + 1;
+    });
 
-          }
-        });
-        addToCartBtn.addEventListener("click", () => {
-          const count = parseInt(quantity.textContent);
-          totalCartCount += count;
-          cartCountDisplay.textContent = totalCartCount;
+    minus.addEventListener("click", () => {
+      const current = parseInt(quantity.textContent);
+      if (current > 1) {
+        quantity.textContent = current - 1;
+      }
+    });
+      
+    addToCartBtn.addEventListener("click", () => {
+      const count = parseInt(quantity.textContent);
+      const name = product.name;
 
-      });
-    })
-    .catch(err => console.error('Error loading product data:', err));
+      if (cart[name]) {
+        cart[name].quantity += count;
+      } else {
+        cart[name] = {
+          quantity: count,
+          price: product.price
+        };
+      }
+
+      updateCartDisplay();
+      quantity.textContent = "1"; // Нулиране на брояча след добавяне
+    });
+  });
+
+  function updateCartDisplay() {
+    cartItemsContainer.innerHTML = "";
+    totalCartCount = 0;
+
+    for (const name in cart) {
+      const item = cart[name];
+      totalCartCount += item.quantity;
+
+      const cartItem = document.createElement("p");
+      cartItem.textContent = `${name} × ${item.quantity}`;
+      cartItemsContainer.appendChild(cartItem);
+    }
+
+    cartCountDisplay.textContent = totalCartCount;
+  }
 });

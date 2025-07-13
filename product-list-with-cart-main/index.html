@@ -23,18 +23,20 @@
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
+
 <body>
+
+  
 
   <div class="container">
 
  <h2> Desserts</h2>
 
- <div class="desserts">
+
+ <div class="desserts"></div> 
 
   <div class="product-card">
-   
-  
-<!-----------------------------
+<!-------
   Waffle with Berries
   Waffle
   6.50
@@ -80,21 +82,30 @@
   6.50
   Add to Cart
 
-</div>
------------------------------->
+
+
+</div> desserts-->
 
   <section class="cart">
     <h3>Your Cart (<span id="cart-quantity">0</span>)</h3>
     <div id="cart-items">Your added items will appear here</div>
+    <div id="orderSummary">Order Total</div>
+      <p>This is a <strong>carbon-neutral</strong> delivery</p>
+    <button id="confirm-order" class="hidden">Confirm Order</button>
+    
   </section>
-  
-</div>
+
+</div> <!--container-->
+
+
+
 <div class="attribution">
   Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
   Coded by <a href="#">Silvana Lindholm</a>.
 </div>
 
-  <script src="script.js"></script>
+<script src="script.js" defer></script>
+
 </body>
 
 </html>
