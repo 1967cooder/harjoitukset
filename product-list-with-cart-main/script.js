@@ -101,6 +101,7 @@ const data = [
       "price": 6.50
    }
 ];
+console.log(data);
 
 document.addEventListener("DOMContentLoaded", () => {
   console.log("DOM loaded");

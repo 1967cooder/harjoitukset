@@ -18,10 +18,7 @@
   <title>Frontend Mentor | Product list with cart</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  
 </head>
 
 <body>
@@ -33,10 +30,12 @@
  <h2> Desserts</h2>
 
 
- <div class="desserts"></div> 
+ <div class="desserts">
 
+
+<!-----
   <div class="product-card">
-<!-------
+
   Waffle with Berries
   Waffle
   6.50
@@ -88,14 +87,27 @@
 
   <section class="cart">
     <h3>Your Cart (<span id="cart-quantity">0</span>)</h3>
+    <img src="assets/images/illustration-empty-cart.svg" alt="Cart emty" class="cart-emty" />       
     <div id="cart-items">Your added items will appear here</div>
+   
     <div id="orderSummary">Order Total</div>
-      <p>This is a <strong>carbon-neutral</strong> delivery</p>
+    <p>
+    <img src="assets/images/icon-carbon-neutral.svg" alt="Carbon neutral" class="carbon-neutral" /> 
+     This is a <strong>carbon-neutral</strong> delivery
+    </p>
     <button id="confirm-order" class="hidden">Confirm Order</button>
-    
   </section>
 
-</div> <!--container-->
+  <section class="orderConfirmed" style="display:none;">
+    <h3>
+      <img src="assets/images/icon-order-confirmed.svg" alt="Order Confirmed" class="order-confirmed">
+      Order Confirmed
+    </h3>
+    <button id="startNewOrder" class="hidden">Start New Order</button>
+  </section>
+   
+</div> 
+
 
 
 

@@ -3,6 +3,14 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+
+    .attribution { 
+      font-size: 11px; text-align: center; }
+    .attribution a { 
+      color: hsl(228, 45%, 44%); }
+  
+
 body {
     font-family: 'Red Hat Text', sans-serif;
     height: 100%;
@@ -12,29 +20,51 @@ body {
   flex-direction: column;
   }
 
-  
+  .container {
+    display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  flex-wrap: wrap; /* За responsive поведение */
+  }
 
   .desserts {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 3 колони за продукти + 1 колона за cart */
+    grid-template-columns: repeat(3, 1fr); /* 3 колони за продукти + 1 колона за cart */
     gap: 2rem;
     padding: 2rem;
-    align-items: start;
+    flex: 1 1 900px; /* Позволява растеж */
   }
   
   .cart {
-    grid-column: 4;   /* четвърта колона */
-    grid-row: 1 / span 3; /* заемай 3 реда, така че кошницата да бъде по-висока */
-    align-self: start;
-    justify-self: end;
+    width: 300px;
+  min-width: 260px;
     background-color: hsl(20, 50%, 98%);
     color: hsl(14, 65%, 9%);
     padding: 1rem 1.5rem;
     border-radius: 16px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-    
+    position: sticky;
+  top: 2rem; /* залепен отгоре при скрол */
+  height: fit-content;
   }
 
+  .carbon-text {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    line-height: 1; /* важно за да няма допълнително вертикално разстояние */
+    margin-top: 1rem;
+  }
+
+  .carbon-neutral {
+    height: 1em; /* същата височина като текста */
+    margin-right: 0.5em; /* разстояние между иконата и текста */
+    flex-shrink: 0; /* не позволява на иконата да се свие */
+  }
   
   
   .cart-panel button {
