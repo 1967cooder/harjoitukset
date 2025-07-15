@@ -2,20 +2,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-
-    .attribution { 
-      font-size: 11px; text-align: center; }
-    .attribution a { 
-      color: hsl(228, 45%, 44%); }
-  
+} 
 
 body {
     font-family: 'Red Hat Text', sans-serif;
     height: 100%;
-  margin: 0;
-  padding: 0;
   display: flex;
   flex-direction: column;
   }
@@ -33,8 +24,9 @@ body {
 
   .desserts {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 колони за продукти + 1 колона за cart */
-    gap: 2rem;
+    /*grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));*/
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
     padding: 2rem;
     flex: 1 1 900px; /* Позволява растеж */
   }
@@ -52,6 +44,15 @@ body {
   height: fit-content;
   }
 
+  .cart h3 {
+    color: hsl(14, 86%, 35%);
+    font-size: 18px;
+  }
+  .cart p {
+    color: hsl(14, 65%, 9%);
+    font-size: 14px;
+  }
+
   .carbon-text {
     display: flex;
     align-items: center;
@@ -66,139 +67,143 @@ body {
     flex-shrink: 0; /* не позволява на иконата да се свие */
   }
   
-  
-  .cart-panel button {
-    border: none;
-    background: none;
-    font-size: 1.2rem;
-    cursor: pointer;
-  }
-  
+  /* Бутоните в cart */
+#confirm-order {
+  display: block;
+  margin-top: 1rem;
+  width: 100%;
+  padding: 8px;
+  background: hsl(14, 86%, 35%);
+  color: white;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+}
 
-  .product-card {
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    margin: 1rem;
-    background: #fff;
-    max-width: 300px;
-    grid-column: span 1;
-  }
-  
-  .product-card img {
-  
-    width: 100%;
-    height: auto;
-  }
-  
-  .product-info {
-    padding: 3rem 3rem 3rem 0; /* премахваме левия padding */
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
-    gap: 0.5rem; /* разстояние между елементите */
-    width: 100%; /* разтягаме по ширина на родителя */
-  }
-  
-  .product-name {
-    font-size: 1rem;
-    font-weight: 700;
-    color: hsl(14, 65%, 9%);
-    margin: 0; /* премахваме всякакви външни отстояния */
-  }
-  
-  .product-category {
-    font-size: 0.9rem;
-    color: hsl(14, 25%, 72%);
-    margin: 0;
-  }
-  
-  .product-price {
-    font-size: 1rem;
-    font-weight: 700;
-    margin: 0;
-    color:hsl(7, 20%, 60%);
-  }
-  
-  .product-image-wrapper {
-    position: relative;
-    display: block;
-    overflow: visible;
-    border-radius: 12px;
-  }
-  
-  .product-image-wrapper img {
-    width: 100%;
-    display: block;
-    border-radius: 12px;
-  }
-  :root {
-    --cart-btn-width: 200px;
-    --cart-btn-height: 48px;
-    --cart-btn-padding: 8px 16px;
-    --cart-btn-radius: 20px;
-  }
-  .add-to-cart-btn {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem; /* разстояние между иконата и текста */
-    bottom: 0px;
-    left: 50%;
-    transform: translate(-50%, 50%);  /* изместен хоризонтално и вертикално надолу с 50% от височината му */
+/* ---------- PRODUCT CARDS ---------- */
+.product-card {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  background: #fff;
+  max-width: 300px;
+ 
+}
+.product-card img {
+  width: 100%;
+  height: auto;
+}
 
-    width: var(--cart-btn-width);
-    height: var(--cart-btn-height);
-    padding: var(--cart-btn-padding);
-    border-radius: var(--cart-btn-radius);
+.product-image-wrapper {
+  position: relative;
+  display: block;
+  overflow: visible;
+  border-radius: 12px;
+}
 
-    background-color: hsl(20, 50%, 98%);
-    color:hsl(14, 65%, 9%);
-    border: none;
-    padding: 8px 16px;
-    border-radius: 40px;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 16px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    transition: opacity 0.3s ease;
-    z-index: 1;
-  }
-  .cart-icon {
-    width: 25px !important;/* !important fiksira px ako ne se povlijavat*/
-    height: 25px !important;
-    object-fit: contain;
-    display: inline-block;
-  }
+.product-image-wrapper img {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+}
 
-  .cart-panel {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    bottom: 0px;
-    left: 50%;
-    transform: translate(-50%, 50%);
+.product-info {
+  padding: 3rem 3rem 3rem 0; /* премахваме левия padding */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  gap: 0.5rem; /* разстояние между елементите */
+  width: 100%; /* разтягаме по ширина на родителя */
+}
+.product-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: hsl(14, 65%, 9%);
+  margin: 0; /* премахваме всякакви външни отстояния */
+}
+.product-category {
+  font-size: 0.9rem;
+  color: hsl(14, 25%, 72%);
+  margin: 0;
+}
 
-    width: var(--cart-btn-width);
-    height: var(--cart-btn-height);
-    padding: var(--cart-btn-padding);
-    border-radius: var(--cart-btn-radius);
+.product-price {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0;
+  color:hsl(7, 20%, 60%);
+}
 
-    background-color: hsl(14, 86%, 35%);
-    border-radius: 40px;
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    padding: 8px 16px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease;
-    z-index: 2;
-  }
+/* ---------- ADD TO CART BTN & PANEL ---------- */
+:root {
+  --cart-btn-width: 200px;
+  --cart-btn-height: 48px;
+  --cart-btn-padding: 8px 16px;
+  --cart-btn-radius: 20px;
+}
+
+.add-to-cart-btn {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem; /* разстояние между иконата и текста */
+  bottom: 0px;
+  left: 50%;
+  transform: translate(-50%, 50%);  /* изместен хоризонтално и вертикално надолу с 50% от височината му */
+
+  width: var(--cart-btn-width);
+  height: var(--cart-btn-height);
+  padding: var(--cart-btn-padding);
+  border-radius: var(--cart-btn-radius);
+
+  background-color: hsl(20, 50%, 98%);
+  color:hsl(14, 65%, 9%);
+  border: none;
+  padding: 8px 16px;
+  border-radius: 40px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.cart-icon {
+  width: 25px !important;/* !important fiksira px ako ne se povlijavat*/
+  height: 25px !important;
+  object-fit: contain;
+  display: inline-block;
+}
+
+.cart-panel {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 0px;
+  left: 50%;
+  transform: translate(-50%, 50%);
+
+  width: var(--cart-btn-width);
+  height: var(--cart-btn-height);
+  padding: var(--cart-btn-padding);
+  border-radius: var(--cart-btn-radius);
+
+  background-color: hsl(14, 86%, 35%);
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 8px 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+}
 
   .cart-panel button {
     width: 32px;
@@ -216,7 +221,6 @@ body {
     box-sizing: border-box;
   }
 
-
   .cart-panel .quantity {
     font-weight: bold;
     font-size: 16px;
@@ -227,6 +231,27 @@ body {
     padding: 0.2em 0.6em;
   }
   
+  .product-image-wrapper:hover .add-to-cart-btn {
+    opacity: 0;
+    pointer-events: none;
+  }
+  .product-image-wrapper:hover .cart-panel {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .product-image-wrapper:hover {
+    outline: 3px solid hsl(14, 86%, 45%); 
+    outline-offset: -3px; /* по избор – за да е по-прибрана рамката */
+  }
+  .cart-panel button:hover {
+    border: 2px solid hsl(20, 50%, 98%); 
+    background-color: hsl(14, 86%, 35%);
+    color: hsl(20, 50%, 98%);
+  }
+  .cart-panel:hover {
+    background-color: hsl(14, 86%, 35%);
+    color: hsl(20, 50%, 98%);
+  }
   .attribution {
     position: fixed;
     bottom: 0;
@@ -238,53 +263,18 @@ body {
     padding: 0.5rem;
     
   }
-
-  .product-image-wrapper:hover .add-to-cart-btn {
-    opacity: 0;
-    pointer-events: none;
-  
-  }
-  
-  .product-image-wrapper:hover .cart-panel {
-    opacity: 1;
-    pointer-events: auto;
-  }
-  .product-image-wrapper:hover {
-    outline: 3px solid hsl(14, 86%, 45%); 
-    outline-offset: -3px; /* по избор – за да е по-прибрана рамката */
-  }
-  
-
-  .cart-panel button:hover {
-    border: 2px solid hsl(20, 50%, 98%); 
-    background-color: hsl(14, 86%, 35%);
-    color: hsl(20, 50%, 98%);
-  }
- 
-  .cart-panel:hover {
-    background-color: hsl(14, 86%, 35%);
-    color: hsl(20, 50%, 98%);
-  }
-
   /*-------*/
-.cart h3 {
-  color: hsl(14, 86%, 35%);
-  font-size: 18px;
-}
-.cart p {
-  color: hsl(14, 65%, 9%);
-  font-size: 14px;
+/* ✅ Tablet: 2 колони */
+@media (max-width: 1024px) {
+  .desserts {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
-/* Бутоните в cart */
-#confirm-order {
-  display: block;
-  margin-top: 1rem;
-  width: 100%;
-  padding: 8px;
-  background: hsl(14, 86%, 35%);
-  color: white;
-  border: none;
-  border-radius: 16px;
-  cursor: pointer;
+/* ✅ Mobile: 1 колона */
+@media (max-width: 480px) {
+  .desserts {
+    grid-template-columns: 1fr;
+  }
 }
+
