@@ -37,14 +37,16 @@
 
   <section class="cart">
     <h3>Your Cart (<span id="cart-quantity">0</span>)</h3>
-    <img src="assets/images/illustration-empty-cart.svg" alt="Cart emty" class="cart-emty" />       
-    <div id="cart-items">Your added items will appear here</div>
+    <img src="assets/images/illustration-empty-cart.svg" alt="Cart emty" class="cart-emty" /> 
+    <p id="empty-text">Your added items will appear here</p>
+  
+    <div id="cart-items"></div>
    
     <div id="orderSummary">Order Total</div>
 
     <p class="carbon-text">
     <img src="assets/images/icon-carbon-neutral.svg" alt="Carbon neutral" class="carbon-neutral" /> 
-     This is a <strong> carbon-neutral </strong> delivery
+     This is a <strong>carbon-neutral</strong> delivery
     </p>
     <button id="confirm-order" class="hidden">Confirm Order</button>
   </section>
@@ -54,6 +56,7 @@
       <img src="assets/images/icon-order-confirmed.svg" alt="Order Confirmed" class="order-confirmed">
       Order Confirmed
     </h3>
+    <p>We hope you enjoy your food!</p>
     <button id="startNewOrder" class="hidden">Start New Order</button>
   </section>
    

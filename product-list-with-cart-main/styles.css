@@ -53,6 +53,10 @@ body {
     font-size: 14px;
   }
 
+  #cart-quantity{
+  color: hsl(14, 86%, 35%);
+  }
+
   .carbon-text {
     display: flex;
     align-items: center;
