@@ -53,9 +53,11 @@ body {
     font-size: 14px;
   }
 
-  #cart-quantity{
-  color: hsl(14, 86%, 35%);
+  .quantity-red {
+    color: hsl(14, 86%, 35%);
+    font-weight: bold;
   }
+  
 
   .carbon-text {
     display: flex;
@@ -76,6 +78,18 @@ body {
     align-items: center;
     border-bottom: 1px solid #eee;
     padding: 0.5rem 0;
+  }
+  .cart-item p {
+    color: hsl(7, 20%, 60%);
+  }
+  #orderSummary  {
+    padding: 10px 0; /* 10px отгоре и отдолу*/
+  }
+  #orderSummary strong {
+    color: black;
+    font-weight: bold;
+    margin-left: 120px; /* разстояние между текста и числото */
+    display: inline-block;
   }
   
   .remove-item {
@@ -98,7 +112,10 @@ body {
     color: hsl(14, 65%, 9%);
   }
   
-
+  .hidden {
+    display: none;
+  }
+  
 
   /* Бутоните в cart */
 #confirm-order {
@@ -111,6 +128,45 @@ body {
   border: none;
   border-radius: 16px;
   cursor: pointer;
+}
+
+#confirmed-items {
+  margin-top: 1rem;
+}
+
+.confirmed-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.confirmed-item-img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.red-quantity {
+  color: red;
+  font-weight: bold;
+  margin-left: 0.25rem;
+}
+
+
+#startNewOrder{
+  display: block;
+  margin-top: 1rem;
+  width: 100%;
+  padding: 8px;
+  background: hsl(14, 86%, 35%);
+  color: white;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+
 }
 
 /* ---------- PRODUCT CARDS ---------- */
