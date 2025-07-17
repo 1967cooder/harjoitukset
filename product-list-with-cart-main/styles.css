@@ -70,7 +70,36 @@ body {
     margin-right: 0.5em; /* разстояние между иконата и текста */
     flex-shrink: 0; /* не позволява на иконата да се свие */
   }
+  .cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding: 0.5rem 0;
+  }
   
+  .remove-item {
+    background-color: white; /* бял фон вътре в кръга */
+    color: hsl(14, 25%, 72%);
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%; /* кръг */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid hsl(14, 25%, 72%);
+    transition: all 0.2s ease;
+  }
+  
+  .remove-item:hover {
+    color: hsl(14, 65%, 9%);
+  }
+  
+
+
   /* Бутоните в cart */
 #confirm-order {
   display: block;
@@ -268,7 +297,7 @@ body {
     
   }
 
-  
+
   /*-------*/
 /* ✅ Tablet: 2 колони */
 @media (max-width: 1024px) {
