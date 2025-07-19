@@ -932,13 +932,16 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>`
       )
       .join("");
-     
+
+      const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+    orderTotalConfirmed.innerHTML = `<span>Order Total</span><span> <strong>$${total.toFixed(2)}</strong></span>`;
   }
 
   confirmOrderBtn.addEventListener("click", () => {
     document.querySelector(".cart").style.display = "none";
     orderConfirmedSection.style.display = "block";
     startNewOrderBtn.classList.remove("hidden");
+    document.querySelector(".overlay").style.display = "block";
 
     renderConfirmedItems();
   });
@@ -949,6 +952,8 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector(".cart").style.display = "block";
     orderConfirmedSection.style.display = "none";
     startNewOrderBtn.classList.add("hidden");
+    document.querySelector(".overlay").style.display = "none";
   });
 });
+
 
