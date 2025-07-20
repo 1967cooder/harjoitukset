@@ -426,7 +426,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="cart-item">
           <div>
             <h4>${item.name}</h4>
-            <p>${item.quantity}x $${item.price.toFixed(2)} 
+            <p><span class="item-quantity">${item.quantity}x</span>$${item.price.toFixed(2)} 
             <strong>$${(item.price * item.quantity).toFixed(2)}</strong></p>
           </div>
           <button class="remove-item" data-id="${item.id}">X</button>
@@ -500,7 +500,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <img src="${item.image.desktop}" alt="${item.name}" class="confirmed-item-img" />
         <div>
         <h4>${item.name}</h4>
-          <p>${item.quantity}x $${item.price.toFixed(2)}</p> 
+          <p><span class="item-quantity">${item.quantity}x</span>$${item.price.toFixed(2)}</p> 
           </div> 
          <p><strong>$${(item.price * item.quantity).toFixed(2)}</strong></p>
       </div>`

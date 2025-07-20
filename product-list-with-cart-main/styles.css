@@ -78,45 +78,46 @@ body {
   font-size: 14px;
 }  
   
-  .cart h3 {
+.cart h3 {
     color: hsl(14, 86%, 35%);
     font-size: 18px;
-  }
-  .cart p {
+}
+.cart p {
     color: hsl(14, 65%, 9%);
     font-size: 14px;
-  }
+}
 
-  .quantity-red {
+.quantity-red {
     color: hsl(14, 86%, 35%);
     font-weight: bold;
-  }
+}
   
 
-  .carbon-text {
+.carbon-text {
     display: flex;
     align-items: center;
     font-size: 14px;
     line-height: 1; /* важно за да няма допълнително вертикално разстояние */
     margin-top: 1rem;
-  }
+}
 
   .carbon-neutral {
     height: 1em; /* същата височина като текста */
     margin-right: 0.5em; /* разстояние между иконата и текста */
     flex-shrink: 0; /* не позволява на иконата да се свие */
   }
-  .cart-item {
+
+.cart-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #eee;
     padding: 0.5rem 0;
   }
-  .cart-item p {
+.cart-item p {
     color: hsl(7, 20%, 60%);
   }
-  #orderSummary {
+ #orderSummary {
     position: absolute;
     bottom: 60px;           /* малко над carbon текста */
     right: 10px;
@@ -162,7 +163,13 @@ body {
   .hidden {
     display: none;
   }
-  
+.cart-item .item-quantity,
+.confirmed-item .item-quantity {
+  color: hsl(14, 86%, 35%);
+  font-weight: bold; /* по желание, за по-ясен акцент */
+}
+
+
 
   /* Бутоните в cart */
 #confirm-order {
@@ -185,34 +192,21 @@ body {
   margin-bottom: 1rem;
   max-height: 200px;
   overflow-y: auto;
-}
-/*
-.confirmed-item {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid #eee;
-  padding: 0.5rem 0;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: left;
+  width: 100%;
 }
 
-.confirmed-item-img {
-  width: 40px;
-  height: 40px;
-  object-fit: cover;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-}
-.confirmed-item h4 {
-  font-size: 1rem;
-  margin: 0 0 3px 0;
-}
-*/
 .confirmed-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #eee;
   padding: 0.5rem 0;
+  width: 100%;
+ 
 }
 
 .confirmed-item-img {
@@ -248,6 +242,15 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  justify-content: center;
+  flex: 1; /* ✅ Разпъва детайлите наляво */
+}
+.confirmed-item-price {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: hsl(14, 65%, 15%);
+  white-space: nowrap;
+  margin-left: auto; /* ✅ Избутва цената най-вдясно */
 }
 
 /* ✅ Общата цена отдясно (ако е последен елемент) */
@@ -284,8 +287,13 @@ body {
   z-index: 1000; /* над overlay */
   max-width: 400px;
   width: 90%;
-  text-align: center;
+  text-align: left;           /* ✅ Подравнява целия текст вляво */
+  display: flex;              /* ✅ Flexbox за подредба */
+  flex-direction: column;     /* ✅ Колона */
+  align-items: flex-start;    /* ✅ Всичко вляво */
 }
+
+
 #orderTotalConfirmed {
   display: flex;
   justify-content: space-between;
