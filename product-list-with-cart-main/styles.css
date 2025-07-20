@@ -10,6 +10,12 @@ body {
     display: flex;
     flex-direction: column;
   }
+  
+  .container header {
+    width: 100%;        /* за да заеме цялата ширина на контейнера */
+    margin-bottom: 1rem; /* малко разстояние под заглавието */
+  }
+
 
   .container {
     display: flex;
@@ -44,6 +50,33 @@ body {
     height: fit-content;
 
   }
+  /* Скриваме по начало */
+  .cart-empty,
+  #empty-text {
+    display: none;
+}
+
+/* Показва се, ако няма продукти */
+#cart-items:empty ~ .cart-empty,
+#cart-items:empty ~ #empty-text {
+  display: block;
+}
+  
+ /* Снимката точно в центъра */
+.cart-empty {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 120px;
+  opacity: 0.9;
+}
+/* Текстът остава долу, но центриран хоризонтално */
+#empty-text {
+  margin-top: 180px; /* така е под снимката */
+  color: #666;
+  font-size: 14px;
+}  
   
   .cart h3 {
     color: hsl(14, 86%, 35%);
@@ -83,9 +116,22 @@ body {
   .cart-item p {
     color: hsl(7, 20%, 60%);
   }
-  #orderSummary  {
-    padding: 10px 0; /* 10px отгоре и отдолу*/
+  #orderSummary {
+    position: absolute;
+    bottom: 60px;           /* малко над carbon текста */
+    right: 10px;
+    font-weight: normal;
+    font-size: 16px;
+    background-color: #fff;
+    padding: 6px 10px;
+    border-radius: 6px;
+    box-shadow: 0 0 3px rgba(0,0,0,0.1);
+    text-align: right;
+    z-index: 1;
   }
+  
+
+
   #orderSummary strong {
     color: black;
     font-weight: bold;
@@ -272,6 +318,9 @@ body {
  
 }
 .product-card img {
+  display: block;               /* премахва празни разстояния под снимката */
+  border-radius: 8px;           /* заобля всички ъгли, горни и долни */
+  object-fit: cover;            /* ако искаш да изпълва контейнера без изкривяване */
   width: 100%;
   height: auto;
 }
@@ -281,12 +330,14 @@ body {
   display: block;
   overflow: visible;
   border-radius: 12px;
+  
 }
 
 .product-image-wrapper img {
   width: 100%;
   display: block;
   border-radius: 12px;
+  
 }
 
 .product-info {
@@ -316,6 +367,7 @@ body {
   margin: 0;
   color:hsl(7, 20%, 60%);
 }
+
 
 /* ---------- ADD TO CART BTN & PANEL ---------- */
 :root {
