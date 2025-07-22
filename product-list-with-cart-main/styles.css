@@ -100,6 +100,10 @@ body {
     line-height: 1; /* важно за да няма допълнително вертикално разстояние */
     margin-top: 1rem;
 }
+.carbon-text img {
+  width: 20px;
+  height: 20px;
+}
 
   .carbon-neutral {
     height: 1em; /* същата височина като текста */
@@ -117,27 +121,33 @@ body {
 .cart-item p {
     color: hsl(7, 20%, 60%);
   }
+
  #orderSummary {
-    position: absolute;
-    bottom: 60px;           /* малко над carbon текста */
-    right: 10px;
+  
+  display: flex;
+  justify-content: flex-start; 
+  align-items: center; /* vertikalno zaravnqvane */
+  margin-top: 1rem;
+    margin-bottom: 1rem;
     font-weight: normal;
     font-size: 16px;
     background-color: #fff;
     padding: 6px 10px;
     border-radius: 6px;
     box-shadow: 0 0 3px rgba(0,0,0,0.1);
-    text-align: right;
-    z-index: 1;
+    width: 100%;
+  }
+  #orderSummary .label {
+    flex-grow: 1;
+   
   }
   
-
-
   #orderSummary strong {
+    margin-left: auto;  /* изтласква сумата до дясно */
+   
     color: black;
     font-weight: bold;
-    margin-left: 120px; /* разстояние между текста и числото */
-    display: inline-block;
+   
   }
   
   .remove-item {
@@ -446,6 +456,7 @@ body {
   transition: opacity 0.3s ease;
   z-index: 2;
 }
+
 
   .cart-panel button {
     width: 32px;
