@@ -898,6 +898,22 @@ document.addEventListener("DOMContentLoaded", () => {
       const increaseBtn = panel.querySelector(".increase");
       const quantitySpan = panel.querySelector(".quantity");
 
+// ✅ Hover ефекти за + и -
+[decreaseBtn, increaseBtn].forEach((btn) => {
+  btn.addEventListener("mouseenter", () => {
+    btn.style.backgroundColor = "white";
+    btn.style.color = "hsl(14, 86%, 42%)";
+    btn.style.border = "1px solid hsl(14, 86%, 42%)";
+  });
+  btn.addEventListener("mouseleave", () => {
+    btn.style.backgroundColor = "";
+    btn.style.color = "";
+    btn.style.border = "";
+  });
+});
+
+
+
       increaseBtn.addEventListener("click", () => {
         addToCart(id, products);
         quantitySpan.textContent = getCartQuantity(id);
