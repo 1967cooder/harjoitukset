@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8" />
+  <title>HAAPUOTI ZIP Extractor</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+</head>
+<body>
+  <h2>HAAPUOTI – Изтегляне на всички продукти</h2>
+  <button onclick="openAndExtract()">🟢 Отвори магазина и изтегли продуктите</button>
+
+  <script>
+    async function openAndExtract() {
+      const popup = window.open("https://holvi.com/shop/HAAPUOTI/", "_blank");
+      if (!popup) {
+        alert("Моля, разреши изскачащи прозорци (pop-ups) за този сайт.");
+        return;
+      }
+
+      popup.onload = async function () {
+        try {
+          const doc = popup.document;
+          const products = doc.querySelectorAll('[data-product]');
+          const zip = new JSZip();
+          const productList = [];
+
+          for (let i = 0; i < products.length; i++) {
+            const el = products[i];
+            const title = el.querySelector('h3')?.innerText || 'No title';
+            const price = el.querySelector('.product-price')?.innerText || 'No price';
+            const img = el.querySelector('img')?.src || '';
+
+            const product = { title, price, image: img };
+            productList.push(product);
+
+            if (img) {
+              try {
+                const imgBlob = await fetch(img).then(r => r.blob());
+                const ext = img.split('.').pop().split('?')[0].slice(0, 4);
+                zip.file(`images/product_${i + 1}.${ext}`, imgBlob);
+              } catch (e) {
+                console.warn("Не можа да свали снимка:", img);
+              }
+            }
+          }
+
+          zip.file("products.json", JSON.stringify(productList, null, 2));
+
+          const content = await zip.generateAsync({ type: "blob" });
+          const a = document.createElement("a");
+          a.href = URL.createObjectURL(content);
+          a.download = "haapuoti_products.zip";
+          a.click();
+
+          alert("Готово! ZIP файлът е изтеглен.");
+          popup.close();
+        } catch (e) {
+          alert("Неуспешен достъп до съдържанието. Браузърът блокира достъпа (CORS).");
+        }
+      };
+    }
+  </script>
+</body>
+</html>
