@@ -40,7 +40,7 @@ Käytä turvallisesti taulukon `orders` toista alkiota, jos se on olemassa.
 const customer = { orders: [1001, 1002] };
 
 // Korjaa tämä
-console.log(customer.orders[2]); // Odotettu: undefined
+//console.log(customer.orders[2]);  Odotettu: undefined
 
 console.log(customer.orders?.[1]);//korjattiu
 

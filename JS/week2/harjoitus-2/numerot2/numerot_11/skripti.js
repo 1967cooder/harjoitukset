@@ -4,8 +4,8 @@
 3. Tulosta lopputulos console.log() avulla, jossa viesti on esimerkiksi: "Arvottu lukusi on 4"
 */
 let num = 0.4
-let randomNum = Math.random(num);
-let roundedNum= Math.floor(randomNum * 10);
 
-console.log("randomNum on:" + roundedNum);
+let randomNum = Math.random();          // 0 - 1 (ei sisällä 1)
+let roundedNum = Math.floor(randomNum * 10); // 0 - 9
 
+console.log("Arvottu lukusi on " + roundedNum);

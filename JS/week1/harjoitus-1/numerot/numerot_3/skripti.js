@@ -8,9 +8,9 @@
     
     const celsius = (fahrenheit - 32) * 5 / 9;
     return Math.round(celsius * 10) / 10;  
-
+  }
     console.log(fahrenheitToCelsius(32)); // haluttu tulos: "-6,1"
 
-  }
+  
   
   funktio()

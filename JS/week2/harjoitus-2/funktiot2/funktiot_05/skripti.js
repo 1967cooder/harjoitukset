@@ -8,7 +8,7 @@ Vinkki: Käytä Math.random(), Math.floor() ja yksinkertaista matikkaa.
 */
 
 function generateRandomNumber(min, max) {
-    return Math.Floor(Math.random() * (max - min + 1)) + min;
+    return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 console.log(generateRandomNumber(1, 10));
 

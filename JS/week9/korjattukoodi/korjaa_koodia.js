@@ -40,7 +40,7 @@ Pitäisi palauttaa `true`, jos luku on parillinen, muuten `false`.
 */
 
 function isEven(num) {
-  return num % 2 = 0;
+  return num % 2 === 0;
 }
 
 // Debuggaus ja testaus
