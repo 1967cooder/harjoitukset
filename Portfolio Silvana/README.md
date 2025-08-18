@@ -7,6 +7,12 @@ A modern, responsive personal portfolio website showcasing my skills, projects, 
 
 ---
 
+##  Preview
+
+![Portfolio Screenshot](screenshot.png)  
+
+----
+
 ## 📋 Features
 
 - **Responsive design** – works on desktop, tablet, and mobile.
@@ -37,3 +43,22 @@ To run this project locally:
 # Clone the repository
 git clone https://github.com/1967cooder/harjoitukset/tree/main/Portfolio%20Silvana
 # Open index.html in your browser
+# Navigate to the portfolio folder
+cd harjoitukset/Portfolio\ Silvana
+
+##Repository Location
+
+This project is part of my learning and practice repository:
+Harjoitukset
+
+##Contact
+
+Portfolio Live Demo: portfoliosilvana.netlify.app
+
+GitHub: 1967cooder
+
+LinkedIn: (add your profile link here)
+
+Email: (optional – add if you want)
+
+## ✨ This portfolio is a continuous work in progress as I grow my skills and add new projects.
