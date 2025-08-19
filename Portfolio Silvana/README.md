@@ -57,8 +57,8 @@ Portfolio Live Demo: portfoliosilvana.netlify.app
 
 GitHub: 1967cooder
 
-LinkedIn: (add your profile link here)
+LinkedIn: www.linkedin.com/in/silvanalindholm
 
-Email: (optional – add if you want)
+Email: silvanalindholm@hotmail.com
 
 ## ✨ This portfolio is a continuous work in progress as I grow my skills and add new projects.
