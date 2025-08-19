@@ -55,14 +55,14 @@ This project showcases a clean, modern grid layout with multiple cards arranged 
 4. Modify the styles in `styles.css` or the markup in `index.html` as needed.
 
 ---
-## Links
+
 
 ### Links
 
-- [Git Hub URL] (https://github.com/1967cooder/harjoitukset/blob/main/bento-grid-main/index.html)
-- [Live Site URL] (https://bento-grid-main-silva.netlify.app)
+- [Git Hub URL](https://github.com/1967cooder/harjoitukset/tree/main/bento-grid-main/)
+- [Live Site URL](https://bento-grid-main-silva.netlify.app/)
 
-- [index.html] (http://127.0.0.1:5502/bento-grid-main/index.html)
+
 
 ## Folder Structure
 
@@ -80,6 +80,18 @@ This project showcases a clean, modern grid layout with multiple cards arranged 
 Silvana Lindholm
 
 ---
+## Contact
+
+Silvana Lindholm
+
+Portfolio: [Live Demo](https://portfoliosilvana.netlify.app/)
+
+GitHub [1967cooder](https://github.com/1967cooder/)
+
+LinkedIn: (https://www.linkedin.com/in/silvanalindholm/)
+
+Email: (silvanalindholm@hotmail.com/)
+
 
 ## License
 

@@ -133,14 +133,26 @@ Since this project was very difficult for me, in the future I want to:
 
 ### Useful resources
 
-- [Example resource 1](https://https://www.w3schools.com/ - 
-- (https://cssgridgarden.com/
+- [Example resource 1](https://https://www.w3schools.com/)
+- [Example resource 1](https://cssgridgarden.com/)
 
-
+## Links
+- [Git Hub URL](https://github.com/1967cooder/harjoitukset/tree/main/product-list-with-cart-main/)
+- [Live Demo](https://bestdesserts.netlify.app/)
 
 ## Author
 
-- Website - [Silvana Lindholm](http://127.0.0.1:5501/index.html)
+Silvana Lindholm
+
+## Contact
+
+Portfolio: [Live Demo](https://portfoliosilvana.netlify.app/)
+
+GitHub [1967cooder](https://github.com/1967cooder/)
+
+LinkedIn: (https://www.linkedin.com/in/silvanalindholm/)
+
+Email: (silvanalindholm@hotmail.com/)
 
 - Frontend Mentor - [@1967cooder
 ](https://www.frontendmentor.io/profile/1967cooder)

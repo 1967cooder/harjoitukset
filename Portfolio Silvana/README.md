@@ -3,7 +3,10 @@
 
 A modern, responsive personal portfolio website showcasing my skills, projects, and contact information.
 
-🌐 **Live Demo:** [https://portfoliosilvana.netlify.app/](https://portfoliosilvana.netlify.app/)
+## Links
+
+🌐 [Git HUb URL](https://github.com/1967cooder/harjoitukset/tree/main/Portfolio%20Silvana/)
+🌐 [Live Demo](https://portfoliosilvana.netlify.app/)
 
 ---
 
@@ -45,20 +48,22 @@ git clone https://github.com/1967cooder/harjoitukset/tree/main/Portfolio%20Silva
 # Open index.html in your browser
 # Navigate to the portfolio folder
 cd harjoitukset/Portfolio\ Silvana
-
-##Repository Location
+```
+## Repository Location
 
 This project is part of my learning and practice repository:
 Harjoitukset
 
-##Contact
+## Contact
 
-Portfolio Live Demo: portfoliosilvana.netlify.app
+Silvana Lindholm
 
-GitHub: 1967cooder
+Portfolio: [Live Demo](portfoliosilvana.netlify.app/)
 
-LinkedIn: www.linkedin.com/in/silvanalindholm
+GitHub 1967cooder
 
-Email: silvanalindholm@hotmail.com
+LinkedIn: (www.linkedin.com/in/silvanalindholm/)
+
+Email: (silvanalindholm@hotmail.com/)
 
 ## ✨ This portfolio is a continuous work in progress as I grow my skills and add new projects.
