@@ -52,3 +52,15 @@ The code is 1234
 ## 👩‍💻 Author
 - GitHub – [1967cooder](https://github.com/1967cooder)  
 
+## Contact
+
+Portfolio: [Live Demo](https://portfoliosilvana.netlify.app/)
+
+GitHub [1967cooder](https://github.com/1967cooder/)
+
+LinkedIn: (https://www.linkedin.com/in/silvanalindholm)
+
+Email: (silvanalindholm@hotmail.com)
+
+Frontend Mentor - [@1967cooder
+](https://www.frontendmentor.io/profile/1967cooder)

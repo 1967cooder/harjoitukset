@@ -132,7 +132,7 @@ Since this project was very difficult for me, in the future I want to:
 
 ### Useful resources
 
-- [Example resource 1](https://https://www.w3schools.com/)
+- [Example resource 1](https://www.w3schools.com/)
 - [Example resource 1](https://cssgridgarden.com/)
 
 ## Links
