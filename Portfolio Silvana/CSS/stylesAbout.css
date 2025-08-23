@@ -128,28 +128,21 @@ body {
 
 .about-content {
     display: flex;
-    justify-content: center; /* Центрира по хоризонтала */
-    align-items: center; /* Подравнява по вертикала */
-    gap: 40px; /* Разстояние между снимката и текста */
+    justify-content: center;          /* Слагаме снимката и текста в редица */
+    align-items: center; 
     flex-wrap: wrap; /* За да се пренарежда на мобилни устройства */
-    
-}
-
-.about-content img {
-    width: 300px;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.about-content p {
-    max-width: 500px;
-    text-align: left;
-    font-size: 18px;
+    gap: 120px;               /* Разстояние между снимката и текста */
+  }
+  
+  .about-text {
+    max-width: 600px;       /* Ограничаваме ширината на текста */
+  }
+  
+  .about-text p {
+    margin-bottom: 20px;    /* Разстояние между параграфите */
     line-height: 1.6;
-    color: hsl(235, 36%, 46%);
-
-}
+  }
+  
 
 /*-----Kuvaagaleria grid -----*/ 
 .gallery {

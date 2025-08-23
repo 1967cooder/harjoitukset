@@ -6,9 +6,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-   <!-- Добави под другите <link> елементи в <head> -->
+    <!-- Добави под другите <link> елементи в <head> -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-   
+    
     <link rel="stylesheet" href="CSS/stylesProjects.css"/>
     <title>Portfolio Silvana Lindholm</title>  
 </head>
@@ -42,6 +42,7 @@
     - Nelson Mandela</p>
   <br>
   <br>
+  
      <button type="button">See more</button><!--backgrImage-button-->
    
   
@@ -56,13 +57,14 @@
     
   
 <!-----------------------Kontainer with 3 projects------------------------------------------------>
+
 <h2>Projects</h2>
-<div class="project-container">
-   
-      <div class="project" id="lomake">
-          <img src="images/turquoise.jpg" alt="Lomake" width="300" height="200" />
-          <h3>Lomake</h3>
-      <a href="lomake(task.png) copy/index.html">See more</a>
+<div class="project-container" id="projectContainer">
+ <!--
+      <div class="project" id="grid">
+          <img src="images/turquoise-light.webp" alt="grid" width="300" height="200" />
+          <h3>Grid</h3>
+      <a href="Grid_harjoitus copy/index.html">See more</a>
    </div>
 
       <div class="project" id="pankkiautomaatti">
@@ -70,12 +72,6 @@
           <h3>Pankkiautomaatti</h3>
           <a href="Pankkiauttomaatti copy/Index.html">See more</a>
       </div>
-
-      <div class="project" id="Pannukakkusivu3">
-        <img src="images/turquoise.jpg" alt="Pannukakku" width="300" height="200" />
-        <h3>Pannukakkusivu3</h3>
-        <a href="Pannukakkusivu3 copy/index.html">See more</a>
-    </div>
 
       <div class="project" id="Pannukakkusivu2">
           <img src="images/turquoise.jpg" alt="Pannukakku" width="300" height="200" />
@@ -100,13 +96,7 @@
       <h3>Pikku_eläintarha1</h3>
   <a href="pikku_eläintarha copy/index1.html">See more</a>
 </div>
-
-<div class="project" id="project-list-with-cart-main">
-  <img src="images/turquoise.jpg" alt="cart-main" width="300" height="200" />
-  <h3>Project-list-with-cart-main</h3>
-<a href="product-list-with-cart-main copy/index.html">See more</a>
-</div>
-
+-->  
   </div><!--tässä loppuu div class project-container-->
 
 
@@ -129,7 +119,6 @@
             <i class="fab fa-github"></i>
           </a>
         </div> 
-
       
    <form id="userForm"><!--Mahdollistaa, että siihen voidaan viitata javascriptillä-->
 
@@ -163,6 +152,6 @@
 
 <button id="toTopBtn">TOP ↑</button>
   
-<script src="JS/script.js"></script>
+<script src="JS/react.js"></script>
 </body>
 </html>

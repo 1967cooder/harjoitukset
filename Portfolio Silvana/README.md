@@ -1,7 +1,12 @@
 # readmetest
 # Silvana Lindholm - Personal Portfolio
 
-A modern, responsive personal portfolio website showcasing my skills, projects, and contact information.
+**Welcome to my Portfolio!** 
+
+This is my personal website where you’ll find my **projects, skills, certificates, and education background** — as well as ways to connect with me.  
+
+I created this portfolio to present my work in a clean, modern, and responsive way.  
+It’s not only a collection of projects, but also a reflection of my growth as I continue to learn new technologies.
 
 ------
 
@@ -56,18 +61,25 @@ git clone https://github.com/1967cooder/harjoitukset/tree/main/Portfolio%20Silva
 # Navigate to the portfolio folder
 cd harjoitukset/Portfolio\ Silvana
 ```
+-------
 ## Repository Location
 
 This project is part of my learning and practice repository:
-Harjoitukset
+[Harjoitukset](https://github.com/1967cooder/harjoitukset)
 
+### Project: Portfolio Silvana
+- [Portfolio folder](https://github.com/1967cooder/harjoitukset/tree/main/Portfolio%20Silvana)
 - HTML
-
 - CSS
-
-- Java Script
-
+- Java Script 
+- React
 -----
+
+### HTML projects
+Here are few examples of my HTML projects:
+
+
+
 
 
 
@@ -83,9 +95,9 @@ Silvana Lindholm
 
 Portfolio: [Live Demo](https://portfoliosilvana.netlify.app/)
 
-GitHub 1967cooder
+GitHub [1967cooder](https://github.com/1967cooder)
 
-LinkedIn: (www.linkedin.com/in/silvanalindholm/)
+LinkedIn: [LinkedIn](https://linkedin.com/in/silvanalindholm/)
 
 Email: (silvanalindholm@hotmail.com/)
 
