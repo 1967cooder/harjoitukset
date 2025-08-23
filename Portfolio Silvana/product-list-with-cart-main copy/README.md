@@ -16,8 +16,6 @@ This is a solution to the [Product list with cart challenge on Frontend Mentor](
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-
-
 ## Overview
 
 ### The challenge
@@ -151,11 +149,11 @@ Portfolio: [Live Demo](https://portfoliosilvana.netlify.app/)
 
 GitHub [1967cooder](https://github.com/1967cooder/)
 
-LinkedIn: (https://www.linkedin.com/in/silvanalindholm/)
+LinkedIn: (https://www.linkedin.com/in/silvanalindholm)
 
-Email: (silvanalindholm@hotmail.com/)
+Email: (silvanalindholm@hotmail.com)
 
-- Frontend Mentor - [@1967cooder
+Frontend Mentor - [@1967cooder
 ](https://www.frontendmentor.io/profile/1967cooder)
 
 
