@@ -127,12 +127,7 @@ This is a solution to the [Frontend Mentor Bento Grid challenge](https://www.fro
 - [Live Demo](https://order-summary-card-silva.netlify.app/)
 - [GitHub Repository](https://github.com/1967cooder/harjoitukset/tree/main/Portfolio%20Silvana/order-summary-component-main)  
 
-
-## React
-
-is comming
 -----
-
 
 ## Links
 
@@ -152,4 +147,3 @@ LinkedIn: [LinkedIn](https://linkedin.com/in/silvanalindholm/)
 
 Email: silvanalindholm@hotmail.com/
 
-## ✨ This portfolio is a continuous work in progress as I grow my skills and add new projects.
