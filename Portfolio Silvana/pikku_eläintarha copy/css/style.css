@@ -94,3 +94,50 @@ button:hover {
     padding-top: 15px;
     border-top: 2px solid #ddd;/*tekee viiva yläpuolella*/
 }
+/* Mobile Responsiveness */
+@media screen and (max-width: 480px) {
+    body {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .controls {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    input, select, button {
+        width: 100%;
+        margin: 5px 0;
+        font-size: 14px;
+    }
+
+    #animalList li {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px;
+    }
+
+    .delete-btn {
+        margin-top: 8px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .add-animal input,
+    .add-animal select,
+    .add-animal button {
+        width: 100%;
+        margin: 5px 0;
+    }
+}

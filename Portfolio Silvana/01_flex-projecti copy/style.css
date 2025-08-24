@@ -219,21 +219,136 @@
     text-decoration: none;
   }
   
-  /* Alla oleva on vapaaehtoinen osuus! */
+ 
   
   /* --- Responsiivisuus --- */
-  @media (max-width: 768px) {
+
+@media (max-width: 768px) {
+  /* Piilotetaan desktop-nav ja voidaan halutessa lisätä burger myöhemmin */
   .nav {
-      display: none; /* piilota nav mobiilissa */
-    }
-    /* Flex-määrittelyt poistettu: .calendar, .tickets, .location */
-  
-    /* Kartta ja osoite täyttävät koko leveyden mobiilissa */
+    display: none;
+  }
+
+  /* Hero-teksti pienemmäksi */
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  /* Kalenteri pystysuuntaan */
+  .calendar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  /* Liput pystysuuntaan */
+  .tickets {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .ticket-card {
+    width: 100%;
+  }
+
+  /* Sijainti pystysuuntaan */
+  .location {
+    flex-direction: column;
+  }
   .map,
   .address {
-    display: flex;/* Flex-määrittelyt poistettu */
-    flex-wrap: wrap;
-     width: 100%;
-    }
+    width: 100%;
   }
-  
+
+  /* Kuvagalleria muutetaan yksipalstaiseksi */
+  .gallery {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  .img_vertical--long,
+  .img_horisontal--long,
+  .img_big {
+    grid-column: span 1 !important;
+    grid-row: span 1 !important;
+  }
+}
+/* --- Responsiivisuus --- */
+@media (max-width: 768px) {
+  /* Piilotetaan desktop-nav ja voidaan halutessa lisätä burger myöhemmin */
+  .nav {
+    display: none;
+  }
+
+  /* Hero-teksti pienemmäksi ja keskelle */
+  .hero {
+    padding: 2rem 1rem;
+    height: auto; /* ettei pakota korkeutta mobiilissa */
+  }
+  .hero h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .hero p {
+    text-align: center;
+  }
+
+  /* Kalenteri pystysuuntaan ja keskelle */
+  .calendar {
+    flex-direction: column;
+    align-items: center;
+  }
+  .day-card {
+    width: 100%;
+    max-width: 400px; /* kortit eivät veny liikaa */
+    text-align: center;
+  }
+
+  /* Liput pystysuuntaan ja keskelle */
+  .tickets {
+    flex-direction: column;
+    align-items: center;
+  }
+  .ticket-card {
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+  }
+
+  /* Sijainti pystysuuntaan ja keskelle */
+  .location {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  .map,
+  .address {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  /* Kuvagalleria muutetaan yksipalstaiseksi ja keskelle */
+  .gallery {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    justify-items: center; /* keskitä kuvat */
+  }
+  .gallery_item {
+    width: 100%;
+    max-width: 500px;
+  }
+  .img_vertical--long,
+  .img_horisontal--long,
+  .img_big {
+    grid-column: span 1 !important;
+    grid-row: span 1 !important;
+  }
+
+  /* Footer keskelle */
+  .footer {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  .social {
+    justify-content: center;
+    flex-wrap: wrap; /* rivittyy nätisti */
+  }
+}

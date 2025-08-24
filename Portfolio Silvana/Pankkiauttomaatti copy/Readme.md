@@ -36,7 +36,7 @@ Direct link to project folder:
 
 
 ---
-
+a
 ## 🔗 Live Demo
  [Live demo](https://pankkiautomaatti.netlify.app/)
 The code is 1234
@@ -58,9 +58,9 @@ Portfolio: [Live Demo](https://portfoliosilvana.netlify.app/)
 
 GitHub [1967cooder](https://github.com/1967cooder/)
 
-LinkedIn: (https://www.linkedin.com/in/silvanalindholm)
+LinkedIn: https://www.linkedin.com/in/silvanalindholm
 
-Email: (silvanalindholm@hotmail.com)
+Email: silvanalindholm@hotmail.com
 
 Frontend Mentor - [@1967cooder
 ](https://www.frontendmentor.io/profile/1967cooder)
