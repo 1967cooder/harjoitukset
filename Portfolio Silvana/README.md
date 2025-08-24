@@ -24,10 +24,6 @@ It’s not only a collection of projects, but also a reflection of my growth as 
 
 ------
 
-
-
-----
-
 ## 📋 Features
 
 - **Responsive design** – works on desktop, tablet, and mobile.
