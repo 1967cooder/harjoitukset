@@ -1,7 +1,7 @@
 # readmetest
 # Silvana Lindholm - Personal Portfolio
 
-**Welcome to my Portfolio!** 
+## Welcome to my Portfolio!
 
 This is my personal website where you’ll find my **projects, skills, certificates, and education background** — as well as ways to connect with me.  
 
@@ -62,25 +62,88 @@ git clone https://github.com/1967cooder/harjoitukset/tree/main/Portfolio%20Silva
 cd harjoitukset/Portfolio\ Silvana
 ```
 -------
+
 ## Repository Location
 
 This project is part of my learning and practice repository:
 [Harjoitukset](https://github.com/1967cooder/harjoitukset)
 
-### Project: Portfolio Silvana
-- [Portfolio folder](https://github.com/1967cooder/harjoitukset/tree/main/Portfolio%20Silvana)
-- HTML
-- CSS
-- Java Script 
-- React
+
+ Here are several HTML, CSS, JavaScript projects I've developed. You can explore the source code, and also see live version and more details on my [Portfolio website](https://portfoliosilvana.netlify.app/) 🌐 
+ 
+ 
+## JavaScript projectts
+
+### Portfolio
+
+- [Live Demo](https://portfoliosilvana.netlify.app/)
+- [Git HUb URL](https://github.com/1967cooder/)
+
+### Pankkiautomaattisimulaattori
+
+A bankk ATM simulator demonstrating user input and logic handling.
+
+- [Live demo](https://pankkiautomaatti.netlify.app/)
+The code is 1234
+-  [GitHub](https://github.com/1967cooder/harjoitukset/tree/main/Pankkiautomaatti)  
+
+### Pikku eläintarha
+ 
+ A small interactive zoo app to practice DOM manipulation
+
+- [Live Demo](https://pikku-elaintarha.netlify.app/)  
+- [GitHub Repository](https://github.com/1967cooder/harjoitukset/tree/main/Portfolio%20Silvana/pikku_el%C3%A4intarha%20copy) 
+
+###  Pannukakkusivu3
+
+Interaktiivinen pannukakun tilaussivu sekä erillinen hallintasivu tilausten käsittelyyn. Projektissa käytettiin **HTML**, **CSS** ja **JavaScript** -tekniikoita sekä **localStorage**-tallennusta.
+
+
+- [Git Hub](https://github.com/1967cooder/harjoitukset/tree/main/Portfolio%20Silvana/Pannukakkusivu3%20copy)
+
+Tilaussivu [Live demo](https://pannukakkusivu3.netlify.app/)  
+*(salasana: `pannukakku123`)*
+
+Tilauksien halintasivu [Live demo](https://pannukakkusivu3.netlify.app/orders)
+*(salasana: `pannukakku123`)*
+
+### Product list with cart solution
+
+This is a solution to the [Product list with cart challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/product-list-with-cart-5MmqLVAp_d).
+
+- [Live Demo](https://bestdesserts.netlify.app/)
+- [Git Hub URL](https://github.com/1967cooder/harjoitukset/tree/main/product-list-with-cart-main/)
+
+
+ ## HTML/CSS projects
+
+ ### FlexFest 2025
+
+FlexFest 2025 is a responsive festival website that showcases the event program, tickets, location, gallery, and contact details.  
+The site is built with **HTML5** and **CSS3**, designed to work on both desktop and mobile devices.
+
+- [Live demo](https://flexfest.netlify.app/)
+- [GitHub](https://github.com/1967cooder/harjoitukset/tree/main/Portfolio%20Silvana/01_flex-projecti%20copy)
+
+### Order Summary Card
+
+This is a solution to the [Order Summary Card challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/order-summary-component-QlPmajDUj). This challenge helps improve coding skills by building realistic UI components.
+
+- [Live Demo](https://order-summary-card-silva.netlify.app/)
+- [GitHub Repository](https://github.com/1967cooder/harjoitukset/tree/main/Portfolio%20Silvana/order-summary-component-main)  
+
+### Bento Grid Challenge
+
+This is a solution to the [Frontend Mentor Bento Grid challenge](https://www.frontendmentor.io/challenges/bento-grid-6e0q6h_bH). The challenge is to build a responsive layout using CSS Grid and Flexbox that matches the provided design.
+
+- [Live Demo](https://order-summary-card-silva.netlify.app/)
+- [GitHub Repository](https://github.com/1967cooder/harjoitukset/tree/main/Portfolio%20Silvana/order-summary-component-main)  
+
+
+## React
+
+is comming
 -----
-
-### HTML projects
-Here are few examples of my HTML projects:
-
-
-
-
 
 
 ## Links
@@ -99,6 +162,6 @@ GitHub [1967cooder](https://github.com/1967cooder)
 
 LinkedIn: [LinkedIn](https://linkedin.com/in/silvanalindholm/)
 
-Email: (silvanalindholm@hotmail.com/)
+Email: silvanalindholm@hotmail.com/
 
 ## ✨ This portfolio is a continuous work in progress as I grow my skills and add new projects.
