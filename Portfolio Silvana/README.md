@@ -12,15 +12,25 @@ It’s not only a collection of projects, but also a reflection of my growth as 
 
 ## Screenshot
 
-![(./images/Screenshots/portfoliosilvana.netlify-home.app_ (1).png)](<images/Screenshots/portfoliosilvana.netlify-home.app_ (1).png>)
+![Portfolio Homepage Screenshot](./images/Screenshots/portfoliosilvana.netlify.app.png)
 
-![alt text](images/Screenshots/portfoliosilvana.netlify.app_projects.png)
+![alt text](./images/Screenshots/portfoliosilvana.netlify.app_iPhone_XR.png)
 
-![alt text](images/Screenshots/portfoliosilvana.netlify.app_contact.png)
+![alt text](./images/Screenshots/portfoliosilvana.netlify.app_projects.png)
+
+![alt text](images/Screenshots/portfoliosilvana.netlify.app_projectsIPhone_XR.png)
 
 ![alt text](images/Screenshots/portfoliosilvana.netlify.app_html_css.png)
 
-![alt text](<images/Screenshots/portfoliosilvana.netlify.app_projects(iPhone 12 Pro).png>)
+![alttext](./images/Screenshots/portfoliosilvana.netlify.app_about.png)
+
+![alttext](./images/Screenshots/portfoliosilvana.netlify.app_aboutiPhone_XR.png)
+
+![alt text](./images/Screenshots/portfoliosilvana.netlify.app_contact.png)
+
+
+
+![alt text](./images/Screenshots/portfoliosilvana.netlify.app_contactiPhone_XR.png)
 
 ------
 

@@ -43,8 +43,6 @@ Here are some of the main projects you can explore in this repository:
 
 ##  Getting Started
 
-To view or run the projects:
-
 To view or run the projects locally:
 
 ```bash
@@ -60,6 +58,7 @@ cd harjoitukset/Portfolio\ Silvana
 For deployed versions, many projects are available live (links inside each project folder’s README).
 
 Here are several HTML, CSS, JavaScript projects I've developed.
+
 ## JavaScript projectts
 
 ### Portfolio
@@ -131,8 +130,11 @@ This is a solution to the [Frontend Mentor Bento Grid challenge](https://www.fro
 
 ## Links
 
-🌐 [Git HUb URL](https://github.com/1967cooder/harjoitukset/tree/main/Portfolio%20Silvana/)
-🌐 [Live Demo](https://portfoliosilvana.netlify.app/)
+🌐 [GitHub harjoitukset](https://github.com/1967cooder/harjoitukset)
+
+🌐 [Git HUb portfolio](https://github.com/1967cooder/harjoitukset/tree/main/Portfolio%20Silvana/)
+
+🌐 [Live Demo portfolio](https://portfoliosilvana.netlify.app/)
 
 
 ## Contact
