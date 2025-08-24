@@ -28,8 +28,6 @@ It’s not only a collection of projects, but also a reflection of my growth as 
 
 ![alt text](./images/Screenshots/portfoliosilvana.netlify.app_contact.png)
 
-
-
 ![alt text](./images/Screenshots/portfoliosilvana.netlify.app_contactiPhone_XR.png)
 
 ------
@@ -83,7 +81,7 @@ This project is part of my learning and practice repository:
 ### Portfolio
 
 - [Live Demo](https://portfoliosilvana.netlify.app/)
-- [Git HUb URL](https://github.com/1967cooder/)
+- [Git HUb](https://github.com/1967cooder/harjoitukset/tree/main/Portfolio%20Silvana)
 
 ### Pankkiautomaattisimulaattori
 
@@ -154,7 +152,7 @@ is comming
 
 ## Links
 
-🌐 [Git HUb URL](https://github.com/1967cooder/harjoitukset/tree/main/Portfolio%20Silvana/)
+🌐 [Git HUb](https://github.com/1967cooder/harjoitukset/tree/main/Portfolio%20Silvana/)
 🌐 [Live Demo](https://portfoliosilvana.netlify.app/)
 
 
