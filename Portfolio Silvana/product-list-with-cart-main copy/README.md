@@ -40,12 +40,6 @@ Users should be able to:
 ![](./designSilva/confirmed-items.html.png)
 
 
-
-### Links
-
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
-
 ## My process
 
 Built with
@@ -88,6 +82,7 @@ To see how you can add code snippets, see below:
     <button id="startNewOrder" class="hidden">Start New Order</button>
   </section>
 ```
+
 ```css
 .proud-of-this-css {
 .cart {
@@ -105,6 +100,7 @@ To see how you can add code snippets, see below:
   }
 }
 ```
+
 ```js
 fetch("data.json")
     .then((response) => response.json())
@@ -136,7 +132,8 @@ Since this project was very difficult for me, in the future I want to:
 - [Example resource 1](https://cssgridgarden.com/)
 
 ## Links
-- [Git Hub URL](https://github.com/1967cooder/harjoitukset/tree/main/product-list-with-cart-main/)
+
+- [Git Hub](https://github.com/1967cooder/harjoitukset/tree/main/product-list-with-cart-main/)
 - [Live Demo](https://bestdesserts.netlify.app/)
 
 ## Author
@@ -149,9 +146,9 @@ Portfolio: [Live Demo](https://portfoliosilvana.netlify.app/)
 
 GitHub [1967cooder](https://github.com/1967cooder/)
 
-LinkedIn: (https://www.linkedin.com/in/silvanalindholm)
+LinkedIn: https://www.linkedin.com/in/silvanalindholm
 
-Email: (silvanalindholm@hotmail.com)
+Email: silvanalindholm@hotmail.com
 
 Frontend Mentor - [@1967cooder
 ](https://www.frontendmentor.io/profile/1967cooder)

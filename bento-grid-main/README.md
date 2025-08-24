@@ -59,7 +59,7 @@ This project showcases a clean, modern grid layout with multiple cards arranged 
 
 ### Links
 
-- [Git Hub URL](https://github.com/1967cooder/harjoitukset/tree/main/bento-grid-main/)
+- [Git Hub](https://github.com/1967cooder/harjoitukset/tree/main/bento-grid-main/)
 - [Live Site URL](https://bento-grid-main-silva.netlify.app/)
 
 
@@ -90,7 +90,7 @@ GitHub [1967cooder](https://github.com/1967cooder/)
 
 LinkedIn: https://www.linkedin.com/in/silvanalindholm/
 
-Email: silvanalindholm@hotmail.com/
+Email: silvanalindholm@hotmail.com
 
 
 ## License
