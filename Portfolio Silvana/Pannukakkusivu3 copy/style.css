@@ -1,3 +1,5 @@
+
+
 *{
     margin: 0;
     padding: 0;
@@ -8,7 +10,7 @@
 
 body {
     background-color: rgb(230, 208, 247);
-    color: #000000;
+   /* color: #000000;*/
     display: flex;
     justify-content: center;
     align-items: center;
@@ -58,8 +60,13 @@ body {
     font-size: 25px;
   }
   
+h2 {
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+}
   h3 {
     margin-top: 15px;
+    
   }
   
   input[type="checkbox"] {
@@ -72,9 +79,200 @@ body {
     margin-top: 10px;
   }
 
-  
-  
   p {
     text-align: left;
     margin-top: 2rem;
   }
+
+
+ 
+/* Унифициран стил за всички интерактивни елементи */
+button,
+input[type="submit"],
+input[type="button"],
+input[type="text"],
+select,
+label,
+a {
+  display: inline-block;
+  padding: 12px 20px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(135deg, hsl(298, 48%, 65%), hsl(298, 48%, 50%));
+  color: hsl(50,100%,50%);
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+}
+
+button:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover,
+input[type="text"]:hover,
+select:hover,
+label:hover,
+a:hover {
+  background: linear-gradient(135deg, hsl(298, 48%, 45%), hsl(298, 48%, 35%));
+  color: hsl(50,100%,60%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(0,0,0,0.2);
+}
+
+button:active,
+input[type="submit"]:active,
+input[type="button"]:active,
+label:active,
+a:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  
+}
+
+/* Подредба на формата */
+#pancakeForm label,
+#pancakeForm input[type="text"],
+#pancakeForm select,
+#pancakeForm button,
+#pancakeForm .topping,
+#pancakeForm .extra,
+#pancakeForm .delivery {
+  margin: 5px;
+}
+
+
+/* Само за реда с името */
+label[for="customerName"],
+#customerName {
+    display: inline-flex;      /* подрежда label и input на един ред */
+    align-items: center;       /* центриране вертикално */
+    gap: 10px;                 /* разстояние между label и input */
+    color:  rgb(230, 208, 247); 
+}
+/*cveta na placeholder teksta*/
+#customerName::placeholder {
+  color: rgb(230, 208, 247); 
+ 
+}
+
+
+/* Специален стил за "Valitse pannukakun tyyppi" и селектора */
+label[for="type"],
+#type {
+  display: inline-flex;      /* подрежда label и select на един ред */
+  align-items: center;
+  gap: 10px;
+  margin-top: 15px;          /* разстояние от реда с име */
+  padding: 12px 20px;
+  border-radius: 30px;
+  background: linear-gradient(135deg, hsl(298, 48%, 65%), hsl(298, 48%, 50%));
+  color: hsl(50,100%,50%);
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+    
+}
+
+
+/* Hover ефект само за тях */
+label[for="type"]:hover,
+#type:hover {
+    background: linear-gradient(135deg, hsl(298, 48%, 45%), hsl(298, 48%, 35%));
+    color: hsl(50,100%,60%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0,0,0,0.2);
+}
+
+/* Active ефект само за тях */
+label[for="type"]:active,
+#type:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+#type {
+  width: max-content;  /* за да не се разтяга */
+  display: inline-flex; /* премахваме display:block */
+  background-color: rgb(230, 208, 247); /* фон по подразбиране */
+  position: relative;       
+    border: none;
+    border-radius: 30px;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+    appearance: auto; /* стандартния стрелец */
+    width: max-content;
+  
+ 
+}
+/* Псевдо-елемент за "v" */
+#type::after {
+  content: "v";            /* самият знак */
+  position: absolute;
+  right: 15px;             /* отстояние от дясно */
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: bold;
+  color: #000;
+  pointer-events: none;    /* да не пречи на избора */
+}
+
+
+/* Hover ефект */
+#type:hover {
+  background: linear-gradient(135deg, hsl(298, 48%, 45%), hsl(298, 48%, 35%));
+  color: hsl(50,100%,60%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(0,0,0,0.2);
+}
+
+
+
+
+/* Втори ред: бутоните за панкейк тип 
+#type,
+.pancake-type {
+  display: inline-block;
+  margin-right: 10px;
+}
+*/
+/* Бутоните за проверка и изпращане на поръчка на един ред */
+#seeOrder,
+#submitOrder {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+/* Flex контейнер за редовете (ако искаш по-гъвкава подредба) */
+#pancakeForm > .form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+/* Checkbox и radio – модерна визия */
+input[type="checkbox"],
+input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  accent-color:hsl(50,100%,50%);
+  margin-right: 8px;
+  vertical-align: middle;
+  box-shadow: none;
+  background:rgb(152, 121, 176); 
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+
