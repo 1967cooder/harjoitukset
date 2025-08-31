@@ -109,7 +109,7 @@ HTML ja CSS toteutin suurelta osin itse. JavaScriptin logiikan kehittämisessä 
 -----
 # Linkit
 
-[Git Hub](https://github.com/1967cooder/harjoitukset/tree/main/Portfolio%20Silvana/Pannukakkusivu3%20copy)
+[Git Hub](https://github.com/1967cooder?tab=repositories)
 
 
 
@@ -122,3 +122,19 @@ HTML ja CSS toteutin suurelta osin itse. JavaScriptin logiikan kehittämisessä 
 
 [Live demo](https://pannukakkusivu3.netlify.app/orders)
 *(salasana: `pannukakku123`)*
+
+### Portfolio
+
+- [Live Demo](https://portfoliosilvana.netlify.app/)
+
+## Contact
+
+Silvana Lindholm
+
+Portfolio: [Live Demo](https://portfoliosilvana.netlify.app/)
+
+GitHub [1967cooder](https://github.com/1967cooder)
+
+LinkedIn: [LinkedIn](https://linkedin.com/in/silvanalindholm/)
+
+Email: silvanalindholm@hotmail.com

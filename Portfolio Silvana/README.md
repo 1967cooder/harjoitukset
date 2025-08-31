@@ -166,6 +166,6 @@ GitHub [1967cooder](https://github.com/1967cooder)
 
 LinkedIn: [LinkedIn](https://linkedin.com/in/silvanalindholm/)
 
-Email: silvanalindholm@hotmail.com/
+Email: silvanalindholm@hotmail.com
 
 ## ✨ This portfolio is a continuous work in progress as I grow my skills and add new projects.
