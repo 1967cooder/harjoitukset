@@ -4,7 +4,7 @@ Tämä projekti on osa harjoitustyötä, jossa toteutettiin interaktiivinen pann
 
 ---
 ## screenshot
-![Pannukakun tilaussivu ](images/pannukakkusivu3.netlify.app_.png)
+![Pannukakun tilaussivu ](./images/pannukakkusivu3.netlify.app_.png)
 
 ![Tilauksien hallintasivu ](images/pannukakkusivu3.netlify.app_orders.png)
 
