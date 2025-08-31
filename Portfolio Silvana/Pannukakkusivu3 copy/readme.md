@@ -112,10 +112,6 @@ HTML ja CSS toteutin suurelta osin itse. JavaScriptin logiikan kehittämisessä 
 [Git Hub](https://github.com/1967cooder/harjoitukset/tree/main/Portfolio%20Silvana/Pannukakkusivu3%20copy)
 
 
-Pannukakun tilaussivu [index.html](http://127.0.0.1:5505/Pannukakkusivu3%20copy/index.html)
-
-Tilauksien hallintasivu [orders.html](http://127.0.0.1:5505/Pannukakkusivu3%20copy/orders.html)(salasana: pannukakku123)
-
 
 ### Pannukakun tilaussivu
 
