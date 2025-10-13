@@ -1,66 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
     <!-- Добави под другите <link> елементи в <head> -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    
-    <link rel="stylesheet" href="CSS/stylesProjects.css"/>
-    <title>Portfolio Silvana Lindholm</title>  
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
 
-<body>
-<!-- HEADER & NAV -->
-  <header class="header">
+    <link rel="stylesheet" href="CSS/stylesProjects.css" />
+    <title>Portfolio Silvana Lindholm</title>
+  </head>
 
-    <div class="logo">Logo</div>
+  <body>
+    <!-- HEADER & NAV -->
+    <header class="header">
+      <div class="logo">
+        <img src="./images/logo.svg" alt="Logo" />
+      </div>
 
-    <nav class="nav">
-      <a href="index.html">Home</a>
-      <a href="projects.html">Projects</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
 
-  </header>
+    <main>
+      <!--------------BackgroundImage-------------------------------->
+      <section class="hero">
+        <img src="images/backgrImage.webp" alt="Background image" />
+        <div id="backgrImage-text">
+          <h1>Welcome to my Portfolio</h1>
+          <br />
+          <br />
+          <p>
+            Hi, I’m Silvana — aspiring web and programming developer & designer.
+            Explore my projects and journey below!
+          </p>
+          <br />
+          <p>"It always seems impossible until it's done." - Nelson Mandela</p>
+          <br />
+          <br />
 
-<main>
- <!--------------BackgroundImage-------------------------------->
-<section class="hero">
-  <img src="images/backgrImage.webp" alt="Background image" />
-  <div id="backgrImage-text">
-    <h1>Welcome to my Portfolio</h1> 
-    <br>
-    <br>
-<p>Hi, I’m Silvana — aspiring web and programming developer & designer. Explore my projects and journey below!</p>
-<br>
-    <p>"It always seems impossible until it's done."
-    - Nelson Mandela</p>
-  <br>
-  <br>
-  
-     <button type="button">See more</button><!--backgrImage-button-->
-   
-  
-</div><!--BackgrImage loppuu-->
+          <button type="button">See more</button
+          ><!--backgrImage-button-->
+        </div>
+        <!--BackgrImage loppuu-->
+      </section>
 
-</section>
+      <!----------the hall container with 1.container with 3 projects; 2 About with oun image; 3.Form-wrap------>
 
+      <div class="container">
+        <!-----------------------Kontainer with 3 projects------------------------------------------------>
 
-  <!----------the hall container with 1.container with 3 projects; 2 About with oun image; 3.Form-wrap------>
-
-  <div class="container">
-    
-  
-<!-----------------------Kontainer with 3 projects------------------------------------------------>
-
-<h2>Projects</h2>
-<div class="project-container" id="projectContainer">
- <!--
+        <h2>HTML_CSS Projects</h2>
+        <div class="project-container" id="projectContainer">
+          <!--
       <div class="project" id="grid">
           <img src="images/turquoise-light.webp" alt="grid" width="300" height="200" />
           <h3>Grid</h3>
@@ -96,62 +100,75 @@
       <h3>Pikku_eläintarha1</h3>
   <a href="pikku_eläintarha copy/index1.html">See more</a>
 </div>
--->  
-  </div><!--tässä loppuu div class project-container-->
-
-
-  </div><!--Div class container finish--------->
-
-<!--------------------------Form-------------------------------------------------------->
-  <div class="form-wrap"><!--Luo laattikon(div lomakkeelle); form-wrap käytetään tyylitykseen CSS-ssä-->
-      <h2>Contact Us</h2><br/>
-
-      <div class="social content">
-        <!-- ИКОНКИ ВЛЯВО -->
-        <div class="social-icons-left">
-          <a href="https://discord.com/users/TUNNUS" target="_blank" aria-label="Discord">
-            <i class="fab fa-discord"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/KAYTTAJANIMI" target="_blank" aria-label="LinkedIn">
-            <i class="fab fa-linkedin"></i>
-          </a>
-          <a href="https://github.com/KAYTTAJANIMI" target="_blank" aria-label="GitHub">
-            <i class="fab fa-github"></i>
-          </a>
-        </div> 
-      
-   <form id="userForm"><!--Mahdollistaa, että siihen voidaan viitata javascriptillä-->
-
-     
-        <label for="yourName">Your Name:</label>
-        <input type="text" id="yourName" name="yourName"required ><!--setää lähettäminen-->
-    
-
-   
-        <label for="yourEmail">Your Email: </label>
-        <input type="email" id="yourEmail" name="yourEmail">
-    
-   
-        <label for="messageToMe">Message to me: </label>
-        <textarea id="messageToMe" name="messageToMe"></textarea>
-
-        
-        <button type="submit">Send Message</button>
-        <p class="error" id="errorMessage"></p>
-    
-        
-  </form>
+-->
+        </div>
+        <!--tässä loppuu div class project-container-->
       </div>
-  
-  <div class="attribution">
-    Copyright <a href="#">Silvana Lindholm</a>
-  </div>
-</div><!--form-wrap-->
+      <!--Div class container finish--------->
 
-</main>
+      <!--------------------------Form-------------------------------------------------------->
+      <div class="form-wrap">
+        <!--Luo laattikon(div lomakkeelle); form-wrap käytetään tyylitykseen CSS-ssä-->
+        <h2>Contact Us</h2>
+        <br />
 
-<button id="toTopBtn">TOP ↑</button>
-  
-<script src="JS/html_css.js"></script>
-</body>
+        <div class="social content">
+          <!-- ИКОНКИ ВЛЯВО -->
+          <div class="social-icons-left">
+            <a
+              href="https://discord.com/users/silvana_lindholm"
+              target="_blank"
+              aria-label="Discord"
+            >
+              <i class="fab fa-discord"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/silvanalindholm"
+              target="_blank"
+              aria-label="LinkedIn"
+            >
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a
+              href="https://github.com/1967cooder"
+              target="_blank"
+              aria-label="GitHub"
+            >
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+
+          <form id="userForm">
+            <!--Mahdollistaa, että siihen voidaan viitata javascriptillä-->
+
+            <label for="yourName">Your Name:</label>
+            <input
+              type="text"
+              id="yourName"
+              name="yourName"
+              required
+            /><!--setää lähettäminen-->
+
+            <label for="yourEmail">Your Email: </label>
+            <input type="email" id="yourEmail" name="yourEmail" />
+
+            <label for="messageToMe">Message to me: </label>
+            <textarea id="messageToMe" name="messageToMe"></textarea>
+
+            <button type="submit">Send Message</button>
+            <p class="error" id="errorMessage"></p>
+          </form>
+        </div>
+
+        <div class="attribution">
+          Copyright <a href="#">Silvana Lindholm</a>
+        </div>
+      </div>
+      <!--form-wrap-->
+    </main>
+
+    <button id="toTopBtn">TOP ↑</button>
+
+    <script src="JS/html_css.js"></script>
+  </body>
 </html>

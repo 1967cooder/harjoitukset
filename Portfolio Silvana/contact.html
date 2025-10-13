@@ -1,108 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
     <!-- Добави под другите <link> елементи в <head> -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
 
-    <link rel="stylesheet" href="CSS/stylesContact.css"/>
-</head>
-<body>
-<!-- HEADER & NAV -->
-<header class="header">
-    <div class="logo">Logo</div>
-    <nav class="nav">
-      <a href="index.html">Home</a>
-      <a href="projects.html">Projects</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-
- 
-  </header>
+    <link rel="stylesheet" href="CSS/stylesContact.css" />
+  </head>
+  <body>
+    <!-- HEADER & NAV -->
+    <header class="header">
+      <div class="logo">
+        <img src="./images/logo.svg" alt="Logo" />
+      </div>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
 
     <main>
-
       <!--------------BackgroundImage-------------------------------->
-<section class="hero">
-  <img src="images/backgrImage.webp" alt="Background image" />
-  <div id="backgrImage-text">
-    <h1>Welcome to my Portfolio</h1> 
-    <br>
-    <br>
-<p>Hi, I’m Silvana — aspiring web and programming developer & designer. Explore my projects and journey below!</p>
-<br>
-    <p>"It always seems impossible until it's done."
-    - Nelson Mandela</p>
-  <br>
-  <br>
-  <!----   <button type="button">See more</button>--backgrImage-button-->
-  <a href="about.html">
-    <button>See more</button>
-  </a>
-  
-</div><!--BackgrImage loppuu-->
+      <section class="hero">
+        <img src="images/backgrImage.webp" alt="Background image" />
+        <div id="backgrImage-text">
+          <h1>Welcome to my Portfolio</h1>
+          <br />
+          <br />
+          <p>
+            Hi, I’m Silvana — aspiring web and programming developer & designer.
+            Explore my projects and journey below!
+          </p>
+          <br />
+          <p>"It always seems impossible until it's done." - Nelson Mandela</p>
+          <br />
+          <br />
+          <!----   <button type="button">See more</button>--backgrImage-button-->
+          <a href="about.html">
+            <button>See more</button>
+          </a>
+        </div>
+        <!--BackgrImage loppuu-->
+      </section>
+      <!--------------------------Form-------------------------------------------------------->
+      <div class="form-wrap">
+        <!--Luo laattikon(div lomakkeelle); form-wrap käytetään tyylitykseen CSS-ssä-->
+        <h2>Contact Us</h2>
+        <br />
 
-</section>
-    <!--------------------------Form-------------------------------------------------------->
-  <div class="form-wrap"><!--Luo laattikon(div lomakkeelle); form-wrap käytetään tyylitykseen CSS-ssä-->
-    <h2>Contact Us</h2><br/>
+        <div class="social content">
+          <!-- ИКОНКИ ВЛЯВО -->
+          <div class="social-icons-left">
+            <a
+              href="https://discord.com/channels/silvana_lindholm"
+              target="_blank"
+              aria-label="Discord"
+            >
+              <i class="fab fa-discord"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/silvanalindholm"
+              target="_blank"
+              aria-label="LinkedIn"
+            >
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a
+              href="https://github.com/1967cooder"
+              target="_blank"
+              aria-label="GitHub"
+            >
+              <i class="fab fa-github"></i>
+            </a>
+            <a
+              href="mailto:example@email.com?subject=Здравей&body=Здравейте,"
+              aria-label="Email"
+            >
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
 
-    <div class="social content">
-      <!-- ИКОНКИ ВЛЯВО -->
-      <div class="social-icons-left">
-        <a href="https://discord.com/channels/silvana_lindholm" target="_blank" aria-label="Discord">
-          <i class="fab fa-discord"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/SILVANALINDHOLM" target="_blank" aria-label="LinkedIn">
-          <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="https://github.com/1967cooder" target="_blank" aria-label="GitHub">
-          <i class="fab fa-github"></i>
-        </a>
-        <a href="mailto:example@email.com?subject=Здравей&body=Здравейте," aria-label="Email">
-          <i class="fas fa-envelope"></i>
-        </a>
-      </div> 
-    
-  
- <form id="userForm"><!--Mahdollistaa, että siihen voidaan viitata javascriptillä-->
+          <form id="userForm">
+            <!--Mahdollistaa, että siihen voidaan viitata javascriptillä-->
 
-   
-      <label for="yourName">Your Name:</label>
-      <input type="text" id="yourName" name="yourName"required ><!--setää lähettäminen-->
-  
+            <label for="yourName">Your Name:</label>
+            <input
+              type="text"
+              id="yourName"
+              name="yourName"
+              required
+            /><!--setää lähettäminen-->
 
-      <label for="yourEmail">Your Email: </label>
-      <input type="email" id="yourEmail" name="yourEmail">
-  
- 
-      <label for="messageToMe">Message to me: </label>
-      <textarea id="messageToMe" name="messageToMe"></textarea>
+            <label for="yourEmail">Your Email: </label>
+            <input type="email" id="yourEmail" name="yourEmail" />
 
-      
-      <button type="submit">Send Message</button>
-      <p class="error" id="errorMessage"></p>     
-</form>
-    </div>
+            <label for="messageToMe">Message to me: </label>
+            <textarea id="messageToMe" name="messageToMe"></textarea>
 
+            <button type="submit">Send Message</button>
+            <p class="error" id="errorMessage"></p>
+          </form>
+        </div>
 
-<div class="attribution">
-  Copyright <a href="#">Silvana Lindholm</a>
-</div>
-</div><!--form-wrap-->
+        <div class="attribution">
+          Copyright <a href="#">Silvana Lindholm</a>
+        </div>
+      </div>
+      <!--form-wrap-->
+    </main>
 
+    <button id="toTopBtn">TOP ↑</button>
 
-</main>
-
-<button id="toTopBtn">TOP ↑</button>
-
-<script src="JS/script.js"></script>
-
-</body>
+    <script src="JS/script.js"></script>
+  </body>
 </html>

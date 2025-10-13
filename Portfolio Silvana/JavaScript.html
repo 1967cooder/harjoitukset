@@ -1,168 +1,294 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-   <!-- Добави под другите <link> елементи в <head> -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-   
-    <link rel="stylesheet" href="CSS/stylesProjects.css"/>
-    <title>Portfolio Silvana Lindholm</title>  
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Добави под другите <link> елементи в <head> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
 
-<body>
-<!-- HEADER & NAV -->
-  <header class="header">
+    <link rel="stylesheet" href="CSS/stylesProjects.css" />
+    <title>Portfolio Silvana Lindholm</title>
+  </head>
 
-    <div class="logo">Logo</div>
-
-    <nav class="nav">
-      <a href="index.html">Home</a>
-      <a href="projects.html">Projects</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-
-  </header>
-
-<main>
- <!--------------BackgroundImage-------------------------------->
-<section class="hero">
-  <img src="images/backgrImage.webp" alt="Background image" />
-  <div id="backgrImage-text">
-    <h1>Welcome to my Portfolio</h1> 
-    <br>
-    <br>
-<p>Hi, I’m Silvana — aspiring web and programming developer & designer. Explore my projects and journey below!</p>
-<br>
-    <p>"It always seems impossible until it's done."
-    - Nelson Mandela</p>
-  <br>
-  <br>
-     <button type="button">See more</button><!--backgrImage-button-->
-   
-  
-</div><!--BackgrImage loppuu-->
-
-</section>
-
-
-  <!----------the hall container with 1.container with 3 projects; 2 About with oun image; 3.Form-wrap------>
-
-  <div class="container">
-    
-  
-<!-----------------------Kontainer with 3 projects------------------------------------------------>
-<h2>Projects</h2>
-<div class="project-container">
-   
-      <div class="project" id="lomake">
-          <img src="images/turquoise.jpg" alt="Lomake" width="300" height="200" />
-          <h3>Lomake</h3>
-      <a href="lomake(task.png) copy/index.html">See more</a>
-   </div>
-
-      <div class="project" id="pankkiautomaatti">
-          <img src="images/turquoise.jpg" alt="Pankki" width="300" height="200" />
-          <h3>Pankkiautomaatti</h3>
-          <a href="Pankkiauttomaatti copy/Index.html">See more</a>
+  <body>
+    <!-- HEADER & NAV -->
+    <header class="header">
+      <div class="logo">
+        <img src="./images/logo.svg" alt="Logo" />
       </div>
 
-      <div class="project" id="Pannukakkusivu3">
-        <img src="images/turquoise.jpg" alt="Pannukakku" width="300" height="200" />
-        <h3>Pannukakkusivu3</h3>
-        <a href="Pannukakkusivu3 copy/index.html">See more</a>
-    </div>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
 
-      <div class="project" id="Pannukakkusivu2">
-          <img src="images/turquoise.jpg" alt="Pannukakku" width="300" height="200" />
-          <h3>Pannukakkusivu2</h3>
-          <a href="Pannukakkusivu2 copy/index.html">See more</a>
+    <main>
+      <!--------------BackgroundImage-------------------------------->
+      <section class="hero">
+        <img src="images/backgrImage.webp" alt="Background image" />
+        <div id="backgrImage-text">
+          <h1>Welcome to my Portfolio</h1>
+          <br />
+          <br />
+          <p>
+            Hi, I’m Silvana — aspiring web and programming developer & designer.
+            Explore my projects and journey below!
+          </p>
+          <br />
+          <p>"It always seems impossible until it's done." - Nelson Mandela</p>
+          <br />
+          <br />
+          <button type="button">See more</button
+          ><!--backgrImage-button-->
+        </div>
+        <!--BackgrImage loppuu-->
+      </section>
+
+      <!----------the hall container with 1.container with 3 projects; 2 About with oun image; 3.Form-wrap------>
+
+      <div class="container">
+        <!-----------------------Kontainer with 3 projects------------------------------------------------>
+        <h2>JavaScript Projects</h2>
+        <div class="project-container">
+          <div class="project" id="lomake">
+            <div class="image-container">
+              <img
+                src="images/turquoise.jpg"
+                alt="Lomake"
+                width="300"
+                height="200"
+              />
+              <a
+                href="https://github.com/1967cooder/harjoitukset/tree/main/Portfolio%20Silvana/lomake(task.png)%20copy"
+                class="overlay-link"
+                target="_blank"
+              >
+                GitHub
+              </a>
+            </div>
+            <h3>Lomake</h3>
+            <a href="lomake(task.png) copy/index.html">See more</a>
+          </div>
+
+          <div class="project" id="pankkiautomaatti">
+            <div class="image-container">
+              <img
+                src="images/turquoise.jpg"
+                alt="Pankki"
+                width="300"
+                height="200"
+              />
+              <a
+                href="https://github.com/1967cooder/harjoitukset/tree/main/Portfolio%20Silvana/Pankkiauttomaatti%20copy"
+                class="overlay-link"
+                target="_blank"
+              >
+                GitHub
+              </a>
+            </div>
+            <h3>Pankkiautomaatti</h3>
+            <a href="Pankkiauttomaatti copy/Index.html">See more</a>
+          </div>
+
+          <div class="project" id="Pannukakkusivu3">
+            <div class="image-container">
+              <img
+                src="images/turquoise.jpg"
+                alt="Pannukakku"
+                width="300"
+                height="200"
+              />
+              <a
+                href="https://github.com/1967cooder/harjoitukset/tree/main/Portfolio%20Silvana/Pannukakkusivu3%20copy"
+                class="overlay-link"
+                target="_blank"
+              >
+                GitHub
+              </a>
+            </div>
+            <h3>Pannukakkusivu3</h3>
+            <a href="Pannukakkusivu3 copy/index.html">See more</a>
+          </div>
+
+          <div class="project" id="Pannukakkusivu2">
+            <div class="image-container">
+              <img
+                src="images/turquoise.jpg"
+                alt="Pannukakku"
+                width="300"
+                height="200"
+              />
+              <a
+                href="https://github.com/1967cooder/harjoitukset/tree/main/Portfolio%20Silvana/Pannukakkusivu2%20copy"
+                class="overlay-link"
+                target="_blank"
+              >
+                GitHub
+              </a>
+            </div>
+            <h3>Pannukakkusivu2</h3>
+            <a href="Pannukakkusivu2 copy/index.html">See more</a>
+          </div>
+
+          <div class="project" id="Pannukakkusivu">
+            <div class="image-container">
+              <img
+                src="images/turquoise.jpg"
+                alt="Pannukakku"
+                width="300"
+                height="200"
+              />
+              <a
+                href="https://github.com/1967cooder/harjoitukset/tree/main/Portfolio%20Silvana/Pannukakkusivu%20copy"
+                class="overlay-link"
+                target="_blank"
+              >
+                GitHub
+              </a>
+            </div>
+            <h3>Pannukakkusivu</h3>
+            <a href="Pannukakkusivu copy/index.html">See more</a>
+          </div>
+
+          <div class="project" id="pikku_eläintarha">
+            <div class="image-container">
+              <img
+                src="images/turquoise.jpg"
+                alt="eläintarha"
+                width="300"
+                height="200"
+              />
+              <a
+                href="https://github.com/1967cooder/harjoitukset/tree/main/Portfolio%20Silvana/pikku_el%C3%A4intarha%20copy"
+                class="overlay-link"
+                target="_blank"
+              >
+                GitHub
+              </a>
+            </div>
+            <h3>Pikku_eläintarha</h3>
+            <a href="pikku_eläintarha copy/index.html">See more</a>
+          </div>
+
+          <div class="project" id="pikku_eläintarha1">
+            <div class="image-container">
+              <img
+                src="images/turquoise.jpg"
+                alt="eläintarha"
+                width="300"
+                height="200"
+              />
+              <a
+                href="https://github.com/1967cooder/harjoitukset/blob/main/Portfolio%20Silvana/pikku_el%C3%A4intarha%20copy/js/script.js"
+                class="overlay-link"
+                target="_blank"
+              >
+                GitHub
+              </a>
+            </div>
+            <h3>Pikku_eläintarha1</h3>
+            <a href="pikku_eläintarha copy/index1.html">See more</a>
+          </div>
+
+          <div class="project" id="project-list-with-cart-main">
+            <div class="image-container">
+              <img
+                src="images/turquoise.jpg"
+                alt="cart-main"
+                width="300"
+                height="200"
+              />
+              <a
+                href="https://github.com/1967cooder/harjoitukset/tree/main/Portfolio%20Silvana/product-list-with-cart-main%20copy"
+                class="overlay-link"
+                target="_blank"
+              >
+                GitHub
+              </a>
+            </div>
+            <h3>Project-list-with-cart-main</h3>
+            <a href="product-list-with-cart-main copy/index.html">See more</a>
+          </div>
+        </div>
+        <!--tässä loppuu div class project-container-->
       </div>
+      <!--Div class container finish--------->
 
-      <div class="project" id="Pannukakkusivu">
-        <img src="images/turquoise.jpg" alt="Pannukakku" width="300" height="200" />
-        <h3>Pannukakkusivu</h3>
-    <a href="Pannukakkusivu copy/index.html">See more</a>
-    </div>
+      <!--------------------------Form-------------------------------------------------------->
+      <div class="form-wrap">
+        <!--Luo laattikon(div lomakkeelle); form-wrap käytetään tyylitykseen CSS-ssä-->
+        <h2>Contact Us</h2>
+        <br />
 
-    <div class="project" id="pikku_eläintarha">
-      <img src="images/turquoise.jpg" alt="eläintarha" width="300" height="200" />
-      <h3>Pikku_eläintarha</h3>
-    <a href="pikku_eläintarha copy/index.html">See more</a>
-    </div>
+        <div class="social content">
+          <!-- ИКОНКИ ВЛЯВО -->
+          <div class="social-icons-left">
+            <a
+              href="https://discord.com/users/silvana_lindholm"
+              target="_blank"
+              aria-label="Discord"
+            >
+              <i class="fab fa-discord"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/silvanalindholm"
+              target="_blank"
+              aria-label="LinkedIn"
+            >
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a
+              href="https://github.com/1967cooder"
+              target="_blank"
+              aria-label="GitHub"
+            >
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
 
-    <div class="project" id="pikku_eläintarha1">
-      <img src="images/turquoise.jpg" alt="eläintarha" width="300" height="200" />
-      <h3>Pikku_eläintarha1</h3>
-  <a href="pikku_eläintarha copy/index1.html">See more</a>
-</div>
+          <form id="userForm">
+            <!--Mahdollistaa, että siihen voidaan viitata javascriptillä-->
 
-<div class="project" id="project-list-with-cart-main">
-  <img src="images/turquoise.jpg" alt="cart-main" width="300" height="200" />
-  <h3>Project-list-with-cart-main</h3>
-<a href="product-list-with-cart-main copy/index.html">See more</a>
-</div>
+            <label for="yourName">Your Name:</label>
+            <input
+              type="text"
+              id="yourName"
+              name="yourName"
+              required
+            /><!--setää lähettäminen-->
 
-  </div><!--tässä loppuu div class project-container-->
+            <label for="yourEmail">Your Email: </label>
+            <input type="email" id="yourEmail" name="yourEmail" />
 
+            <label for="messageToMe">Message to me: </label>
+            <textarea id="messageToMe" name="messageToMe"></textarea>
 
-  </div><!--Div class container finish--------->
+            <button type="submit">Send Message</button>
+            <p class="error" id="errorMessage"></p>
+          </form>
+        </div>
 
-<!--------------------------Form-------------------------------------------------------->
-  <div class="form-wrap"><!--Luo laattikon(div lomakkeelle); form-wrap käytetään tyylitykseen CSS-ssä-->
-      <h2>Contact Us</h2><br/>
-
-      <div class="social content">
-        <!-- ИКОНКИ ВЛЯВО -->
-        <div class="social-icons-left">
-          <a href="https://discord.com/users/TUNNUS" target="_blank" aria-label="Discord">
-            <i class="fab fa-discord"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/KAYTTAJANIMI" target="_blank" aria-label="LinkedIn">
-            <i class="fab fa-linkedin"></i>
-          </a>
-          <a href="https://github.com/KAYTTAJANIMI" target="_blank" aria-label="GitHub">
-            <i class="fab fa-github"></i>
-          </a>
-        </div> 
-
-      
-   <form id="userForm"><!--Mahdollistaa, että siihen voidaan viitata javascriptillä-->
-
-     
-        <label for="yourName">Your Name:</label>
-        <input type="text" id="yourName" name="yourName"required ><!--setää lähettäminen-->
-    
-
-   
-        <label for="yourEmail">Your Email: </label>
-        <input type="email" id="yourEmail" name="yourEmail">
-    
-   
-        <label for="messageToMe">Message to me: </label>
-        <textarea id="messageToMe" name="messageToMe"></textarea>
-
-        
-        <button type="submit">Send Message</button>
-        <p class="error" id="errorMessage"></p>
-    
-        
-  </form>
+        <div class="attribution">
+          Copyright <a href="#">Silvana Lindholm</a>
+        </div>
       </div>
-  
-  <div class="attribution">
-    Copyright <a href="#">Silvana Lindholm</a>
-  </div>
-</div><!--form-wrap-->
+      <!--form-wrap-->
+    </main>
 
-</main>
+    <button id="toTopBtn">TOP ↑</button>
 
-<button id="toTopBtn">TOP ↑</button>
-  
-<script src="JS/script.js"></script>
-</body>
+    <script src="JS/script.js"></script>
+  </body>
 </html>
