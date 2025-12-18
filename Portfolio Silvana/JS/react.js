@@ -4,24 +4,24 @@ const container = document.getElementById("projectContainer");
 const projects = [
   {
     id: "hrapp",
-    title: "hrApp",
+    title: "hrApp (React)",
     img: "images/randomImages/ReactProjects.webp",
     link: "https://1967cooder.github.io/hrApp/#/",
     github: "https://github.com/1967cooder/hrApp/blob/Step7/README.md",
   },
   {
-    id: "",
-    title: "",
+    id: "Kide",
+    title: "Kide (WordPress+React)",
     img: "images/randomImages/ReactProjects.webp",
-    link: "",
-    github: "",
+    link: "https://github.com/1967cooder/kide",
+    github: "https://github.com/1967cooder/kide",
   },
   {
-    id: "",
-    title: "",
+    id: "abc-of-media",
+    title: "ABC-of-media (WordPress)",
     img: "images/randomImages/ReactProjects.webp",
-    link: "",
-    github: "",
+    link: "https://github.com/1967cooder/ABCs-of-media",
+    github: "https://github.com/1967cooder/ABCs-of-media",
   },
 ];
 
