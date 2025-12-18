@@ -1,6 +1,6 @@
 # Frontend Mentor - Product list with cart solution
 
-This is a solution to the [Product list with cart challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/product-list-with-cart-5MmqLVAp_d). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Product list with cart challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/product-list-with-cart-5MmqLVAp_d). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
@@ -39,7 +39,6 @@ Users should be able to:
 
 ![](./designSilva/confirmed-items.html.png)
 
-
 ## My process
 
 Built with
@@ -49,8 +48,7 @@ Built with
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- 
-Vanilla JavaScript (dynamic rendering, cart logic, modal handling)
+- Vanilla JavaScript (dynamic rendering, cart logic, modal handling)
 
 ### What I learned
 
@@ -69,51 +67,51 @@ To see how you can add code snippets, see below:
 ```html
 .proud-of-this-html
 <section class="orderConfirmed" style="display:none;">
-  
-      <img src="assets/images/icon-order-confirmed.svg" alt="Order Confirmed" class="order-confirmed">
-      <h3>Order Confirmed
-    </h3>
-    <p>We hope you enjoy your food!</p>
+  <img
+    src="assets/images/icon-order-confirmed.svg"
+    alt="Order Confirmed"
+    class="order-confirmed"
+  />
+  <h3>Order Confirmed</h3>
+  <p>We hope you enjoy your food!</p>
 
-    <div id="confirmed-items"></div>
+  <div id="confirmed-items"></div>
 
-    <div id="orderTotalConfirmed">Order Total</div>
+  <div id="orderTotalConfirmed">Order Total</div>
 
-    <button id="startNewOrder" class="hidden">Start New Order</button>
-  </section>
+  <button id="startNewOrder" class="hidden">Start New Order</button>
+</section>
 ```
 
 ```css
 .proud-of-this-css {
-.cart {
+  .cart {
     width: 300px;
     min-width: 260px;
     background-color: hsl(20, 50%, 98%);
     color: hsl(14, 65%, 9%);
     padding: 1rem 1.5rem;
     border-radius: 16px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
     position: sticky;
     top: 2rem; /* залепен отгоре при скрол */
     height: fit-content;
-
   }
 }
 ```
 
 ```js
 fetch("data.json")
-    .then((response) => response.json())
-    .then((products) => {
-      products = products.map((p, index) => ({ id: index + 1, ...p }));
-      renderProducts(products);
-      updateCartUI();
-    })
-    .catch((error) =>
-      console.error("Грешка при зареждане на продуктите:", error)
-    );
+  .then((response) => response.json())
+  .then((products) => {
+    products = products.map((p, index) => ({ id: index + 1, ...p }));
+    renderProducts(products);
+    updateCartUI();
+  })
+  .catch((error) =>
+    console.error("Грешка при зареждане на продуктите:", error)
+  );
 ```
-
 
 ### Continued development
 
@@ -123,8 +121,6 @@ Since this project was very difficult for me, in the future I want to:
 ✅ Practice more with Local Storage
 ✅ Practice more with CSS
 ✅ Practice more with Grid
-
-
 
 ### Useful resources
 
@@ -153,9 +149,6 @@ Email: silvanalindholm@hotmail.com
 Frontend Mentor - [@1967cooder
 ](https://www.frontendmentor.io/profile/1967cooder)
 
-
-
 ## Acknowledgments
 
 Special thanks to Frontend Mentor for providing this challenge. I worked alone.
-
