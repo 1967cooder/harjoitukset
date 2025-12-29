@@ -30,7 +30,7 @@ document.addEventListener("click", function (event) {
 });
 
 //Vaihda teema nappi---------------------
-f; // 🚀 Когато страницата се зареди, проверяваме запазената тема
+// 🚀 Когато страницата се зареди, проверяваме запазената тема
 document.addEventListener("DOMContentLoaded", () => {
   const savedTheme = localStorage.getItem("theme");
   const body = document.body;
