@@ -111,7 +111,7 @@
 <div class="project" id="react">
         <img src="images/React.jpg" alt="Puzzle" width="300" height="200" />
         <h3>React and WordPress</h3>
-        <a href="React.html">See more</a>
+        <a href="React_WordPress.html">See more</a>
     </div>
     
 </div><!--tässä loppuu div class project-container-->
@@ -138,12 +138,12 @@
           </a>
         </div> 
 
-      
-   <form id="userForm"><!--Mahdollistaa, että siihen voidaan viitata javascriptillä-->
+   <!--  
+   <form id="userForm">Mahdollistaa, että siihen voidaan viitata javascriptillä
 
      
         <label for="yourName">Your Name:</label>
-        <input type="text" id="yourName" name="yourName"required ><!--setää lähettäminen-->
+        <input type="text" id="yourName" name="yourName"required >setää lähettäminen
     
    
         <label for="yourEmail">Your Email: </label>
@@ -158,6 +158,30 @@
         <p class="error" id="errorMessage"></p>
         
   </form>
+-->
+  <!---Netlify form-->
+<form
+name="contact"
+method="POST"
+data-netlify="true"
+netlify-honeypot="bot-field"
+action="/thank-you.html"
+>
+<!-- задължително -->
+<input type="hidden" name="form-name" value="contact" />
+<input type="hidden" name="bot-field" />
+
+<label for="yourName">Your Name:</label>
+<input type="text" id="yourName" name="yourName" required />
+
+<label for="yourEmail">Your Email:</label>
+<input type="email" id="yourEmail" name="yourEmail" required />
+
+<label for="messageToMe">Message to me:</label>
+<textarea id="messageToMe" name="messageToMe"></textarea>
+
+<button type="submit">Send Message</button>
+</form>
       </div>
   
   <div class="attribution">
