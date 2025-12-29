@@ -1,102 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
     <!-- Добави под другите <link> елементи в <head> -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    
-    <link rel="stylesheet" href="CSS/stylesProjects.css"/>
-    <title>Portfolio Silvana Lindholm</title>  
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
 
-<body>
-<!-- HEADER & NAV -->
-  <header class="header">
+    <link rel="stylesheet" href="CSS/stylesProjects.css" />
+    <title>Portfolio Silvana Lindholm</title>
+  </head>
 
-    <div class="logo">
-      <img src="./images/logo.svg" alt="Logo" />
-    </div>
-    
+  <body>
+    <!-- HEADER & NAV -->
+    <header class="header">
+      <div class="logo">
+        <img src="./images/logo.svg" alt="Logo" />
+      </div>
 
-    <nav class="nav">
-      <a href="index.html">Home</a>
-      <a href="projects.html">Projects</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
 
-  </header>
+    <main>
+      <!--------------BackgroundImage-------------------------------->
+      <section class="hero">
+        <img src="images/backgrImage.webp" alt="Background image" />
+        <div id="backgrImage-text">
+          <h1>Welcome to my Portfolio</h1>
+          <br />
+          <br />
+          <p>
+            Hi, I’m Silvana — aspiring web and programming developer & designer.
+            Explore my projects and journey below!
+          </p>
+          <br />
+          <p>"It always seems impossible until it's done." - Nelson Mandela</p>
+          <br />
+          <br />
+          <button type="button">See more</button
+          ><!--backgrImage-button-->
+        </div>
+        <!--BackgrImage loppuu-->
+      </section>
 
-<main>
- <!--------------BackgroundImage-------------------------------->
-<section class="hero">
-  <img src="images/backgrImage.webp" alt="Background image" />
-  <div id="backgrImage-text">
-    <h1>Welcome to my Portfolio</h1> 
-    <br>
-    <br>
-<p>Hi, I’m Silvana — aspiring web and programming developer & designer. Explore my projects and journey below!</p>
-<br>
-    <p>"It always seems impossible until it's done."
-    - Nelson Mandela</p>
-  <br>
-  <br>
-     <button type="button">See more</button><!--backgrImage-button-->
-   
-  
-</div><!--BackgrImage loppuu-->
+      <!----------the hall container with 1.container with 3 projects; 2 About with oun image; 3.Form-wrap------>
 
-</section>s
+      <div class="container">
+        <!-----------------------Kontainer with 3 projects------------------------------------------------>
+        <h2>Education and Certificates</h2>
+        <div class="project-container">
+          <div class="project" id="handsFree">
+            <div class="image-container">
+              <img
+                src="images/turquoise_dark.avif"
+                alt="handsFree"
+                width="300"
+                height="200"
+              />
+            </div>
+            <h3>HTTP Essential Training</h3>
+            <a
+              href="https://www.linkedin.com/feed/update/urn:li:activity:7322905654615072768/"
+              >See more</a
+            >
+          </div>
 
+          <div class="project" id="handsFree">
+            <div class="image-container">
+              <img
+                src="images/turquoise_dark.avif"
+                alt="handsFree"
+                width="300"
+                height="200"
+              />
+            </div>
+            <h3>React Essential Training</h3>
+            <a
+              href="https://www.linkedin.com/learning/certificates/b2e1b92f60b7d01e500c2afe590a8db37b64f271fba4ab89427a6e24ebfc3871?trk=share_certificate&accountId=99655914&u=99655914&success=true&authUUID=4qo6efMMTFem%2FevRsxMRVg%3D%3D"
+              >See more</a
+            >
+          </div>
 
-  <!----------the hall container with 1.container with 3 projects; 2 About with oun image; 3.Form-wrap------>
+          <div class="project" id="handsFree">
+            <div class="image-container">
+              <img
+                src="images/turquoise_dark.avif"
+                alt="handsFree"
+                width="300"
+                height="200"
+              />
+            </div>
+            <h3>
+              React Practice for Beginners: Build and Modify Basic Components
+            </h3>
+            <a
+              href="https://www.linkedin.com/learning/certificates/80e43a6580c1f29813e84d831aba22aa869efc41492bb54e6ca2f08013c2e72c?u=99655914"
+              >See more</a
+            >
+          </div>
 
-  <div class="container">
-    
-  
-<!-----------------------Kontainer with 3 projects------------------------------------------------>
-<h2>Education and Certificates</h2>
-<div class="project-container">
-   
-      <div class="project" id="handsFree">
-        <div class="image-container">
-          <img src="images/turquoise_dark.avif" alt="handsFree" width="300" height="200" />
-          
-          <h3>HTTP Essential Training</h3>
-      <a href="https://www.linkedin.com/feed/update/urn:li:activity:7322905654615072768/">See more</a>
-   </div>
+          <div class="project" id="handsFree">
+            <div class="image-container">
+              <img
+                src="images/turquoise_dark.avif"
+                alt="handsFree"
+                width="300"
+                height="200"
+              />
+            </div>
+            <h3>WordPress Essential Training</h3>
+            <a
+              href="https://www.linkedin.com/learning/certificates/075bebe37cf5f40cd1c9d3dc2e2524536f89771cba6f2eb6b84000a054d7d923?u=99655914"
+              >See more</a
+            >
+          </div>
 
-   
-   
+          <div class="project" id="handsFree">
+            <div class="image-container">
+              <img
+                src="images/turquoise_dark.avif"
+                alt="handsFree"
+                width="300"
+                height="200"
+              />
+            </div>
+            <h3>Introducion to WordPress Block Themes</h3>
+            <a
+              href="https://www.linkedin.com/learning/certificates/8ce323a5a3fd579252653af7350c753091b2406f883edd4346e433875c057aed?u=99655914"
+              >See more</a
+            >
+          </div>
+        </div>
+        <!--tässä loppuu div class project-container-->
+      </div>
+      <!--Div class container finish--------->
 
-  </div><!--tässä loppuu div class project-container-->
+      <!--------------------------Form-------------------------------------------------------->
+      <div class="form-wrap">
+        <!--Luo laattikon(div lomakkeelle); form-wrap käytetään tyylitykseen CSS-ssä-->
+        <h2>Contact Us</h2>
+        <br />
 
+        <div class="social content">
+          <!-- ИКОНКИ ВЛЯВО -->
+          <div class="social-icons-left">
+            <a
+              href="https://discord.com/users/silvana_lindholm"
+              target="_blank"
+              aria-label="Discord"
+            >
+              <i class="fab fa-discord"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/silvanalindholm"
+              target="_blank"
+              aria-label="LinkedIn"
+            >
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a
+              href="https://github.com/1967cooder"
+              target="_blank"
+              aria-label="GitHub"
+            >
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
 
-  </div><!--Div class container finish--------->
-
-<!--------------------------Form-------------------------------------------------------->
-  <div class="form-wrap"><!--Luo laattikon(div lomakkeelle); form-wrap käytetään tyylitykseen CSS-ssä-->
-      <h2>Contact Us</h2><br/>
-
-      <div class="social content">
-        <!-- ИКОНКИ ВЛЯВО -->
-        <div class="social-icons-left">
-          <a href="https://discord.com/users/silvana_lindholm" target="_blank" aria-label="Discord">
-            <i class="fab fa-discord"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/silvanalindholm" target="_blank" aria-label="LinkedIn">
-            <i class="fab fa-linkedin"></i>
-          </a>
-          <a href="https://github.com/1967cooder" target="_blank" aria-label="GitHub">
-            <i class="fab fa-github"></i>
-          </a>
-        </div> 
-
-  <!--    
+          <!--    
    <form id="userForm">Mahdollistaa, että siihen voidaan viitata javascriptillä
 
      
@@ -119,41 +203,40 @@
        
   </form>
 -->
-  <!---Netlify form-->
-<form
-name="contact"
-method="POST"
-data-netlify="true"
-netlify-honeypot="bot-field"
-action="/thank-you.html"
->
-<!-- задължително -->
-<input type="hidden" name="form-name" value="contact" />
-<input type="hidden" name="bot-field" />
+          <!---Netlify form-->
+          <form
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+            action="/thank-you.html"
+          >
+            <!-- задължително -->
+            <input type="hidden" name="form-name" value="contact" />
+            <input type="hidden" name="bot-field" />
 
-<label for="yourName">Your Name:</label>
-<input type="text" id="yourName" name="yourName" required />
+            <label for="yourName">Your Name:</label>
+            <input type="text" id="yourName" name="yourName" required />
 
-<label for="yourEmail">Your Email:</label>
-<input type="email" id="yourEmail" name="yourEmail" required />
+            <label for="yourEmail">Your Email:</label>
+            <input type="email" id="yourEmail" name="yourEmail" required />
 
-<label for="messageToMe">Message to me:</label>
-<textarea id="messageToMe" name="messageToMe"></textarea>
+            <label for="messageToMe">Message to me:</label>
+            <textarea id="messageToMe" name="messageToMe"></textarea>
 
-<button type="submit">Send Message</button>
-</form>
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
+
+        <div class="attribution">
+          Copyright <a href="#">Silvana Lindholm</a>
+        </div>
       </div>
-  
- 
-  <div class="attribution">
-    Copyright <a href="#">Silvana Lindholm</a>
-  </div>
-</div><!--form-wrap-->
+      <!--form-wrap-->
+    </main>
 
-</main>
+    <button id="toTopBtn">TOP ↑</button>
 
-<button id="toTopBtn">TOP ↑</button>
-  
-<script src="JS/script.js"></script>
-</body>
+    <script src="JS/script.js"></script>
+  </body>
 </html>
