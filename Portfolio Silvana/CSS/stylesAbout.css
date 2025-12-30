@@ -74,11 +74,20 @@ header {
   object-fit: cover; /* Täyttää valinnaisesti koko leveyden vääristymättä*/
   z-index: -1;
 }
-#backgrImage-text {
+/* #backgrImage-text {
   position: absolute;
   top: 40%;
   left: 50%;
   transform: translate(-50%, -40%);
+  text-align: center;
+  color: white;
+} */
+
+#backgrImage-text {
+  position: static;
+  top: 40%;
+  left: 50%;
+  transform: none;
   text-align: center;
   color: white;
 }
@@ -322,5 +331,12 @@ button:hover {
 
   form {
     width: 90%;
+  }
+  @media (max-width: 600px) {
+    .hero {
+      height: auto;
+      min-height: 70vh;
+      padding: 40px 20px;
+    }
   }
 }
