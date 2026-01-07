@@ -1,0 +1,8 @@
+# macOS
+.DS_Store
+
+# Node / JS (ако имаш node_modules)
+node_modules/
+
+# Лог файлове
+*.log
