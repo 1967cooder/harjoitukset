@@ -21,7 +21,7 @@ const projects = [
     id: "01_flex-projecti",
     title: "FlexFest",
     img: "images/turquoise-light.webp",
-    link: "01_flex-projecti copy/flexfest.html",
+    link: "https://flexfest.netlify.app/",
     github:
       "https://github.com/1967cooder/harjoitukset/tree/main/Portfolio%20Silvana/01_flex-projecti%20copy",
   },
